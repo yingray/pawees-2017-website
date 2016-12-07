@@ -42,6 +42,7 @@ $window.on("scroll", function(e) {
     fixed_shadowbg.click(function(){
         nav.removeClass("leftshow");
         fixed_shadowbg.removeClass("leftshow");
+        logo.removeClass("logo2");
     })
 
 

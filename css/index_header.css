@@ -5,7 +5,7 @@
 /*---中央logo區域---*/
 
 .logo{
-	position: absolute;
+	position: absolute; /*從位置列抽起來讓nav疊在下面*/
 	margin: auto;
 	left: 0;
 	right: 0;
@@ -20,8 +20,8 @@
 
 
 /*---nav選單列---*/
-ul{
-	position: absolute; /*下absolute和logo疊在一起*/
+
+nav ul{
 	width: 100%;
 	height: 120px;
 
@@ -30,7 +30,7 @@ ul{
 }
 
 
-li{ /*洞要挖固定大小140*120，因為要用sprite去換圖*/
+nav ul li{ /*洞要挖固定大小140*120，因為要用sprite去換圖*/
 	position: relative;
 	width: 140px;
 	height: 120px;
@@ -142,7 +142,7 @@ li:hover:after{
 
 /*---nav選單列的link範圍---*/
 
-a{ /*感應區域開跟li一樣大*/
+nav ul li a{ /*感應區域開跟li一樣大*/
 	position: relative; /*給before的background依附*/
 	width: 100%;
 	height: 100%;
@@ -150,7 +150,7 @@ a{ /*感應區域開跟li一樣大*/
 }
 
 /*當前頁面掛上葉子裝飾*/
-li.here a:before{
+li.here a:before, li.here a:after{
 	content:'';
 	position: absolute; /*定位在a的後面*/
 	width: 200px;
@@ -160,6 +160,13 @@ li.here a:before{
 	background: url(../images/header/header_leaves.svg) no-repeat;
 	background-size: cover; /*填滿前面設定的寬高*/
 }
+
+
+/*=======================================*/
+
+
+/*---右上角icons---*/
+
 
 
 
@@ -172,6 +179,123 @@ li.here a:before{
 
 @media screen and (max-width: 1024px) {/*IPAD尺寸*/
 
+/*---banner調成fixed---*/
+.banner{
+	position: fixed;
+	z-index: 10; /*層次拉上來到最上面*/
+	width: 100%;
+	height: 120px;
+}
+
+/*---中央logo區域---*/
+
+.logo{
+	top: 8px;
+	transform: scale(0.8); 
+	transition: 2s;
+}
+
+.logo2{
+	left: -50%;
+}
+
+
+/*---三明治選單---*/
+
+/*三明治按鈕出現*/
+.sandwich{
+	position: absolute; /*fixed在螢幕左上角*/
+
+	width: 50px;
+	height: 50px;
+	top: 35px; /*置中於header（120/2-50/2）*/
+	left: 35px; /*和上面一樣35px*/
+
+	/*icon的sprite背景*/
+	background-image: url(../images/header/header_icon.svg);
+	background-size: 400px 50px; 
+	background-position: 0px 0px; 
+	/*要設定原始整張圖的大小*/ 
+}
+
+
+
+/*---nav移到三明治選單---*/
+
+nav{
+	position: fixed; /*釘在100%的wrap上面*/
+	z-index: 9; /*層次在漢堡選單下面*/
+
+	width: 50%;
+	height: 100%;
+
+	background-color: #fff;
+
+	box-shadow: 0 0 50px 5px #888;
+	overflow: hidden;
+
+	left: -55%; /*先收起來*/
+	transition: 2s;
+}
+
+
+
+nav ul{
+	position: absolute;
+	top: 120px;
+	height:auto;
+}
+
+nav ul li{ 
+	display: block; /*讓鈕一列一列分開*/
+} 
+
+/*每個鈕都把margin關掉，變置中*/
+li.icon_aboutus, li.icon_product, li.icon_custom, li.icon_inspire{
+	margin: auto;
+}
+
+/*葉子的裝飾*/
+li.here a:before, li.here a:after{
+	width: 200px;
+	height: 120px;
+}
+
+li.here a:before{ /*左邊的葉子*/
+	left: -150px;
+	top:-25px;
+	transform: rotate(-10deg);
+}
+
+li.here a:after{ /*右邊的葉子*/
+	left: 90px;
+	top:25px;
+	transform: rotate(170deg);
+}
+
+
+
+/*---fixed選單出現後畫面的暗幕---*/
+
+.fixed_shadowbg{
+	position: fixed;
+	z-index: 8;
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0,0,0,.2);
+	left: -100%; /*先收起來*/
+	transition-delay: 1.2s;
+}
+
+.leftshow{ /*sandwich點擊後從左邊出現*/
+	left: 0; 
+	transition-delay: 0s;
+}
+
+
+
+
 
 
 } /*平板版本結束*/
@@ -181,9 +305,17 @@ li.here a:before{
 
 /*==========手機版本==========*/
 
-@media screen and (max-width: 768px) {
-		
+@media screen and (max-width: 760px) {
 
+.logo2{
+	left: 0;
+}
+		
+/*nav{
+	width: 100%;
+
+	left: -110%; *//*收起來*/
+}
 
 } /*手機版本結束*/
 

@@ -57,7 +57,6 @@ body{
 header, content, footer{
 	/*置中*/
 	display: block;
-	position: relative;
 	margin: auto;
 	left: 0;
 	right: 0;
@@ -76,6 +75,7 @@ header{
 
 /*白紙底*/
 content{ 
+	position: relative;
 	background: url(../images/background/paper01.svg); /*白紙背景必須用svg保持邊緣俐落，因為RWD縮放時會有拉伸*/
 	background-size: 100%;
 	min-height: 590px; /*高度撐開至少590px(螢幕1580*830的單頁)，之後自然隨裡面的物件撐開*/
@@ -102,6 +102,7 @@ content:after{ /*白紙底的下緣*/
 
 
 footer{
+	position: relative;
 	height: 120px; /*和header一樣高*/
 }
 
@@ -112,6 +113,10 @@ footer{
 /*==========平板版本==========*/
 
 @media screen and (max-width: 1024px) {/*IPAD尺寸*/
+
+	header{
+		width: 100%;
+	}
 
 	content{
 		

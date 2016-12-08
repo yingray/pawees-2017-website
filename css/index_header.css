@@ -105,7 +105,7 @@ li.here:after{
 
 
 /*hover前的左右兩條直線先不出現*/
-li:before, li:after{
+nav ul li:before, nav ul li:after{
 	content:'';
 	position: absolute;
 	background-color: rgba(239,174,162,0); /*透明度先設定0*/
@@ -119,22 +119,22 @@ li:before, li:after{
 
 	transition:.5s; 
 }
-li:before{ 
+nav ul li:before{ 
 	left: 0px;
 }
-li:after{
+nav ul li:after{
 	right: 0px;
 }
 /*hover後的左右兩條線出現的動畫*/
-li:hover:before, li:hover:after{
+nav ul li:hover:before, nav ul li:hover:after{
 	background-color: rgba(239,174,162,1); /*透明度設定1出現*/
 	width: 2px;
 	height: 16px;
 }
-li:hover:before{ 
+nav ul li:hover:before{ 
 	left: 15px;
 }
-li:hover:after{
+nav ul li:hover:after{
 	right: 15px;
 }
 
@@ -165,7 +165,91 @@ li.here a:before, li.here a:after{
 /*=======================================*/
 
 
-/*---右上角icons---*/
+/*---右邊icons---*/
+.cart_icon, .member_icon, .totop_icon{
+	position: fixed; /*fixed在右邊*/
+	z-index: 10;
+	
+	/*垂直置中*/
+	margin: auto;
+	top: 0; 
+	bottom: 0;
+
+	width: 50px;
+	height: 50px;
+	right: 15px; 
+
+	/*icon的sprite背景*/
+	background-image: url(../images/header/header_icon.svg);
+	background-size: 400px 50px;
+	/*要設定原始整張圖的大小*/ 
+
+	transition: 1s;
+}
+
+
+
+.cart_icon{
+	background-position: -300px 0px; 
+}
+.member_icon{
+	top: -150px; /*置中再上移*/
+	background-position: -200px 0px; 
+}
+.totop_icon{
+	opacity: 0.5;
+	/*icon的sprite背景*/
+	background-image: url(../images/header/header_icon.svg),
+					  url(../images/header/header_icon_totop.svg);
+	background-size:  400px 50px,
+					  50px 100px;
+	top: 150px; /*置中再下移*/
+	background-position: -100px 0px ,
+						    0px 0px ; 
+}
+.cart_icon:hover{
+	right: 30px; 
+}
+.member_icon:hover{
+	right: 30px; 
+}
+.totop_icon:hover{
+	background-position: -100px 0px ,
+						  0px -50px; 
+}
+
+/*icon後面的標籤*/
+.cart_icon:before, .member_icon:before{
+	content: '';
+	position: absolute;
+	
+	left: -10px;
+	width: 250px;
+	height: 50px;
+	background-color: rgba(239,174,162,.5); 
+
+	transition: .5s;
+}
+.cart_icon:after, .member_icon:after{
+	content: '';
+	position: absolute;
+	
+	right: 60px;
+	border-style: solid;
+	border-width: 25px 25px;
+	border-color: transparent rgba(239,174,162,.5) transparent transparent;  
+
+	transition: .5s;
+}
+
+.cart_icon:hover:before, .member_icon:hover:before{
+	left: -20px;
+}
+.cart_icon:hover:after, .member_icon:hover:after{
+	right: 70px;
+}
+
+
 
 
 
@@ -213,7 +297,7 @@ li.here a:before, li.here a:after{
 
 /*三明治按鈕出現*/
 .sandwich{
-	position: absolute; /*fixed在螢幕左上角*/
+	position: absolute; /*fixed在banner*/
 
 	width: 50px;
 	height: 50px;
@@ -292,7 +376,7 @@ li.here a:after{ /*右邊的葉子*/
 	width: 100%;
 	height: 100%;
 
-	background-color: rgba(0,0,0,.1);
+	background-color: rgba(0,0,0,.2);
 	left: -100%; /*先收起來*/
 	transition-delay: 1.2s;
 }
@@ -301,6 +385,51 @@ li.here a:after{ /*右邊的葉子*/
 .leftshow{ 
 	left: 0; 
 	transition-delay: 0s;
+}
+
+
+
+/*---右上角icons---*/
+.cart_icon, .member_icon, .totop_icon{
+	position: absolute; /*fixed在banner*/
+
+	margin: 0; /*關掉垂直置中*/
+	top: 35px; 
+
+	transition: 0s;
+}
+
+
+.cart_icon{
+	right: 35px; 
+	opacity: 0.5;
+}
+.member_icon{
+	right: 85px;
+	opacity: 0.5;
+}
+.totop_icon{
+	transition: 1s;
+	right: 135px;
+}
+.cart_icon:hover{
+	right: 35px;
+	background-position: -350px 0px; 
+}
+.member_icon:hover{
+	right: 85px;
+	background-position: -250px 0px; 
+}
+.totop_icon:hover{
+	right: 135px;
+}
+
+/*平板把before和after關掉*/
+.cart_icon:before, .member_icon:before, .totop_icon:before{
+	height: 0;
+}
+.cart_icon::after, .member_icon::after, .totop_icon::after{
+	border-width: 0;  
 }
 
 
@@ -357,7 +486,7 @@ li.here a:after{ /*右邊的葉子*/
 }
 /*三明治按鈕動畫*/
 .sandwich2{
-	transform: translateX(-55px) ;
+	transform: translateX(-58px) ;
 }
 
 
@@ -365,6 +494,18 @@ li.here a:after{ /*右邊的葉子*/
 
 nav ul{
 	top: 85px;
+}
+
+
+/*---右上角icons---*/
+.cart_icon{
+ 	transform: scale(0.8) translateX(33px) ;  /*跟三明治選單位置一樣高*/
+}
+.member_icon{
+ 	transform: scale(0.8) translateX(43px) ;  /*跟三明治選單位置一樣高*/
+}
+.totop_icon{
+ 	transform: scale(0.8) translateX(53px) ;  /*跟三明治選單位置一樣高*/
 }
 		
 

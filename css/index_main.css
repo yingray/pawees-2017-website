@@ -13,7 +13,7 @@
 
 	/*background-color: rgba(244,240,240,1);  #F4F0F0; ---背景底色*/
 	/*background-color: rgba(239,174,162,1);  #EFAEA2; ---重點粉紅色*/
-	/*background-color: rgba(145,186,177,1);  #91BAB1; ---粉綠色*/
+	/*background-color:   #91BAB1; ---粉綠色*/
 
 	
 
@@ -78,7 +78,7 @@ content{
 	position: relative;
 	background: url(../images/background/paper01.svg); /*白紙背景必須用svg保持邊緣俐落，因為RWD縮放時會有拉伸*/
 	background-size: 100%;
-	min-height: 590px; /*高度撐開至少590px(螢幕1580*830的單頁)，之後自然隨裡面的物件撐開*/
+	min-height: 2000px; /*高度撐開至少590px(螢幕1580*830的單頁)，之後自然隨裡面的物件撐開*/
 }
 content:before, content:after{
 	content:'';

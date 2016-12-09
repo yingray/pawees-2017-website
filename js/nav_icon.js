@@ -19,34 +19,101 @@
     var sandwich=$(".sandwich");
     var fixed_shadowbg=$("div.fixed_shadowbg");
 
+    var cart_icon=$(".cart_icon");
+    var member_icon=$(".member_icon");
+    var cart_sidebar=$(".cart_sidebar");
+    var member_sidebar=$(".member_sidebar");
+
+
+
     // 三明治選單收合
     sandwich.click(function(){
-      if(nav.hasClass("leftshow")){
+      if(nav.hasClass("leftshow")){ //已經打開
         nav.removeClass("leftshow");
-        fixed_shadowbg.removeClass("leftshow");
+
+        fixed_shadowbg.removeClass("shadowshow");
+
         logo.removeClass("logo2");
-        sandwich.removeClass("sandwich2");
 
-        $window.trigger('scroll'); /*觸發scroll看本來有沒有fixed banner*/
-
-      }else{
+      }else{ //還沒打開
         nav.addClass("leftshow");
-        fixed_shadowbg.addClass("leftshow");
+        fixed_shadowbg.addClass("shadowshow");
         logo.addClass("logo2");
-        sandwich.addClass("sandwich2");
 
-        banner.removeClass("banner2");
+        // 其他通通關起來
+        cart_icon.removeClass("cart_icon2");
+        member_icon.removeClass("member_icon2");
+        cart_sidebar.removeClass("rightshow");
+        member_sidebar.removeClass("rightshow");
 
       }
     });
 
-    // 暗幕點了也會收起來
+
+    
+    // 購物車sidebar收合
+    cart_icon.click(function(){ 
+      if(cart_sidebar.hasClass("rightshow")){ //已經打開
+        cart_sidebar.removeClass("rightshow");
+        cart_icon.removeClass("cart_icon2");
+
+        fixed_shadowbg.removeClass("shadowshow");
+        logo.removeClass("logo2");
+
+      }else{ //還沒打開
+        cart_sidebar.addClass("rightshow");
+        cart_icon.addClass("cart_icon2");
+
+        fixed_shadowbg.addClass("shadowshow");
+        logo.addClass("logo2");
+      }
+    });
+
+
+
+    // 會員sidebar收合
+    member_icon.click(function(){ 
+      if(member_sidebar.hasClass("rightshow")){ //已經打開
+        member_sidebar.removeClass("rightshow");
+        member_icon.removeClass("member_icon2");
+
+        fixed_shadowbg.removeClass("shadowshow");
+        logo.removeClass("logo2");
+
+      }else{ //還沒打開
+        member_sidebar.addClass("rightshow");
+        member_icon.addClass("member_icon2");
+
+        fixed_shadowbg.addClass("shadowshow");
+        logo.addClass("logo2");
+
+      }
+    });
+
+
+
+    // 暗幕點了全部收起來
     fixed_shadowbg.click(function(){
         nav.removeClass("leftshow");
-        fixed_shadowbg.removeClass("leftshow");
+
+        fixed_shadowbg.removeClass("shadowshow");
         logo.removeClass("logo2");
-        sandwich.removeClass("sandwich2");
+
+        cart_icon.removeClass("cart_icon2");
+        member_icon.removeClass("member_icon2");
+        cart_sidebar.removeClass("rightshow");
+        member_sidebar.removeClass("rightshow");
+
     })
+
+
+
+    // 捲回置頂
+    var totop_icon=$(".totop_icon");
+
+    totop_icon.click(function(){
+        $('html,body').stop(true,false).animate({scrollTop:0},1000);
+    });
 
 
 

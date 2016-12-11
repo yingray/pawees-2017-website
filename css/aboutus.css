@@ -68,7 +68,15 @@ header, content, footer{
 header{
 	position: absolute;
 	height: 120px;
+
+	opacity: 1;
+	transition: 1s; 
 }
+
+	/*一開始先隱藏*/
+	.header2{
+		opacity: 0;
+	}
 
 nav{
 	position: absolute; /*拉出來到section之上*/

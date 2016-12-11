@@ -18,6 +18,10 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;*/
 
+
+
+/*---視差捲動基本設定---*/
+
 .parallax {
     height: 100vh;
     overflow-x: hidden; /*水平方向不要超出*/
@@ -55,6 +59,11 @@ section{
 	-webkit-transform-origin-x: 50%;
 	transform-origin-x: 50%;
 }
+
+
+
+/*---視差捲動  不同Z層次設定---*/
+
 .parallax_layer0 {
 	/*拉層次和z-index*/
     -webkit-transform: translateZ(0px);
@@ -75,24 +84,61 @@ section{
 	z-index: 3;
 }
 
+.parallax_layer03 {
+	-webkit-transform: translateZ(0.3px) scale(0.7);
+	transform: translateZ(0.3px) scale(0.7);
+
+	z-index: 7;
+}
+
+.parallax_layer05 {
+	-webkit-transform: translateZ(0.5px) scale(0.5);
+	transform: translateZ(0.5px) scale(0.5);
+
+	z-index: 8;
+}
+
+.parallax_layer07 {
+	-webkit-transform: translateZ(0.7px) scale(0.3);
+	transform: translateZ(0.7px) scale(0.3);
+
+	z-index: 9;
+}
+
+
+
+/*---各個section背景設定---*/
 
 .section01{
 	background: url(..//images/logo_ani/BG.png) no-repeat;
-	background-size: 1280px;
+	background-size: 100%;
 	background-position: 50% 50%;
 }
 
 
 .section02{
-	background: url(..//images/logo_ani/BG.png) no-repeat;
+	/*background: url(..//images/logo_ani/BG.png) no-repeat;
 	background-size: 1280px;
-	background-position: 50% 50%;
+	background-position: 50% 50%;*/
 }
 
 
-.parallax_layer img{
-	position: absolute;
 
+/*---section01---*/
+
+/*繩子*/
+.logo_leaves{
+
+} 
+
+/*木板logo大小的漸變範圍*/
+.circle_logo img{
+	width: 45%;
+	max-width: 700px;
+	min-width: 600px;
+
+	/*置中*/
+	position: absolute;
 	margin: auto;
 	left: 0;
 	right: 0;
@@ -101,7 +147,6 @@ section{
 }
 
 
-/*---LOGO動畫---*/
 
 
 
@@ -113,7 +158,12 @@ section{
 
 @media screen and (max-width: 1080px) {/*IPAD尺寸*/
 
-	
+/*木板logo大小的漸變範圍*/
+	.circle_logo img{
+		width: 90%;
+		max-width: 600px;
+		min-width: auto;
+	}
 	
 }
 

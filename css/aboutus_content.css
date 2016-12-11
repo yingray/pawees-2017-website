@@ -64,6 +64,20 @@ section{
 
 /*---視差捲動  不同Z層次設定---*/
 
+.parallax_layer-2 {
+	-webkit-transform: translateZ(-2px) scale(3);
+	transform: translateZ(-2px) scale(3);
+
+	z-index: 3;
+}
+
+.parallax_layer-1 {
+	-webkit-transform: translateZ(-1px) scale(2);
+	transform: translateZ(-1px) scale(2);
+
+	z-index: 4;
+}
+
 .parallax_layer0 {
 	/*拉層次和z-index*/
     -webkit-transform: translateZ(0px);
@@ -71,17 +85,12 @@ section{
 
     z-index: 5;
 }
-.parallax_layer-1 {
-	-webkit-transform: translateZ(-1px) scale(2);
-	transform: translateZ(-1px) scale(2);
 
-	z-index: 4;
-}
-.parallax_layer-2 {
-	-webkit-transform: translateZ(-2px) scale(3);
-	transform: translateZ(-2px) scale(3);
+.parallax_layer01 {
+	-webkit-transform: translateZ(0.1px) scale(0.9);
+	transform: translateZ(0.1px) scale(0.9);
 
-	z-index: 3;
+	z-index: 6;
 }
 
 .parallax_layer03 {
@@ -90,6 +99,7 @@ section{
 
 	z-index: 7;
 }
+
 
 .parallax_layer05 {
 	-webkit-transform: translateZ(0.5px) scale(0.5);
@@ -126,12 +136,11 @@ section{
 
 /*---section01---*/
 
-/*繩子*/
-.logo_leaves{
-	
-} 
-
 /*木板logo大小的漸變範圍*/
+.circle_logo{
+	font-size: 0; /*讓50%inline排在一起剛好*/
+}
+
 .circle_logo img{
 	width: 45%;
 	max-width: 700px;
@@ -147,7 +156,113 @@ section{
 }
 
 
+/*繩子*/
+.circle_logo .logo_line01, .circle_logo .logo_line02{
+	width: 50%;
+	max-width: 790px;
+	min-width: 677.14px; /* 790/700*600px */
 
+	height: 45vw;
+	max-height: 700px;
+	min-height: 600px;
+
+	display: inline-block; /*左右排在一起*/
+	overflow: hidden; /*超出線段消失*/
+
+	/*置中*/
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+}
+
+.circle_logo .logo_line01{ /*左邊的線*/
+	right: 50%;
+
+	background: url(../images/logo_ani/line_1.svg) no-repeat;
+	background-size: 200% 100%;
+	background-position: -100% 0;
+
+	animation: logo_line01 5s 0s ease 1 backwards ;
+}
+
+.circle_logo .logo_line02{ /*右邊的線*/
+	left: 50%;
+
+	background: url(../images/logo_ani/line_1.svg) no-repeat;
+	background-size: 200% 100%;
+	background-position: 200% 0;
+
+	animation: logo_line02 5s 0s ease 1 backwards ;
+}
+
+	@keyframes logo_line01{
+		  0%{background-position: 0 0;}
+		100%{background-position: -100% 0;}
+	}
+
+	@keyframes logo_line02{
+		  0%{background-position: 100% 0;}
+		100%{background-position: 200% 0;}
+	}
+
+
+/*葉子*/
+
+.leaves_1{
+	animation: leaves_1 6s 0s ease 1 backwards ;
+}
+.leaves_2{
+	animation: leaves_2 6s 0s ease 1 backwards ; 
+}
+.leaves_3{
+	animation: leaves_3 6s 0s ease 1 backwards ;
+}
+.leaves_4{
+	animation: leaves_4 6s 0s ease 1 backwards ;
+}
+.leaves_5{
+	animation: leaves_5 6s 0s ease 1 backwards ;
+}
+.leaves_6{
+	animation: leaves_6 6s 0s ease 1 backwards ;
+}
+
+	@keyframes leaves_1{
+		  0%{transform: translate(75%,-5%) scale(0.8);}
+		 50%{transform: translate(1%,-6%) scale(0.8);}
+		100%{transform: translate(0,0) scale(1);}
+	}
+
+	@keyframes leaves_2{
+		  0%{transform: rotate(20deg) translate(55%,-25%) scale(0.8);}
+		 50%{transform: rotate(20deg) translate(-7%,-3%) scale(0.8);}
+		100%{transform: translate(0,0) scale(1);}
+	}
+
+	@keyframes leaves_3{
+		  0%{transform: rotate(76deg) translate(4%,-35%) scale(0.8);}
+		 50%{transform: rotate(76deg) translate(-4%,9%) scale(0.8);}
+		100%{transform: translate(0,0) scale(1);}
+	}
+
+	@keyframes leaves_4{
+		  0%{transform: translate(-70%,6%) scale(0.8); }
+		 50%{transform: translate(0,0) scale(0.8); }
+		100%{transform: translate(0,0) scale(1);}
+	}
+
+	@keyframes leaves_5{
+		  0%{transform: rotate(25deg) translate(-42%,27%) scale(0.8); }
+		 50%{transform: rotate(25deg) translate(0,0) scale(0.8); }
+		100%{transform: translate(0,0) scale(1);}
+	}
+
+	@keyframes leaves_6{
+		  0%{transform: rotate(75deg) translate(-2%,28%) scale(0.8); }
+		 50%{transform: rotate(75deg) translate(0,0) scale(0.8); }
+		100%{transform: translate(0,0) scale(1);}
+	}
 
 
 
@@ -164,6 +279,18 @@ section{
 		max-width: 600px;
 		min-width: 0px;
 	}
+
+	/*繩子*/
+	.circle_logo .logo_line01, .circle_logo .logo_line02{
+		width: 203.14%;
+		max-width: 677.14px;
+		min-width: 0px;   
+
+		height: 90vw;
+		max-height: 600px;
+		min-height: 0px;
+	}
+
 	
 }
 

@@ -80,7 +80,7 @@ header{
 
 nav{
 	position: absolute; /*拉出來到section之上*/
-	z-index: 12;
+	z-index: 9; /*在陰影後面*/
 	
 	/*置中*/
 	left: 0;
@@ -146,7 +146,9 @@ footer{
 
 	nav{
 	height: 100vh;
-	left: -50%; 
+	left: -50%;
+
+	z-index: 12; /*平板手機版拉上來*/ 
 	}
 
 	li.here a:before,li.here a:after{

@@ -183,7 +183,7 @@ section{
 	background-size: 200% 100%;
 	background-position: -100% 0;
 
-	animation: logo_line01 5s 0s ease 1 backwards ;
+	animation: logo_line01 8s 0s ease 1 backwards ;
 }
 
 .circle_logo .logo_line02{ /*右邊的線*/
@@ -193,7 +193,7 @@ section{
 	background-size: 200% 100%;
 	background-position: 200% 0;
 
-	animation: logo_line02 5s 0s ease 1 backwards ;
+	animation: logo_line02 8s 0s ease 1 backwards ;
 }
 
 	@keyframes logo_line01{
@@ -210,57 +210,58 @@ section{
 /*葉子*/
 
 .leaves_1{
-	animation: leaves_1 6s 0s ease 1 backwards ;
+	animation: leaves_1 5s 0s linear 1 backwards ;
 }
 .leaves_2{
-	animation: leaves_2 6s 0s ease 1 backwards ; 
+	animation: leaves_2 5s 0s linear 1 backwards ; 
 }
 .leaves_3{
-	animation: leaves_3 6s 0s ease 1 backwards ;
+	animation: leaves_3 5s 0s linear 1 backwards ;
 }
 .leaves_4{
-	animation: leaves_4 6s 0s ease 1 backwards ;
+	animation: leaves_4 5s 0s linear 1 backwards ;
 }
 .leaves_5{
-	animation: leaves_5 6s 0s ease 1 backwards ;
+	animation: leaves_5 5s 0s linear 1 backwards ;
 }
 .leaves_6{
-	animation: leaves_6 6s 0s ease 1 backwards ;
+	animation: leaves_6 5s 0s linear 1 backwards ;
 }
 
+	/*分三階段：起始位置、拉到圓上、轉回原位*/
 	@keyframes leaves_1{
 		  0%{transform: translate(75%,-5%) scale(0.8);}
-		 50%{transform: translate(1%,-6%) scale(0.8);}
+		 60%{transform: translate(1%,-5%) scale(0.8);}
 		100%{transform: translate(0,0) scale(1);}
 	}
 
 	@keyframes leaves_2{
 		  0%{transform: rotate(20deg) translate(55%,-25%) scale(0.8);}
-		 50%{transform: rotate(20deg) translate(-7%,-3%) scale(0.8);}
+		 50%{transform: rotate(20deg) translate(-4%,-3%) scale(0.8);}
 		100%{transform: translate(0,0) scale(1);}
 	}
 
 	@keyframes leaves_3{
 		  0%{transform: rotate(76deg) translate(4%,-35%) scale(0.8);}
-		 50%{transform: rotate(76deg) translate(-4%,9%) scale(0.8);}
+		 23%{transform: rotate(76deg) translate(-3%,-8%) scale(0.8);}
 		100%{transform: translate(0,0) scale(1);}
 	}
 
 	@keyframes leaves_4{
 		  0%{transform: translate(-70%,6%) scale(0.8); }
-		 50%{transform: translate(0,0) scale(0.8); }
+		 70%{transform: translate(-2%,6%) scale(0.8); }
 		100%{transform: translate(0,0) scale(1);}
 	}
 
 	@keyframes leaves_5{
 		  0%{transform: rotate(25deg) translate(-42%,27%) scale(0.8); }
-		 50%{transform: rotate(25deg) translate(0,0) scale(0.8); }
+		 50%{transform: rotate(25deg) translate(2%,8%) scale(0.8); }
 		100%{transform: translate(0,0) scale(1);}
 	}
 
 	@keyframes leaves_6{
 		  0%{transform: rotate(75deg) translate(-2%,28%) scale(0.8); }
-		 50%{transform: rotate(75deg) translate(0,0) scale(0.8); }
+		 15%{transform: rotate(75deg) translate(1%,15%) scale(0.8); }
 		100%{transform: translate(0,0) scale(1);}
 	}
 

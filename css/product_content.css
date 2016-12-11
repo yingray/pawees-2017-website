@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	/*background-color: rgba(244,240,240,1);  #F4F0F0; ---背景底色*/
+	/*background-color: rgba(239,174,162,1);  #EFAEA2; ---重點粉紅色*/
+	/*background-color: rgba(,,,1);  #91BAB1; ---粉綠色*/
+
+	
+
+	/*margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;*/
+
+	/*-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;*/
+
+
+
+
+
+/*____________________________________________________________________________*/
+
+/*==========平板版本==========*/
+
+@media screen and (max-width: 1080px) {/*IPAD尺寸*/
+
+	
+	
+}
+
+/*____________________________________________________________________________*/
+
+/*==========手機版本==========*/
+
+@media screen and (max-width: 760px) {
+	
+
+
+}
+
+

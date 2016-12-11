@@ -110,10 +110,17 @@
 
     // 捲回置頂
     var totop_icon=$(".totop_icon");
+    var parallax=$(".parallax");
 
     totop_icon.click(function(){
+        
         $('html,body').stop(true,false).animate({scrollTop:0},1000);
+
+        parallax.stop(true,false).animate({scrollTop:0},1000);
+
     });
+
+
 
 
 

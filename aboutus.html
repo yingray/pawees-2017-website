@@ -6,7 +6,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="css/US_main.css" rel="stylesheet" type="text/css">
+	<link href="css/aboutus.css" rel="stylesheet" type="text/css">
 
 
 <!-- Icons -->
@@ -41,79 +41,117 @@
 
 <!-- 主頁面內容 -->
 <div class="wrap">
+
+		<!-- header拉出來釘在wrap上面，頁面已經被parallax鎖在視窗範圍內了 -->
+		<header>
+
+			<!-- 平板手機會fixed的banner -->
+			<div class="banner">
+
+				<!-- 三明治選單 -->
+				<div class="sandwich"></div>
+				
+
+				<!-- fixed的按鈕 -->
+				
+				<div class="cart_icon"></div>
+				<div class="cart_sidebar"></div>
+
+				<div class="member_icon"></div>
+				<div class="member_sidebar"></div>
+
+				<div class="totop_icon"></div>
+				
+
+				<!-- 中央logo -->
+				<div class="logo"><img src="images/header/header_logo.svg" alt=""></div>
+				
+			
+
+
+				<!-- 上方選單列 -->
+				<nav> 
+					<ul>
+						<!-- 當前頁面掛上here的class -->
+						<li class="icon_aboutus here">
+							<a href="aboutus.html"></a>
+						</li>
+						<li class="icon_product">
+							<a href="product.html"></a>
+						</li>
+						<li class="icon_custom">
+							<a href=""></a>
+						</li>
+						<li class="icon_inspire">
+							<a href=""></a>
+						</li>
+					</ul>
+				</nav>
+
+
+				<!-- 暗幕的背景 -->
+				<div class="fixed_shadowbg"></div>
+
+			</div><!-- banner包全部 -->
+
+		</header>	
+
 	
-	<header>
+	<!-- 視差捲動 -->
+	<div class="parallax">
 
-		<!-- 平板手機會fixed的banner -->
-		<div class="banner">
+		<!-- 第一幕 logo動畫 -->
+		<section class="section01">
+			<div class="parallax_layer parallax_layer0">
+				<img src="images/animal_icon/deer.svg" alt="">
+			</div>
 
-			<!-- 三明治選單 -->
-			<div class="sandwich"></div>
+			<div class="parallax_layer parallax_layer-1">
+				<img src="images/animal_icon/eagle.svg" alt="">
+			</div>
+		</section>
+
+
+		<!-- ====================================================================================== -->
+
+
+		<!-- 第二幕 兔子介紹品牌理念 -->
+		<section class="section02">
 			
+		</section>
 
-			<!-- fixed的按鈕 -->
+
+		<!-- 第三幕 森林-->
+		<section class="section03">
 			
-			<div class="cart_icon"></div>
-			<div class="cart_sidebar"></div>
+		</section>
 
-			<div class="member_icon"></div>
-			<div class="member_sidebar"></div>
 
-			<div class="totop_icon"></div>
+		<!-- 第四幕 小動物 -->
+		<section class="section04">
 			
+		</section>
 
-			<!-- 中央logo -->
-			<div class="logo"><img src="images/header/header_logo.svg" alt=""></div>
+
+		<!-- 第五幕 導向產品頁 -->
+		<section class="section05">
 			
+		</section>
+
+
+	
+
+	<!-- ====================================================================================== -->
+
+
+		<footer>
 		
 
 
-			<!-- 上方選單列 -->
-			<nav> 
-				<ul>
-					<!-- 當前頁面掛上here的class -->
-					<li class="icon_aboutus here">
-						<a href="index.html"></a>
-					</li>
-					<li class="icon_product">
-						<a href=""></a>
-					</li>
-					<li class="icon_custom">
-						<a href=""></a>
-					</li>
-					<li class="icon_inspire">
-						<a href=""></a>
-					</li>
-				</ul>
-			</nav>
+		</footer>
 
 
-			<!-- 暗幕的背景 -->
-			<div class="fixed_shadowbg"></div>
-
-		</div><!-- banner包全部 -->
-
-	</header>
-
-
-<!-- ====================================================================================== -->
-
-
-	<content>
-
-	
-
-	</content>
-
-
-<!-- ====================================================================================== -->
-
-
-	<footer>
-	
-
-
-	</footer>
+	</div>
 
 
 <!-- ====================================================================================== -->

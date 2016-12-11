@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	/*background-color: rgba(244,240,240,1);  #F4F0F0; ---背景底色*/
+	/*background-color: rgba(239,174,162,1);  #EFAEA2; ---重點粉紅色*/
+	/*background-color: rgba(,,,1);  #91BAB1; ---粉綠色*/
+
+	
+
+	/*margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;*/
+
+	/*-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;*/
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden; /*水平方向不要超出*/
+    overflow-y: auto; /*垂直方向有很多個section就用捲軸捲動*/
+
+	/*設定透視點，讓後面的section產生3D視差效果*/
+    -webkit-perspective: 1px;
+    perspective: 1px;
+
+
+	/*保險起見把變形原點和透視原點設定一樣*/
+    -webkit-perspective-origin-x: 50%; 
+    perspective-origin-x: 50%;
+}
+
+
+section{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+
+	/*讓裡面的物件有3D變型*/
+    -webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.parallax_layer { /*置中*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	/*保險起見把變形原點和透視原點設定一樣*/
+	-webkit-transform-origin-x: 50%;
+	transform-origin-x: 50%;
+}
+.parallax_layer0 {
+	/*拉層次和z-index*/
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+
+    z-index: 5;
+}
+.parallax_layer-1 {
+	-webkit-transform: translateZ(-1px) scale(2);
+	transform: translateZ(-1px) scale(2);
+
+	z-index: 4;
+}
+.parallax_layer-2 {
+	-webkit-transform: translateZ(-2px) scale(3);
+	transform: translateZ(-2px) scale(3);
+
+	z-index: 3;
+}
+
+
+.section01{
+	background: url(..//images/logo_ani/BG.png) no-repeat;
+	background-size: 1280px;
+	background-position: 50% 50%;
+}
+
+
+.section02{
+	background: url(..//images/logo_ani/BG.png) no-repeat;
+	background-size: 1280px;
+	background-position: 50% 50%;
+}
+
+
+.parallax_layer img{
+	position: absolute;
+
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+
+/*---LOGO動畫---*/
+
+
+
+
+
+/*____________________________________________________________________________*/
+
+/*==========平板版本==========*/
+
+@media screen and (max-width: 1080px) {/*IPAD尺寸*/
+
+	
+	
+}
+
+/*____________________________________________________________________________*/
+
+/*==========手機版本==========*/
+
+@media screen and (max-width: 760px) {
+	
+
+
+}
+
+

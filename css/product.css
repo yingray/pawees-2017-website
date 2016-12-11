@@ -7,7 +7,7 @@
 @import url(US_header.css);
 @import url(US_footer.css);
 
-@import url(aboutus_content.css);
+@import url(product_content.css);
 
 
 
@@ -45,8 +45,10 @@ body{
 	left: 0;
 	right: 0;
 
-	width: 100%; /*100%讓section和螢幕同寬*/
-	
+	width: 100%; /*葉子底100%跟body螢幕同寬*/
+	max-width: 1280px; /*葉子底最大寬度1280px*/
+
+	background: url(../images/background/background_leaves.png); /*背景不會放大所以用png即可，檔案小很多*/
 	background-size: 100%; /*寬度下100%背景圖才會撐滿並置中*/
 }
 
@@ -64,24 +66,9 @@ header, content, footer{
 }
 
 
-/*畫面已經被parallax侷限*/
+
 header{
-	position: absolute;
 	height: 120px;
-}
-
-nav{
-	position: absolute; /*拉出來到section之上*/
-	z-index: 12;
-	
-	/*置中*/
-	left: 0;
-	right: 0;
-}
-
-/*先把花關掉，平板之後再打開*/
-li.here a:before,li.here a:after{
-	opacity: 0;
 }
 
 
@@ -131,22 +118,6 @@ footer{
 		width: 100%;
 	}
 	
-	/*調回預設值，就可以自然不影響section*/
-	.banner{
-		position: static;
-	}
-
-	nav{
-	height: 100vh;
-	left: -50%; 
-	}
-
-	li.here a:before,li.here a:after{
-	opacity: 1;
-	}
-
-
-
 }
 
 /*____________________________________________________________________________*/

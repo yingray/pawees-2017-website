@@ -124,14 +124,25 @@
 
     // 視差捲動，木板logo上去header再出現
     var header = $("header");
+    var section01_downbottom2 = $(".section01_downbottom2");
     
     parallax.on("scroll", function(e) {
-      if (this.scrollTop > (0.5*parallax.outerHeight()-150)) {
+        if (this.scrollTop > (0.5*parallax.outerHeight()-150)) {
         header.removeClass('header2');
-      } 
-      else {
+        } 
+        else {
         header.addClass('header2');
-      }
+        }
+
+
+        // 向下鈕 旋轉
+        if (this.scrollTop > 0) {
+        section01_downbottom2.addClass("section01_downbottom2_02");
+        } 
+        else {
+        section01_downbottom2.removeClass("section01_downbottom2_02");
+        }
+
     });
 
 

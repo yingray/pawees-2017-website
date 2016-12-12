@@ -78,6 +78,13 @@ section{
 	z-index: 4;
 }
 
+.parallax_layer-15 {
+	-webkit-transform: translateZ(-1.5px) scale(2.5);
+	transform: translateZ(-1.5px) scale(2.5);
+
+	z-index: 4;
+}
+
 .parallax_layer0 {
 	/*拉層次和z-index*/
     -webkit-transform: translateZ(0px);
@@ -121,6 +128,9 @@ section{
 
 /*---各個section背景設定---*/
 
+
+
+/*---section01---*/
 .section01{
 	background: url(..//images/logo_ani/BG.png) no-repeat;
 	background-size: 1580px;
@@ -128,15 +138,6 @@ section{
 }
 
 
-.section02{
-	/*background: url(..//images/logo_ani/BG.png) no-repeat;
-	background-size: 1280px;
-	background-position: 50% 50%;*/
-}
-
-
-
-/*---section01---*/
 
 /*木板logo大小的漸變範圍*/
 .circle_logo{
@@ -186,6 +187,8 @@ section{
 	margin: auto;
 	top: 0;
 	bottom: 0;
+
+	opacity: 0.75; 	/*繩子顏色淡一點*/
 }
 
 .circle_logo .logo_line01{ /*左邊的線*/
@@ -321,7 +324,7 @@ section{
 
 .circle_logo img.yousay{
 	left: 50%;
-	animation: yousay 1s 10s ease 1 backwards ;
+	animation: yousay 1s 9.5s ease 1 backwards ;
 	transform-origin: 45% 45%; 
 }
 
@@ -329,6 +332,62 @@ section{
 		   0%{opacity:0; transform: translate(-15%,-10%) scale(0);}
 		 100%{opacity:1; transform: translate(0,0) scale(1);}
 	}
+
+
+
+/*向下指引*/
+
+.circle_logo img.section01_downbottom1, .circle_logo img.section01_downbottom2{
+	transform: translate(0,-8%);
+	animation: downbottom1 1s 11s ease 1 backwards ;
+	transition: 0.5s;
+
+	bottom: -100vh;
+}
+
+	@keyframes downbottom1{
+		   0%{opacity:0.5 ; transform: translate(0,7%);}
+		 100%{opacity:1 ; transform: translate(0,-8%);}
+	}
+
+.circle_logo img.section01_downbottom2{
+	transform: translate(0,-8%) rotate(-45deg);
+	animation: downbottom2 1s 11s ease 1 backwards ;
+}
+
+	@keyframes downbottom2{
+		   0%{opacity:0.5; transform: translate(0,7%) rotate(0deg);}
+		 100%{opacity:1; transform: translate(0,-8%) rotate(-45deg);}
+	}
+
+	/*向下滑之後 bottom變透明*/ /*寫在nav_icon裡面*/
+	.circle_logo img.section01_downbottom2_02{
+		transform: translate(0,-8%) rotate(0deg);
+		opacity:0.5;
+		transition: 1s;
+	}
+
+
+
+/*---section02---*/
+.section02{
+	/*background: url(..//images/logo_ani/BG.png) no-repeat;
+	background-size: 1280px;
+	background-position: 50% 50%;*/
+}
+
+
+
+.circle_logo img.section02_rabbit{
+	transform: translate(0,-12%);
+	animation: section02_rabbit 1s 11s ease 1 backwards ;
+}
+
+	@keyframes section02_rabbit{
+		   0%{transform: translate(0,0);}
+		 100%{transform: translate(0,-12%);}
+	}
+
 
 
 
@@ -355,8 +414,9 @@ section{
 		max-height: 600px;
 		min-height: 0px;
 	}
-
 	
+
+
 }
 
 /*____________________________________________________________________________*/

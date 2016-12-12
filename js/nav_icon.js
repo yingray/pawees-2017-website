@@ -147,6 +147,16 @@
 
 
 
+    // 捲動到某區段
+
+    $('.secondbanner ul li').click(function(){
+        var _num_a = $(this).index(); //按到第幾個鈕
+        console.log(_num_a);
+        parallax.stop(true,false).animate({scrollTop: $('section').outerHeight()*_num_a},1500);
+    })
+
+
+
 // 因為有可能載入畫面時，剛好停在有動畫元件的位置，這時就寫下面這行，window一載入就觸發scroll事件
 $window.trigger('scroll');
 

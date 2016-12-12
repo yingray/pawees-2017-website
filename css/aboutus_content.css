@@ -317,6 +317,19 @@ section{
 
 
 
+/*由你說*/
+
+.yousay{
+	transform: translate(50%);
+	animation: yousay 1s 0s ease 1 backwards ;
+}
+
+	@keyframes yousay{
+		  0%{opacity:0; transform: translate(50%) scale(0); }
+		 100%{opacity:1; transform: translate(50%) scale(1);}
+	}
+
+
 
 /*____________________________________________________________________________*/
 

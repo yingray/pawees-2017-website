@@ -116,6 +116,8 @@ section{
 }
 
 
+/*____________________________________________________________________________*/
+
 
 /*---各個section背景設定---*/
 
@@ -155,6 +157,16 @@ section{
 	bottom: 0;
 }
 
+.circle_logo img.LOGO_0{
+	animation: LOGO_0 2s 0s ease 1 backwards ;
+}
+
+	@keyframes LOGO_0{
+		  0%{opacity:0.5 ;}
+		100%{opacity:1 ;}
+	}
+
+
 
 /*繩子*/
 .circle_logo .logo_line01, .circle_logo .logo_line02{
@@ -183,7 +195,7 @@ section{
 	background-size: 200% 100%;
 	background-position: -100% 0;
 
-	animation: logo_line01 10s 0s ease 1 backwards ;
+	animation: logo_line01 6s 2s linear 1 backwards ;
 }
 
 .circle_logo .logo_line02{ /*右邊的線*/
@@ -193,7 +205,7 @@ section{
 	background-size: 200% 100%;
 	background-position: 200% 0;
 
-	animation: logo_line02 10s 0s ease 1 backwards ;
+	animation: logo_line02 6s 2s linear 1 backwards ;
 }
 
 	@keyframes logo_line01{
@@ -207,25 +219,26 @@ section{
 	}
 
 
+
 /*葉子*/
 
 .leaves_1{
-	animation: leaves_1 6s 0s linear 1 backwards ;
+	animation: leaves_1 5s 2s linear 1 backwards ;
 }
 .leaves_2{
-	animation: leaves_2 6s 0s linear 1 backwards ; 
+	animation: leaves_2 5s 2s linear 1 backwards ; 
 }
 .leaves_3{
-	animation: leaves_3 6s 0s linear 1 backwards ;
+	animation: leaves_3 5s 2s linear 1 backwards ;
 }
 .leaves_4{
-	animation: leaves_4 6s 0s linear 1 backwards ;
+	animation: leaves_4 5s 2s linear 1 backwards ;
 }
 .leaves_5{
-	animation: leaves_5 6s 0s linear 1 backwards ;
+	animation: leaves_5 5s 2s linear 1 backwards ;
 }
 .leaves_6{
-	animation: leaves_6 6s 0s linear 1 backwards ;
+	animation: leaves_6 5s 2s linear 1 backwards ;
 }
 
 	/*分三階段：起始位置、拉到圓上、轉回原位*/
@@ -263,6 +276,43 @@ section{
 		  0%{transform: rotate(75deg) translate(-2%,28%) scale(0.8); }
 		 15%{transform: rotate(75deg) translate(1%,15%) scale(0.8); }
 		100%{transform: translate(0,0) scale(1);}
+	}
+
+
+
+/*小動物*/
+
+.animal_1{
+	animation: animal_1 8s 2s ease 1 backwards ;
+}
+
+.animal_2{
+	animation: animal_2 8s 2s ease 1 backwards ;
+}
+
+.animal_3{
+	animation: animal_3 8s 2s ease 1 backwards ;
+}
+
+	@keyframes animal_1{
+		  0%{opacity:0; transform: translate(20%,20%);}
+		 10%{opacity:1; transform: translate(15%,15%);}
+		 70%{transform: translate(15%,15%);}
+		 80%{transform: translate(0,0);}
+	}
+
+	@keyframes animal_2{
+		  0%{opacity:0; transform: translate(18%,-12%);}
+		 70%{opacity:0; transform: translate(18%,-12%);}
+		 80%{opacity:1; transform: translate(18%,-12%);}
+		 90%{transform: translate(0,0);}
+	}
+
+	@keyframes animal_3{
+		  0%{opacity:0; transform: translate(-12%,6%);}
+		 80%{opacity:0; transform: translate(-12%,6%);}
+		 90%{opacity:1; transform: translate(-12%,6%);}
+		100%{transform: translate(0,0);}
 	}
 
 

@@ -319,14 +319,15 @@ section{
 
 /*由你說*/
 
-.yousay{
-	transform: translate(50%);
-	animation: yousay 1s 0s ease 1 backwards ;
+.circle_logo img.yousay{
+	left: 50%;
+	animation: yousay 1s 10s ease 1 backwards ;
+	transform-origin: 45% 45%; 
 }
 
 	@keyframes yousay{
-		  0%{opacity:0; transform: translate(50%) scale(0); }
-		 100%{opacity:1; transform: translate(50%) scale(1);}
+		   0%{opacity:0; transform: translate(-15%,-10%) scale(0);}
+		 100%{opacity:1; transform: translate(0,0) scale(1);}
 	}
 
 
@@ -364,6 +365,11 @@ section{
 
 @media screen and (max-width: 760px) {
 	
+/*由你說手機版先拿掉*/
+.circle_logo img.yousay{
+	display: none;
+}
+
 
 
 }

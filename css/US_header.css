@@ -297,18 +297,19 @@ li.here a:before, li.here a:after{
 .fixed_shadowbg{
 	position: fixed;
 	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 
+	left: -100%;
 	z-index: -1;  /*先收起來到後面*/
 	background-color: rgba(0,0,0,0);
 
-	transition: 1.5s;
+	transition: z-index 1.5s, background-color 1.5s;
 }
 
 /*icons點擊後淡入出現*/
 .shadowshow{ 
+	left: 0;
 	z-index: 10; /*陰影層次拉到10(暫定在banner裡面的最底是10)*/
 	background-color: rgba(0,0,0,.2);
 }

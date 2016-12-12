@@ -33,7 +33,7 @@
 
 body{
 	background-color: rgba(244,240,240,1);
-	overflow-y: scroll; /*讓右側scrollbar一直存在，畫面才不會跳掉*/
+	overflow: hidden; /*讓scrollbar消失，畫面才不會有雙捲軸*/
 }
 
 

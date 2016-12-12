@@ -116,7 +116,7 @@
         
         $('html,body').stop(true,false).animate({scrollTop:0},1000);
 
-        parallax.stop(true,false).animate({scrollTop:0},1000);
+        parallax.stop(true,false).animate({scrollTop:0},2000); /*有動畫捲慢一點*/
 
     });
 

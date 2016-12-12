@@ -183,7 +183,7 @@ section{
 	background-size: 200% 100%;
 	background-position: -100% 0;
 
-	animation: logo_line01 8s 0s ease 1 backwards ;
+	animation: logo_line01 10s 0s ease 1 backwards ;
 }
 
 .circle_logo .logo_line02{ /*右邊的線*/
@@ -193,7 +193,7 @@ section{
 	background-size: 200% 100%;
 	background-position: 200% 0;
 
-	animation: logo_line02 8s 0s ease 1 backwards ;
+	animation: logo_line02 10s 0s ease 1 backwards ;
 }
 
 	@keyframes logo_line01{
@@ -210,22 +210,22 @@ section{
 /*葉子*/
 
 .leaves_1{
-	animation: leaves_1 5s 0s linear 1 backwards ;
+	animation: leaves_1 6s 0s linear 1 backwards ;
 }
 .leaves_2{
-	animation: leaves_2 5s 0s linear 1 backwards ; 
+	animation: leaves_2 6s 0s linear 1 backwards ; 
 }
 .leaves_3{
-	animation: leaves_3 5s 0s linear 1 backwards ;
+	animation: leaves_3 6s 0s linear 1 backwards ;
 }
 .leaves_4{
-	animation: leaves_4 5s 0s linear 1 backwards ;
+	animation: leaves_4 6s 0s linear 1 backwards ;
 }
 .leaves_5{
-	animation: leaves_5 5s 0s linear 1 backwards ;
+	animation: leaves_5 6s 0s linear 1 backwards ;
 }
 .leaves_6{
-	animation: leaves_6 5s 0s linear 1 backwards ;
+	animation: leaves_6 6s 0s linear 1 backwards ;
 }
 
 	/*分三階段：起始位置、拉到圓上、轉回原位*/

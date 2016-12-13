@@ -122,41 +122,6 @@
 
 
 
-    // 視差捲動，木板logo上去header再出現
-    var header = $("header");
-    var section01_downbottom2 = $(".section01_downbottom2");
-    
-    parallax.on("scroll", function(e) {
-        if (this.scrollTop > (0.5*parallax.outerHeight()-150)) {
-        header.removeClass('header2');
-        } 
-        else {
-        header.addClass('header2');
-        }
-
-
-        // 向下鈕 旋轉
-        if (this.scrollTop > 0) {
-        section01_downbottom2.addClass("section01_downbottom2_02");
-        } 
-        else {
-        section01_downbottom2.removeClass("section01_downbottom2_02");
-        }
-
-    });
-
-
-
-    // 捲動到某區段
-
-    $('.secondbanner ul li').click(function(){
-        var _num_a = $(this).index(); //按到第幾個鈕
-        console.log(_num_a);
-        parallax.stop(true,false).animate({scrollTop: $('section').outerHeight()*_num_a},1500);
-    })
-
-
-
 // 因為有可能載入畫面時，剛好停在有動畫元件的位置，這時就寫下面這行，window一載入就觸發scroll事件
 $window.trigger('scroll');
 

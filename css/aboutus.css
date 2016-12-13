@@ -129,11 +129,12 @@ footer{
 
 
 
-/*---secondbanner---*/
+/*---滾動的secondbanner---*/
 
 .secondbanner{
-	position: absolute;
-	z-index: 20;
+	position: absolute; /*因為parallax已經鎖住螢幕了所以直接用絕對定位即可*/
+	z-index: 11; /*拉到上面*/
+
 	margin: auto;
 	top: 0;
 	bottom: 0;
@@ -156,7 +157,7 @@ footer{
 }
 
 .secondbanner ul li{
-
+	/*一顆鈕初始設定25*25*/
 	width: 25px;
 	height: 25px;
 
@@ -168,19 +169,17 @@ footer{
 
 	transform: scale(0.8);
 	transition: 0.5s;
-}
 
-.secondbanner ul li a{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
+	cursor: pointer; /*滑鼠變手*/
 }
 
 .secondbanner ul li:hover{
-	background-color: rgba(102,102,102,0.5);
+	background-color: rgba(102,102,102,0.4);
 }
 
-
+.secondbanner ul li.secondbannerhere{
+	background-color: rgba(102,102,102,0.6);
+}
 
 
 
@@ -212,7 +211,10 @@ footer{
 
 
 
+
+
 }
+
 
 /*____________________________________________________________________________*/
 
@@ -225,6 +227,28 @@ footer{
 	}
 
 
+
+/*---滾動的secondbanner---*/
+
+.secondbanner{
+	right: -90%; /*移到右邊*/
 }
+
+.secondbanner ul{
+	transform: scale(0.7);
+}
+
+.secondbanner ul li{
+	transform: scale(0.8);
+}
+
+
+
+}
+
+
+
+
+
 
 

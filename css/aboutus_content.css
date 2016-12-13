@@ -424,7 +424,12 @@ section{
 
 /*雲彩背景*/
 .section_frame img.section03_window{
-	top: 240px; /*下移header高度的兩倍*/
+	top: 180px; /*下移到下層header*/
+	opacity: 0; /*為了畫面好看一開始先消失*/
+}
+
+.section_frame img.section03_window02{
+	opacity: 1;
 }
 
 
@@ -460,10 +465,16 @@ section{
 	}
 
 
+
+	/*---section03---*/
+
 	/*雲彩背景*/
 	.section_frame img.section03_window{
-		top: 0px;
+		top: 0px; 
+		transform: scale(1.1);
+		opacity: 1;
 	}
+
 
 
 }
@@ -520,6 +531,18 @@ section{
 		left: -50%;
 	}
 
+
+	/*---section03---*/
+
+	/*雲彩背景*/
+	.section_frame img.section03_window{
+		top: 60px;
+		opacity: 0;
+	}
+
+	.section_frame img.section03_window02{
+		opacity: 1;
+	}
 
 
 }

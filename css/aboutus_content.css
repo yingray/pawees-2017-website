@@ -426,6 +426,7 @@ section{
 .section_frame img.section03_window{
 	top: 180px; /*下移到下層header*/
 	opacity: 0; /*為了畫面好看一開始先消失*/
+	transition: 0.5s; 
 }
 
 .section_frame img.section03_window02{

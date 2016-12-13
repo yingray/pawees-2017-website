@@ -378,11 +378,6 @@ section{
 
 
 /*---section02---*/
-/*.section02{
-	background: url(..//images/aboutus/section02_BG.png) no-repeat;
-	background-size: contain;
-	background-position: 0 ;
-}*/
 
 
 
@@ -396,6 +391,12 @@ section{
 		 100%{transform: translate(0,-12%);}
 	}
 
+
+
+/*品牌故事抬頭*/
+.circle_logo img.USstory_title{
+	left: 50%;
+}
 
 
 /*紙*/
@@ -475,6 +476,14 @@ section{
 	}
 	
 
+
+	/*---section02---*/
+
+	/*品牌故事抬頭*/
+	.circle_logo img.USstory_title{
+		left: 48%;
+	}
+
 	/*紙*/
 	.circle_logo img.paperframe{
 		left: -40%;
@@ -545,6 +554,15 @@ section{
 	.section_frame img{
 		width: 200%;
 		left: -50%;
+	}
+
+
+	/*---section02---*/
+
+	/*品牌故事抬頭*/
+	.circle_logo img.USstory_title{
+		left: 30%;
+		top: -25%;
 	}
 
 

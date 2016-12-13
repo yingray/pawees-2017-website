@@ -100,9 +100,17 @@ section{
 	z-index: 6;
 }
 
+
 .parallax_layer03 {
 	-webkit-transform: translateZ(0.3px) scale(0.7);
 	transform: translateZ(0.3px) scale(0.7);
+
+	z-index: 7;
+}
+
+.parallax_layer04 {
+	-webkit-transform: translateZ(0.4px) scale(0.6);
+	transform: translateZ(0.4px) scale(0.6);
 
 	z-index: 7;
 }
@@ -433,6 +441,12 @@ section{
 	.section_frame img.section03_window02{
 		opacity: 1;
 	}
+
+
+
+/*---section04---*/
+
+
 
 
 

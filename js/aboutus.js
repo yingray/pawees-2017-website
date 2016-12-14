@@ -38,7 +38,7 @@
 
 
         // 左邊的secondbanner加上目前所在位置
-        var _num_li = Math.ceil(this.scrollTop/parallax.outerHeight());
+        var _num_li = Math.floor(this.scrollTop/parallax.outerHeight());
         var i;
 
         for(i=0;i<5;i++){

@@ -452,9 +452,12 @@ section{
 
 
 
-/*---section04---*/
+/*---section05---*/
 
-
+/*背景木紋*/
+.section_frame img.section05_BG{
+	height: 100%;
+}
 
 
 

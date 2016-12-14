@@ -460,6 +460,77 @@ section{
 }
 
 
+/*三大款式*/
+.section05_wood, .section05_animal, .section05_motto{
+	position: absolute;
+	z-index: 9;
+	margin: auto;
+	right: 0;
+	left: 0;
+	
+	background-color: #fff;
+	box-shadow: 5px 5px 30px 0px #555;
+	border-radius: 3px;
+
+	background-size: cover;
+}
+
+.section05_wood{
+	left: -50%;
+	top: 0;
+	bottom: 0;
+
+	width: 25%;
+	height: 18vw;
+
+	background-image: url(../images/aboutus/section05_product01.jpg);
+	background-position: 50% 50%;
+
+}
+
+.section05_animal{
+	top: 20%;
+	
+	width: 25%;
+	height: 18vw;
+
+	background-image: url(../images/aboutus/section05_product02.jpg);
+	background-position: 50% 50%;
+
+}
+
+.section05_motto{
+	left: 50%;
+	bottom: 25%;
+
+	width: 25%;
+	height: 18vw;
+
+	background-image: url(../images/aboutus/section05_product03.jpg);
+	background-position: 50% 50%;
+}
+
+
+.section05_wood:after, .section05_animal:after, .section05_motto:after{
+	content: "經典款";
+	font-size: 36px;
+	color: #fff;
+	text-align: center;
+	line-height: 18vw;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #91BAB1;
+
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.section05_wood:hover:after, .section05_animal:hover:after, .section05_motto:hover:after{
+	opacity: 0.9;
+}
+
+
 
 /*____________________________________________________________________________*/
 
@@ -509,6 +580,27 @@ section{
 		transform: scale(1.1);
 		opacity: 1;
 	}
+
+
+
+/*---section05---*/
+
+/*三大款式*/
+
+.section05_wood{
+	width: 30%;
+	height: 20vw;
+}
+
+.section05_animal{
+	width: 30%;
+	height: 20vw;
+}
+
+.section05_motto{
+	width: 30%;
+	height: 20vw;
+}
 
 
 
@@ -589,6 +681,46 @@ section{
 	}
 
 
+
+	/*---section05---*/
+
+	/*三大款式*/
+
+	.section05_wood{
+		left: 0;
+		right: 0;
+		top: -50%;
+		bottom: 0;
+
+		width: 50%;
+		height: 30vw;
+	}
+
+	.section05_animal{
+		left: 0;
+		right: 0;
+		top: -10%;
+		bottom: 0;
+
+		width: 50%;
+		height: 30vw;
+	}
+
+	.section05_motto{
+		left: 0;
+		right: 0;
+		top: 30%;
+		bottom: 0;
+
+		width: 50%;
+		height: 30vw;
+	}
+
+
+
 }
+
+
+
 
 

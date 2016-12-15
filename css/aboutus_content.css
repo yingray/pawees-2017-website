@@ -552,7 +552,24 @@ section{
 }
 
 
-/*____________________________________________________________________________*/
+
+/*暫時多設定一個區段去調整LOGO位置*/
+@media screen and (max-width: 1280px) {
+/*三大類別的LOGO*/
+
+.section_frame img.section05_logo02{
+	top: 0;
+	bottom: auto;
+	max-height: 100%;
+}
+
+
+
+}
+
+
+
+/*____________________________________________________________________________
 
 /*==========平板版本==========*/
 
@@ -711,9 +728,9 @@ section{
 	/*三大款式*/
 
 	.section05_wood{
-		left: 0;
+		left: 15%;
 		right: 0;
-		top: -50%;
+		top: -40%;
 		bottom: 0;
 
 		width: 50%;
@@ -721,9 +738,9 @@ section{
 	}
 
 	.section05_animal{
-		left: 0;
+		left: 10%;
 		right: 0;
-		top: -10%;
+		top: 0;
 		bottom: 0;
 
 		width: 50%;
@@ -731,9 +748,9 @@ section{
 	}
 
 	.section05_motto{
-		left: 0;
+		left: 15%;
 		right: 0;
-		top: 30%;
+		top: 40%;
 		bottom: 0;
 
 		width: 50%;
@@ -744,6 +761,24 @@ section{
 		line-height: 30vw;
 		font-size: 20px;
 	}
+
+
+
+/*三大類別的LOGO*/
+.section_frame img.section05_logo01{
+ 	left: -1%;
+ 	top: -50%;
+}
+
+.section_frame img.section05_logo02{
+ 	top: 23%;
+}
+
+.section_frame img.section05_logo03{
+	left: -177%;
+ 	top: auto;
+ 	bottom:1%;
+}
 
 
 

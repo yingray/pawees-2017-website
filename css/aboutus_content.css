@@ -765,6 +765,7 @@ section{
 
 
 /*三大類別的LOGO*/
+
 .section_frame img.section05_logo01{
  	left: -1%;
  	top: -50%;
@@ -776,8 +777,7 @@ section{
 
 .section_frame img.section05_logo03{
 	left: -177%;
- 	top: auto;
- 	bottom:1%;
+ 	top: 39%;
 }
 
 

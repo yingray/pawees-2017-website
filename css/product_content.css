@@ -19,6 +19,128 @@
 	box-sizing: border-box;*/
 
 
+/*區塊基本設定*/
+.product_logo, .productclass_intro, .product_item, .productclass_secondnav{
+	position: relative;
+
+	margin: auto;
+	left: 0;
+	right: 0;
+
+	padding: 15px 0;
+}
+
+
+
+/*分類LOGO區*/
+.product_logo{
+	width: 95%;
+	height: 150px;
+}
+
+
+/*logo的外框*/
+.product_logo div{
+	position: relative;
+	width: 15%;
+	height: 100%;
+
+	float: right;
+	margin: 0 1% 0 0 ;
+
+	transition: 0s;
+	z-index: 5;
+}
+.product_logo div.this_productclass{
+	position: absolute;
+	float: left;
+	top: 15px;
+
+	width: 30%;
+	height: 150%;
+
+	transition: 1s;	
+}
+
+
+/*logo前圖*/
+.product_logo div img{
+	width: 100%;
+	opacity: 1;
+}
+/*logo後圖*/
+.product_logo div img.productclass_logo{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	opacity: 0;
+}
+
+
+/*hover木板圖出現*/
+.product_logo div:hover img.productclass_logo{
+	opacity: 1;
+}
+
+/*當前頁面的logo放大，黑白的透明度調掉*/
+.product_logo div.this_productclass img{
+	opacity: 0;
+}
+.product_logo div.this_productclass img.productclass_logo{
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+/*分類介紹板*/
+.productclass_intro{
+	width: 96%;
+	height: 200px;
+
+	background-color: #91BAB1;
+	opacity: 1;
+}
+
+.productclass_intro:before, .productclass_intro:after{
+	content: "";
+	position: absolute;
+	width: 10%;
+	height: 100%;
+
+	background-color: #91BAB1;
+	opacity: 0.5;
+}
+
+.productclass_intro:before{
+	left: -49.5%;
+}
+
+.productclass_intro:after{
+	right: -49%;
+}
+
+
+/*分類下的第二選單icons*/
+.productclass_secondnav{
+	width: 90%;
+	height: 200px;
+
+	/*background-color: rgba(102, 102, 102, 0.5);*/
+}
+
+
+
+/*篩選過後的產品陳列區*/
+.product_item{
+	width: 90%;
+	height: 2000px;
+}
+
 
 
 

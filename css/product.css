@@ -79,6 +79,8 @@ content{
 	background: url(../images/background/paper01.svg); /*白紙背景必須用svg保持邊緣俐落，因為RWD縮放時會有拉伸*/
 	background-size: 100%;
 	min-height: 590px; /*高度撐開至少590px(螢幕1580*830的單頁)，之後自然隨裡面的物件撐開*/
+
+	z-index: 1;
 }
 content:before, content:after{
 	content:'';

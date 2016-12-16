@@ -101,7 +101,37 @@
 
 	<content>
 
-	
+
+		<!-- 三大分類LOGO -->
+		<div class="product_logo">
+			<div class="this_productclass">
+				<img class="productclass_logo" src="images/product/animal01.png" alt="">
+				<img src="images/product/animal01_BG.png" alt="">
+			</div>
+
+			<div>
+				<img class="productclass_logo" src="images/product/animal02.png" alt="">
+				<img src="images/product/animal02_BG.png" alt="">
+			</div>
+
+			<div>
+				<img class="productclass_logo" src="images/product/animal03.png" alt="">
+				<img src="images/product/animal03_BG.png" alt="">
+			</div>
+		</div>
+
+
+		<!-- 三大分類的介紹區塊 -->
+		<div class="productclass_intro"></div>
+
+
+		<!-- 各分類下的第二選單icons -->
+		<div class="productclass_secondnav"></div>
+
+		
+		<!-- 篩選過後的產品陳列區域 -->
+		<div class="product_item"></div>
+
 
 	</content>
 
@@ -126,6 +156,18 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 <script src="js/nav_icon.js"></script>
+
+<script>
+	
+	var product_logo = $(".product_logo div");
+
+	product_logo.click(function(){
+		product_logo.removeClass("this_productclass");
+		$(this).addClass("this_productclass");
+	})
+
+
+</script>
 
 
 

@@ -502,7 +502,7 @@ section{
 
 .section05_motto{
 	left: 50%;
-	bottom: 25%;
+	bottom: 23%;
 
 	width: 25%;
 	height: 18vw;
@@ -772,12 +772,13 @@ section{
 }
 
 .section_frame img.section05_logo02{
- 	top: 23%;
+ 	top: 15%;
+ 	bottom:10%;
 }
 
 .section_frame img.section05_logo03{
 	left: -177%;
- 	top: 39%;
+ 	top: 38%;
 }
 
 

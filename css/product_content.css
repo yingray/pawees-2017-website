@@ -396,8 +396,47 @@
 
 @media screen and (max-width: 1080px) {/*IPAD尺寸*/
 
+	/*logo的外框*/
+	.product_logo div{
+		width: 20%;
+		margin: 0;
+	}
+
+
+
+	/*---各分類介紹板---*/
+	.productclass_intro{
+		padding: 125px 5% 0;
+		text-align: center;
+	}
+
+
+
+	/*icons*/
+
+	.productclass_secondnav div div{
+		transform: scale(1.2);
+		margin: 1%; 
+	}
+
+
+	/*下面大圖*/
+	.this_animalicon_large div{
+		transform: scale(3.5);
+		top: 30px;
+	}
+
+
+	/*動物名稱title*/
+	.this_animalname{
+		padding: 65px 135px 0 0; 
+	}
+	.this_animalname div{
+		font-size: 40px;
+	}
 	
-	
+
+
 }
 
 /*____________________________________________________________________________*/
@@ -405,8 +444,83 @@
 /*==========手機版本==========*/
 
 @media screen and (max-width: 760px) {
-	
 
+	.product_logo{
+		height: 30px;
+		padding: 0;
+	}
+
+	/*logo的外框*/
+	.product_logo div{
+		width: 25%;
+	}
+	.product_logo div.this_productclass{
+		top: 0;
+		width: 40%;
+	}
+
+
+
+	/*---各分類介紹板---*/
+	.productclass_intro{
+		padding: 25% 5% 0 ;
+	}
+
+	.productclass_intro_content{
+		height: 90%;
+		width: 100%;
+	}
+
+	/*介紹區的標題*/
+	.productclass_intro_content p{
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: bold;
+
+		text-align: right; /*手機版本靠右*/
+	}
+
+	.productclass_intro_content p + p{
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+
+
+	/*控制icons四個一排*/
+	.productclass_secondnav div{
+		margin: auto;
+		left: 0;
+		right: 0;
+		width: 300px;
+	}
+
+	/*icons*/
+	.productclass_secondnav div div{
+		transform: scale(1);
+		margin: 2%; 
+	}
+
+
+	/*下面大圖*/
+	.this_animalicon_large div{
+		transform: scale(3.5);
+		right: 40px;
+	}
+
+
+	/*動物名稱title*/
+	.this_animalname{
+		padding: 65px 135px 0 0; 
+	}
+	.this_animalname div{
+		font-size: 36px;
+	}
+	.this_animalname div span{
+		display: block; /*手機版強制換行*/
+		font-size: 24px;
+	}
+	
 
 }
 

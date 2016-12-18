@@ -409,13 +409,23 @@
 
 	margin: 2% 1%; 
 	overflow: hidden;
+
+	text-align: center;
 }
 
 
 /*產品照固定高220*/
-.product_item_filter .one_product img{
+.product_item_filter .one_product .one_product_img{
 	height: 220px;
+	width: 100%;
 }
+.product_item_filter .one_product .one_product_img img{ 
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	object-position:50% 50%;
+}
+
 /*產品簡介固定高130*/
 .product_item_filter .one_product .one_product_info{
 	position: relative;

@@ -25,10 +25,39 @@
         // ajax
         // productclass_intro_content.load("ajax/product_animal.html");
 
+        location.href = product_class_html; //暫時先換頁
 
         console.log(product_class_html);
 
     })
+
+
+
+// 經典分頁
+
+    var click_this_woodicon = $(".productclass_secondnav div.woodicon div");
+    var this_woodname = $(".this_woodname div");
+
+    click_this_woodicon.click(function(){
+        // 先全部移除this_woodicon
+        click_this_woodicon.removeClass("this_woodicon");
+
+        // 再抓classname
+        var woodicon_name=$(this).attr("class");
+        var wood_name=woodicon_name.slice(7);
+
+        // 再變色
+        $(this).addClass("this_woodicon");
+
+        // 格言名字title
+        this_woodname.text(wood_name);
+
+
+
+        // 按鈕點擊後往上捲到第二選單(才看得到下面有產品出來)
+        $('html,body').stop(true,false).animate({scrollTop:(productclass_secondnav.offset().top - header.outerHeight())},1000);
+
+    });
 
 
 

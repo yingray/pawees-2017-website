@@ -9,6 +9,14 @@
     var product_item = $(".product_item");
 
 
+    //抓點進來的頁面
+    var page = window.location.search.slice(6);
+
+    if(page){
+        var product_class_html = "product_" + page + ".html";
+        location.href = product_class_html;
+    };
+
 
     product_logo.click(function(){
         // 全部先移除

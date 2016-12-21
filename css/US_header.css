@@ -183,6 +183,8 @@ li.here a:before, li.here a:after{
 	/*要設定原始整張圖的大小*/ 
 
 	transition: .5s;
+
+	cursor: pointer;
 }
 
 
@@ -376,6 +378,9 @@ li.here a:before, li.here a:after{
 	background-size: 400px 50px; 
 	background-position: 0px 0px; 
 	/*要設定原始整張圖的大小*/ 
+
+	cursor: pointer;
+	
 }
 
 

@@ -49,9 +49,24 @@
             }
         }
         
-
-
     });
+
+
+
+    // 導向產品頁
+    var section05_wood = $(".section05_wood");
+    var section05_animal = $(".section05_animal");
+    var section05_motto = $(".section05_motto");
+
+        section05_wood.click(function(){
+            location.href = "product.html?page=wood";
+        });
+        section05_animal.click(function(){
+            location.href = "product.html?page=animal";
+        });
+        section05_motto.click(function(){
+            location.href = "product.html?page=motto";
+        });
 
 
 
@@ -60,7 +75,7 @@
     secondbannerulli.click(function(){
         var _num_a = $(this).index(); //按到第幾個鈕
         parallax.stop(true,false).animate({scrollTop: parallax.outerHeight()*_num_a},1500);
-    })
+    });
 
 
 

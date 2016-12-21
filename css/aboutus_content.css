@@ -33,8 +33,8 @@
 
 
 	/*保險起見把變形原點和透視原點設定一樣*/
-    -webkit-perspective-origin-x: 50%; 
-    perspective-origin-x: 50%;
+    -webkit-perspective-origin: center; 
+    perspective-origin: center;
 }
 
 
@@ -56,8 +56,8 @@ section{
 	left: 0;
 
 	/*保險起見把變形原點和透視原點設定一樣*/
-	-webkit-transform-origin-x: 50%;
-	transform-origin-x: 50%;
+	-webkit-transform-origin: center;
+	transform-origin: center;
 }
 
 
@@ -474,6 +474,9 @@ section{
 
 	background-size: 100% 100%;
 	transition: 0.5s;
+
+	cursor: pointer;
+	
 }
 
 .section05_wood{

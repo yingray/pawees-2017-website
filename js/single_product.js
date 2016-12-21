@@ -3,37 +3,47 @@
     var header = $("header");
 
 
-    var product_logo = $(".product_logo div");
-    var productclass_intro_content = $(".productclass_intro_content");
-    var productclass_secondnav = $(".productclass_secondnav");
-    var product_item = $(".product_item");
+
+// 木頭按鈕
+
+    var click_this_woodicon = $(".product_info .product_option div.woodicon div");
+    var wood_bigpic = $(".product_content .product_img .product_img_big img");
+    var wood_smallpic = $(".product_content .product_img .product_img_small ul li");
+
+    click_this_woodicon.click(function(){
+        // 先全部移除this_woodicon
+        click_this_woodicon.removeClass("this_woodicon");
+
+        // 再抓classname
+        var woodicon_name=$(this).attr("class");
+        var wood_name=woodicon_name.slice(7);
+        var this_wood_index=$(this).index();
+        var this_wood_smallpic = wood_smallpic.eq(this_wood_index).children().attr("src");
+
+
+        // 大圖換圖
+        wood_bigpic.attr("src",this_wood_smallpic);
+        // 小圖換圖
+        wood_smallpic.removeClass("this_pic");
+        wood_smallpic.eq(this_wood_index).addClass("this_pic");
+
+
+        // 再變色
+        $(this).addClass("this_woodicon");
+    });
 
 
 
-    product_logo.click(function(){
-        // 全部先移除
-        product_logo.removeClass("this_productclass");
+    wood_smallpic.click(function(){
 
-        // 取得現在點擊的類別字串
-        var product_class_name = $(this).attr("class");
-        var product_class_html = product_class_name + ".html" ; //字串串接出檔案名稱
+        var this_wood_smallpic = $(this).children().attr("src");
 
-        // 加上新類別換內容
-        $(this).addClass("this_productclass");
+        // 大圖換圖
+        wood_bigpic.attr("src",this_wood_smallpic);
+        // 小圖換圖
+        wood_smallpic.removeClass("this_pic");
+        $(this).addClass("this_pic");
 
-
-        // ajax
-        // productclass_intro_content.load("ajax/product_animal.html");
-
-        location.href = product_class_html; //暫時先換頁
-
-        console.log(product_class_html);
-
-    })
-
-
-
-// 因為有可能載入畫面時，剛好停在有動畫元件的位置，這時就寫下面這行，window一載入就觸發scroll事件
-$window.trigger('scroll');
+    });
 
 

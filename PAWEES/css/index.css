@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+	/*background-color:  ---背景底色*/
+	/*background-color:  ---重點色*/
+	/*background-color:  ---輔助色*/
+
+	
+
+	/*margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;*/
+
+	/*-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;*/
+
+*{
+	font-family: sans-serif, 微軟正黑體, 黑體;
+}
+
+
+section{
+	position: relative;
+	height: 100vh;
+}
+
+.section02{
+	background-color: #fff;
+}
+
+.full-video{
+	position: fixed;
+	width: 100%;
+}
+
+
+.pawee_title{
+	/*置於影片之上 置中*/
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	width: 600px;
+	height: 150px;
+	
+	background: url(../images/PAWEE.svg) no-repeat;
+	background-size:600px 150px;
+	background-position: 0 0;
+}
+
+/*____________________________________________________________________________*/
+
+/*==========平板版本==========*/
+
+@media screen and (max-width: 1080px) {/*IPAD尺寸*/
+
+
+	
+}
+
+/*____________________________________________________________________________*/
+
+/*==========手機版本==========*/
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+

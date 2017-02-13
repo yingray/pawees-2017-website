@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@import url(reset.css);
+
+@import url(index.css);
+
+
+
+	/*background-color:  ---背景底色*/
+	/*background-color:  ---重點色*/
+	/*background-color:  ---輔助色*/
+
+	
+
+	/*margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;*/
+
+	/*-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;*/
+
+*{
+	font-family: sans-serif, 微軟正黑體, 黑體;
+}
+
+body{
+	background-color: rgba(244,240,240,1);
+}
+
+
+
+.wrap{
+	/*置中*/
+	position: relative;
+	width: 100%; 
+}
+
+
+
+header, content, footer{
+	/*置中*/
+	display: block;
+	margin: auto;
+	left: 0;
+	right: 0;
+
+	position: relative;
+}
+
+
+
+header{
+	position: fixed;
+	top: 0;
+	z-index: 1;
+
+	background: rgba(255,255,255,0);
+}
+
+
+
+.logo img{
+	margin: 20px;
+	width: auto;
+	height: 60px;
+}
+
+
+
+nav ul{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 20px;
+
+	text-align: right;
+}
+
+nav ul li{
+	display: inline-block;
+	height: 100%;
+
+	vertical-align: top;
+	text-align: center;
+
+	padding:0 15px; 
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 2px;
+
+	line-height: 100px;
+	font-family: 'Cuprum', sans-serif;
+
+}
+
+
+
+/*____________________________________________________________________________*/
+
+/*==========平板版本==========*/
+
+@media screen and (max-width: 1080px) {/*IPAD尺寸*/
+
+
+	
+}
+
+/*____________________________________________________________________________*/
+
+/*==========手機版本==========*/
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+

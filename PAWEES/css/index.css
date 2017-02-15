@@ -30,7 +30,7 @@ section{
 }
 
 .section02{
-	background-color: #fff;
+	background-color: rgba(108,151,158,0.95);
 }
 
 .full-video{
@@ -51,10 +51,44 @@ section{
 	width: 600px;
 	height: 150px;
 	
-	background: url(../images/PAWEE.svg) no-repeat;
-	background-size:600px 150px;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
 	background-position: 0 0;
+	background-image: url(../images/section01/PAWEE_01.svg);
 }
+	@keyframes pawees{
+		  0%{background-position: -25px 0;
+		  	 opacity: 0;}
+		100%{background-position: 0 0;
+			 opacity: 1;}
+	}
+
+	.pawee_p{
+		background-image: url(../images/section01/PAWEE_P.svg);
+		animation: pawees 0.5s 0s linear 1 backwards ;
+	}
+	.pawee_a{
+		background-image: url(../images/section01/PAWEE_A.svg);
+		animation: pawees 0.5s 0.2s linear 1 backwards ;
+	}
+	.pawee_w{
+		background-image: url(../images/section01/PAWEE_W.svg);
+		animation: pawees 0.5s 0.4s linear 1 backwards ;
+	}
+	.pawee_e{
+		background-image: url(../images/section01/PAWEE_E.svg);
+		animation: pawees 0.5s 0.6s linear 1 backwards ;
+	}
+	.pawee_ee{
+		background-image: url(../images/section01/PAWEE_EE.svg);
+		animation: pawees 0.5s 0.8s linear 1 backwards ;
+	}
+	.pawee_s{
+		background-image: url(../images/section01/PAWEE_S.svg);
+		animation: pawees 0.5s 1s linear 1 backwards ;
+	}
+
+
 
 /*____________________________________________________________________________*/
 
@@ -71,6 +105,11 @@ section{
 /*==========手機版本==========*/
 
 @media screen and (max-width: 768px) {
+
+.pawee_title{
+	width: 80%;
+	height: 20vw;
+}
 
 
 

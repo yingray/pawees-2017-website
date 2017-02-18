@@ -24,13 +24,18 @@
 }
 
 
+
 section{
 	position: relative;
-	height: 100vh;
+	height: 68vh;
 }
 
-.section02{
-	background-color: rgba(108,151,158,0.95);
+
+
+/*---section01---*/
+.section01{
+	background: url(../images/section01/video_BG.jpg) no-repeat fixed center;
+	background-size: cover;
 }
 
 .full-video{
@@ -90,14 +95,46 @@ section{
 
 
 
+/*---section02---*/
+
+.section02{
+	font-size: 0;
+}
+
+.section02 div{
+	display: inline-block;
+	width: 33.33%;
+	height: 16.66vw;
+}
+
+	.aboutus_time{
+		background: rgba(98, 153, 159, 1.00) url(../images/section02/info_time.svg) no-repeat center;
+		background-size: cover;
+	}
+	.aboutus_intro{
+		background: rgba(204, 204, 204, 1.00) url(../images/section02/info_title.svg) no-repeat center;
+		background-size: cover;
+	}
+	.aboutus_location{
+		background: rgba(16, 97, 116, 1.00) url(../images/section02/info_location.svg) no-repeat center;
+		background-size: cover;
+	}
+
+
+
 /*____________________________________________________________________________*/
 
 /*==========平板版本==========*/
 
 @media screen and (max-width: 1080px) {/*IPAD尺寸*/
 
-
+/*平板以下把影片拿掉，因為目前手持裝置對於影片自動播放的設定都不同，所以直接換圖片*/
+.full-video{
+	display: none;
+}
 	
+
+
 }
 
 /*____________________________________________________________________________*/
@@ -109,6 +146,13 @@ section{
 .pawee_title{
 	width: 80%;
 	height: 20vw;
+}
+
+
+
+.section02 div{
+	width: 100%;
+	height: 50vw;
 }
 
 

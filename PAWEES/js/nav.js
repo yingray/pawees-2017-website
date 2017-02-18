@@ -7,8 +7,9 @@
 
     var section01 = $(".section01");
     // banner fixed 動畫
+    //(section01.outerHeight()-100)
     $window.on("scroll", function(e) {
-      if (this.scrollY > (section01.outerHeight()-100)) {
+      if (this.scrollY > 0) {
         banner.addClass("banner2");
       }
       else {

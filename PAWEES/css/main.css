@@ -6,12 +6,6 @@
 
 @import url(index.css);
 
-
-
-	/*background-color:  ---背景底色*/
-	/*background-color:  ---重點色*/
-	/*background-color:  ---輔助色*/
-
 	
 
 	/*margin: auto;
@@ -64,8 +58,8 @@ header{
 	transition: 0.5s; 
 }
 	.banner2{
-	/*background: rgba(108,151,158,0.9);*/
-	background: rgba(255,255,255,0.5);
+		/*background: rgba(255,255,255,0.2);*/
+		background: rgba(136,136,136,0.8);
 	}
 
 
@@ -97,8 +91,12 @@ nav ul li{
 
 	padding:0 15px; 
 }
+	
+
 
 nav ul li a{
+	position: relative;
+
 	text-decoration: none;
 	color: #fff;
 	font-size: 18px;
@@ -106,7 +104,47 @@ nav ul li a{
 
 	line-height: 100px;
 	font-family: 'Cuprum', sans-serif;
+
+	transition:0.2s; 
 }
+	nav ul li.here a{
+		color: #FEE68C;
+	}
+	nav ul li a:hover{
+		color: #faa;
+	}
+
+	nav ul li.here a:before{
+		content: "";
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+
+		bottom: -50px;
+		border-radius: 50%;
+
+		width: 22px;
+		height: 22px;
+		background-color: rgba(96, 185, 237, 1.00);
+	}
+	nav ul li.here a:after{
+		content: "";
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+
+		bottom: -34px;
+
+		width: 0px;
+		height: 0px;
+
+		border-width: 0 10px 15px 10px;
+		border-style: solid;
+		border-color: #FEE68C transparent;
+	}
+
 
 
 
@@ -197,6 +235,20 @@ nav ul li a{
 	font-size: 22px;
 	line-height: 150px;
 }
+	nav ul li.here a{
+		color: rgba(98, 153, 159, 1.00);
+	}
+	nav ul li.here a:before{
+		bottom: -31px;
+		background-color: rgba(251, 222, 128, 1.00);
+	}
+	nav ul li.here a:after{
+		bottom: -15px;
+		border-color: rgba(98, 153, 159, 1.00) transparent;
+	}
+
+	
+
 
 	
 }
@@ -243,13 +295,15 @@ nav ul{
 }
 	
 nav ul li{
-	height: 60px;
+	height: 70px;
 }
 
 nav ul li a{
 	font-size: 20px;
-	line-height: 120px;
+	line-height: 130px;
 }
+
+
 
 }
 

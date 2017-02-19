@@ -138,6 +138,7 @@ section, .welcome{
 
 .section01{
 	height: 100%;
+	background-size: auto 100%;
 }
 
 /*平板以下把影片拿掉，因為目前手持裝置對於影片自動播放的設定都不同，所以直接換圖片*/

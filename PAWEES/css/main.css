@@ -145,6 +145,13 @@ nav ul li a{
 		border-color: #FEE68C transparent;
 	}
 
+	nav ul li.here a{
+		color: #FEE68C;
+	}
+	nav ul li a:hover{
+		color: #faa;
+	}
+
 
 
 
@@ -245,6 +252,10 @@ nav ul li a{
 	nav ul li.here a:after{
 		bottom: -15px;
 		border-color: rgba(98, 153, 159, 1.00) transparent;
+	}
+
+	nav ul li.joinicon a{
+		color: rgba(98, 153, 159, 1.00);
 	}
 
 	

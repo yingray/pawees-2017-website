@@ -38,11 +38,13 @@ section, .welcome{
 }
 
 .section01 img{
-	height: 100%;
 	position: fixed;
+	
+	height: 100%;
+	width: 100%;
 
-	/*-webkit-object-position: center;
-	-webkit-object-fit: cover;*/
+	object-position: 50% 50%;
+	object-fit: cover;
 }
 
 .full-video{
@@ -143,7 +145,6 @@ section, .welcome{
 
 .section01{
 	height: 100%;
-	/*background-size: auto 100%;*/
 }
 
 /*平板以下把影片拿掉，因為目前手持裝置對於影片自動播放的設定都不同，所以直接換圖片*/

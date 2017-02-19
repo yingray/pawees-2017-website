@@ -25,15 +25,17 @@
 
 
 
-section{
+section, .welcome{
 	position: relative;
-	height: 68vh;
+	height: 100vh;
 }
 
 
 
 /*---section01---*/
 .section01{
+	height: 68%;
+
 	background: url(../images/section01/video_BG.jpg) no-repeat fixed center;
 	background-size: cover;
 }
@@ -96,15 +98,21 @@ section{
 
 
 /*---section02---*/
+/*置底於歡迎頁*/
+.section02{ 
+	position: absolute;
+	bottom: 0;
 
-.section02{
+	width: 100%;
+	height: 16.66vw;
+
 	font-size: 0;
 }
 
 .section02 div{
 	display: inline-block;
 	width: 33.33%;
-	height: 16.66vw;
+	height: 100%;
 }
 
 	.aboutus_time{
@@ -128,10 +136,16 @@ section{
 
 @media screen and (max-width: 1080px) {/*IPAD尺寸*/
 
+.section01{
+	height: 100%;
+}
+
 /*平板以下把影片拿掉，因為目前手持裝置對於影片自動播放的設定都不同，所以直接換圖片*/
 .full-video{
 	display: none;
 }
+
+
 	
 
 
@@ -143,6 +157,13 @@ section{
 
 @media screen and (max-width: 768px) {
 
+.welcome{
+	height: auto;
+}
+.section01{
+	height: 100vh;
+}
+
 .pawee_title{
 	width: 80%;
 	height: 20vw;
@@ -150,6 +171,10 @@ section{
 
 
 
+.section02{
+	position: relative;
+	height: auto;
+}
 .section02 div{
 	width: 100%;
 	height: 50vw;

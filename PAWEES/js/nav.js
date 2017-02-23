@@ -22,7 +22,6 @@
     var nav=$("nav");
     var sandwichclick=$(".sandwichclick");
     var sandwich=$(".sandwich");
-    var fixed_shadowbg=$("div.fixed_shadowbg");
    
     // 三明治選單收合
     sandwichclick.click(function(){
@@ -34,6 +33,27 @@
         nav.addClass("navshow");
       }
     });
+
+
+
+    var joinicon=$(".joinicon");
+    var Registration_Page=$(".Registration_Page");
+    var Registration_Page_close=$(".Registration_Page_close");
+    var fixed_shadowbg=$(".fixed_shadowbg");
+
+    // 註冊按鈕點擊
+    joinicon.click(function(){
+        fixed_shadowbg.addClass("fixed_shadowbg2");
+        Registration_Page.addClass("Registration_Page2");
+        Registration_Page_close.addClass("Registration_Page_close2");
+    });
+
+    Registration_Page_close.click(function(){
+        fixed_shadowbg.removeClass("fixed_shadowbg2");
+        Registration_Page.removeClass("Registration_Page2");
+        Registration_Page_close.removeClass("Registration_Page_close2");
+    });
+
 
 
     // 暗幕點了全部收起來

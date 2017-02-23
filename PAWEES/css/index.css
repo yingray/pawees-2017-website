@@ -30,28 +30,40 @@ section, .welcome{
 	height: 100vh;
 }
 
+section img{
+	top: 0;
+	z-index: -1;
 
-
-/*---section01---*/
-.section01{
-	height: 68%;
-}
-
-.section01 img{
-	position: fixed;
-	
 	height: 100%;
 	width: 100%;
 
 	object-position: 50% 50%;
 	object-fit: cover;
 }
+section video{
+	top: 0;
+	z-index: -1;
 
-.full-video{
-	position: fixed;
+	height: 100%;
 	width: 100%;
-}
 
+	object-position: 50% 0;
+	object-fit: cover;
+}
+	section img.fixed_bg, section video.fixed_bg{
+		position: fixed;
+		display: block;
+	}
+
+
+
+/*---section01---*/
+.section01{
+	height: 68%;
+}
+.full-video{
+	display: none;
+}
 
 .pawee_title{
 	/*置於影片之上 置中*/
@@ -137,6 +149,15 @@ section, .welcome{
 
 
 
+/*---section03---*/
+
+.section03{
+	background-color: #eee;
+	height: 100vh;
+}
+
+
+
 /*____________________________________________________________________________*/
 
 /*==========平板版本==========*/
@@ -151,6 +172,10 @@ section, .welcome{
 .full-video{
 	display: none;
 }
+	section video.fixed_bg{
+		display: none;
+	}
+
 
 
 	

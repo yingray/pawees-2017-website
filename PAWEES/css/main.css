@@ -165,7 +165,7 @@ nav ul li a{
 
 	height: 100%;
 	width: 100%;
-	background: rgba(136,136,136,0.8);
+	background: rgba(136,136,136,1);
 
 	transition: opacity 1s; 
 }
@@ -187,6 +187,13 @@ nav ul li a{
 	box-shadow: rgba(0,0,0,0) 0px 0px 50px 0px;
 
 	transition: 1s;
+
+	padding: 30px 365px 30px 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	overflow: hidden;
 }
 	.Registration_Page2{
 		left: 335px;
@@ -212,6 +219,135 @@ nav ul li a{
 	.Registration_Page_close2{
 		right: 30px;
 	}
+
+
+
+/*表單標籤導覽*/
+.fixed_shadowbg ul{
+	position: absolute;
+
+	left: 125px;
+	top: 50px;
+}
+
+.fixed_shadowbg ul li{
+	position: relative;
+	height: 55px;
+
+	text-decoration: none;
+	color: #fff;
+
+	font-size: 18px;
+	font-family: 'Cuprum', sans-serif;
+	letter-spacing: 2px;
+}
+	.fixed_shadowbg ul li:before{
+		content: "";
+		position: absolute;
+		top: -3px;
+		left: -40px;
+
+		width: 18px;
+		height: 18px;
+
+		border: #fff solid 2px;
+		border-radius: 50%;
+	}
+	
+	.fixed_shadowbg ul li.write{
+		color: #faa;
+	}
+	.fixed_shadowbg ul li.write:before{
+		background: #faa;
+	}
+	.fixed_shadowbg ul li.write_done:before{
+		background-color: #fff;
+	}
+
+/*表單內容*/
+.Registration_Page form{
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+	
+	top:0;
+	left: 150%;
+	opacity: 0;
+	transition: 1s;
+
+	text-align: left;
+
+	padding: 100px 365px 100px 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+	.Registration_Page form.write_form{
+		left: 0;
+		opacity: 1;
+	}
+
+	.Registration_Page form.write_done{
+		left: -150%;
+		opacity: 0;
+	}
+
+	.Registration_Page form .form_title{
+		position: absolute;
+		top: 52px;
+		left: 52px;
+		color:rgba(13, 82, 162, 1.00);
+
+		font-size: 28px;
+		font-family: 'Dancing Script', cursive;
+	}
+
+	.Registration_Page form .pre_step, .Registration_Page form .next_step, .Registration_Page form .edit_information, .Registration_Page form .submit_info{
+		position: absolute;
+		bottom: 40px;
+		color:rgba(13, 82, 162, 1.00);
+
+		font-size: 28px;
+		font-family: 'Dancing Script', cursive;
+
+		cursor: pointer;
+	}
+		.Registration_Page form .pre_step{
+			left: 52px;
+		}
+		.Registration_Page form .next_step{
+			right: 387px;
+		}
+
+	.Registration_Page form .edit_information{
+		bottom: 30px;
+		left: 30px;
+		border: 1px solid rgba(13, 82, 162, 1.00);
+		padding: 10px 20px; 
+	}
+	.Registration_Page form .submit_info{
+		bottom: 30px;
+		right: 365px;
+		border: 1px solid rgba(13, 82, 162, 1.00);
+		padding: 10px 20px; 
+	}
+
+.Registration_Page form fieldset{
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+
+	border-width: 1px 0px; 
+	border-style: solid; 
+	border-color: #ccc;
+
+	padding: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 
 
 
@@ -386,8 +522,11 @@ nav ul li a{
 }
 
 .Registration_Page{
+	overflow: visible;
 	top: 100%;
 	left: 0;
+
+	padding: 30px 30px 100px;
 }
 	.Registration_Page2{
 		left: 0px;
@@ -408,6 +547,58 @@ nav ul li a{
 	.Registration_Page_close2{
 		right: 13px;
 	}
+
+
+
+/*表單內容*/
+.Registration_Page form{
+	padding: 70px 30px 140px;
+}
+
+	.Registration_Page form .form_title{
+		top: 30px;
+		left: 30px;
+
+		font-size: 24px;
+	}
+
+	.Registration_Page form .pre_step, .Registration_Page form .next_step{
+		bottom: 96px;
+		font-size: 24px;
+	}
+		.Registration_Page form .pre_step{
+			left: 30px;
+		}
+		.Registration_Page form .next_step{
+			right: 30px;
+		}
+
+	.Registration_Page form .edit_information{
+		font-size: 24px;
+		bottom: 90px;
+		padding: 5px 10px; 
+	}
+	.Registration_Page form .submit_info{
+		font-size: 24px;
+		right: 30px;
+		bottom: 90px;
+		padding: 5px 10px; 
+	}
+
+.Registration_Page form fieldset{
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+
+	border-width: 1px 0px; 
+	border-style: solid; 
+	border-color: #ccc;
+
+	padding: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 
 

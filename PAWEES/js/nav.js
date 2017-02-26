@@ -56,21 +56,42 @@
 
 
 
-    // 暗幕點了全部收起來
-    // fixed_shadowbg.click(function(){
-    //     nav.removeClass("leftshow");
+    var pre_step=$(".pre_step");
+    var next_step=$(".next_step");
+    var edit_info=$(".edit_information");
+    var submit_info=$(".submit_info");
+    var Registration_form=$(".Registration_Page form");
+    var fixed_shadowbg_li=$(".fixed_shadowbg ul li");
 
-    //     fixed_shadowbg.removeClass("shadowshow");
-    //     logo.removeClass("logo2");
+    // 表單上下頁點擊
+    next_step.click(function(){
+        var n=$(this).parents("form").index();
+        Registration_form.eq(n).addClass("write_done");
+        Registration_form.removeClass("write_form");
 
-    //     cart_icon.removeClass("cart_icon2");
-    //     member_icon.removeClass("member_icon2");
-    //     cart_sidebar.removeClass("rightshow");
-    //     member_sidebar.removeClass("rightshow");
+        fixed_shadowbg_li.eq(n).addClass("write_done");
+        fixed_shadowbg_li.removeClass("write");
 
-    //     $(".cart_sidebar_content .products_qty_note").removeClass("products_qty_note2");
+        n=n+1;
+        Registration_form.eq(n).addClass("write_form");
 
-    // })
+        fixed_shadowbg_li.eq(n).addClass("write");
+    });
+
+    pre_step.click(function(){
+        var n=$(this).parents("form").index();
+        Registration_form.removeClass("write_form");
+        
+        fixed_shadowbg_li.removeClass("write");
+
+        n=n-1;
+        Registration_form.eq(n).addClass("write_form");
+        Registration_form.eq(n).removeClass("write_done");
+
+        fixed_shadowbg_li.eq(n).addClass("write");
+        fixed_shadowbg_li.eq(n).removeClass("write_done");
+
+    });
 
 
 

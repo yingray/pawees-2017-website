@@ -135,11 +135,11 @@ section video{
 }
 
 	.aboutus_time{
-		background: rgba(98, 153, 159, 1.00) url(../images/section02/info_time.svg) no-repeat center;
+		background: rgba(204, 204, 204, 1.00) url(../images/section02/info_time.svg) no-repeat center;
 		background-size: cover;
 	}
 	.aboutus_intro{
-		background: rgba(204, 204, 204, 1.00) url(../images/section02/info_title.svg) no-repeat center;
+		background: rgba(98, 153, 159, 1.00) url(../images/section02/info_title.svg) no-repeat center;
 		background-size: cover;
 	}
 	.aboutus_location{
@@ -158,6 +158,16 @@ section video{
 
 
 
+/*---section04---*/
+
+.section04{
+	height: 100vh;
+	background: url(../images/section01/video_BG2.jpg) no-repeat fixed center;
+	background-size: cover;
+}
+
+
+
 /*____________________________________________________________________________*/
 
 /*==========平板版本==========*/
@@ -166,6 +176,8 @@ section video{
 
 .section01{
 	height: 100%;
+	background: url(../images/section01/video_BG.jpg) no-repeat fixed center;
+	background-size: cover;
 }
 
 /*平板以下把影片拿掉，因為目前手持裝置對於影片自動播放的設定都不同，所以直接換圖片*/

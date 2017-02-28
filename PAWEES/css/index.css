@@ -141,7 +141,7 @@ section video{
 /*---section03---*/
 
 .section03{
-	background: url(../images/section01/video_BG2.jpg) no-repeat fixed center;
+	background: url(../images/section01/video_BG8.jpg) no-repeat fixed center;
 	background-size: cover;
 
 	height: auto;
@@ -255,6 +255,8 @@ section video{
 		color: rgba(16, 97, 116, 1.00);
 	}
 	.section04 .themes span.h{
+		font-family: 'Marcellus SC', serif;
+
 		border:1px solid #333;
 		background-color: #333;
 
@@ -299,6 +301,8 @@ section video{
 		color: rgba(1, 71, 140, 1.00);
 	}
 	.section05 .call_abstract span.h{
+		font-family: 'Marcellus SC', serif;
+
 		border:1px solid #333;
 		background-color: #333;
 
@@ -443,7 +447,7 @@ section video{
 
 .section08{
 	height: 100vh;
-	background: url(../images/section01/video_BG8.jpg) no-repeat fixed center;
+	background: url(../images/section01/video_BG2.jpg) no-repeat fixed center;
 	background-size: cover;
 }
 

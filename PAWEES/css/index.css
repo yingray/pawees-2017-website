@@ -204,7 +204,7 @@ section video{
 	height: auto;
 	background-color: rgba(252, 227, 146, 1.00);
 
-	box-shadow:  0px 0px 30px 0px rgba(0,0,0,1);
+	box-shadow:  0px 0px 10px 0px rgba(0,0,0,1);
 
 }
 
@@ -219,13 +219,25 @@ section video{
 	background: url(../images/section04/title.svg) no-repeat center;
 	background-size: contain;
 }
+	.section04 .bottom_title{
+		position: absolute;
+		width: 800px;
+		height: 200px;
+
+		bottom: 0px;
+		right: 10px;
+
+		background: url(../images/section04/bottom_title.svg) no-repeat center;
+		background-size: contain;
+	}
+
 .section04 .themes{
 	margin: auto;
 	left: 0;
 	right: 0;
 
 	width: 70%;
-	padding: 50px 0; 
+	padding: 50px 0 150px; 
 
 	color: #333;
 	font-size: 20px;
@@ -254,11 +266,41 @@ section video{
 /*---section05---*/
 
 .section05{
-	height: 100vh;
-	background: #fff;
+	height: auto;
+	background-color: #fff;
 }
 
-	/*font-family: 'Marcellus SC', serif;*/
+.section05 .call_abstract{
+	margin: auto;
+	left: 0;
+	right: 0;
+
+	width: 70%;
+	padding: 50px 0; 
+
+	color: #333;
+	font-size: 18px;
+	line-height: 32px;
+	letter-spacing: 2px;
+
+	font-family: 'Cuprum', sans-serif;
+
+}
+	.section05 .call_abstract span{
+		font-weight: bold;
+		color: rgba(1, 71, 140, 1.00);
+	}
+	.section05 .call_abstract span.h{
+		border:1px solid #333;
+		background-color: #333;
+
+		color: #fff;
+		padding:5px 10px; 
+
+		line-height: 80px;
+		font-size: 20px;
+	}
+
 
 
 /*---section06---*/
@@ -318,10 +360,16 @@ section video{
 
 	top: -150px;
 }
+
+	.section04 .bottom_title{
+		width: 600px;
+		height: 150px;
+	}
+
 .section04 .themes{
 	width: 70%;
 }
-	
+
 
 
 }
@@ -358,7 +406,7 @@ section video{
 
 
 .section03 div{
-	padding: 70px 0px 150px;
+	padding: 70px 0px 100px;
 }
 	.section03 h1{
 		font-size: 18px;
@@ -392,8 +440,13 @@ section video{
 
 	top: -80px;
 }
+	.section04 .bottom_title{
+		width: 320px;
+		height: 80px;
+	}
+
 .section04 .themes{
-	padding: 10px 0 20px; 
+	padding: 10px 0 70px; 
 
 	width: 90%;
 	font-size: 14px;
@@ -404,6 +457,22 @@ section video{
 		font-size: 16px;
 	}
 
+
+
+/*---section05---*/
+
+.section05 .call_abstract{
+	width: 90%;
+	padding: 20px 0 40px; 
+
+	font-size: 14px;
+	line-height: 24px;
+	text-align: justify;	
+}
+	.section05 .call_abstract span.h{
+		line-height: 60px;
+		font-size: 16px;
+	}
 
 
 }

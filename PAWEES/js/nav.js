@@ -104,9 +104,13 @@
     var nav_li=$("nav ul li");
     var section03 = $(".section03");
     var section05 = $(".section05");
+    var section06 = $(".section06");
 
     logo_img.eq(1).click(function(){
         $('html,body').stop(true,false).animate({scrollTop:0},1000);
+
+        sandwich.removeClass("sandwich2");
+        nav.removeClass("navshow");
     });
 
     nav_li.eq(0).children("a").click(function(){
@@ -117,7 +121,14 @@
     });
 
     nav_li.eq(1).children("a").click(function(){
-        $('html,body').stop(true,false).animate({scrollTop:section05.offset().top-$window.outerHeight()},1000);
+        $('html,body').stop(true,false).animate({scrollTop:section05.offset().top-banner.outerHeight()-60},1000);
+
+        sandwich.removeClass("sandwich2");
+        nav.removeClass("navshow");
+    });
+
+    nav_li.eq(2).children("a").click(function(){
+        $('html,body').stop(true,false).animate({scrollTop:section06.offset().top-banner.outerHeight()-5},1000);
 
         sandwich.removeClass("sandwich2");
         nav.removeClass("navshow");

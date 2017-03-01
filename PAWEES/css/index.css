@@ -446,12 +446,92 @@ section video{
 /*---section08---*/
 
 .section08{
-	height: 100vh;
+	height: auto;
 	background: url(../images/section01/video_BG2.jpg) no-repeat fixed center;
 	background-size: cover;
+
+	padding: 200px 0;
+}
+
+.section08 .news{
+	margin: auto;
+	left: 0;
+	right: 0;
+
+	width: 60%;
+	border-radius: 25px;
+
+	background-color: rgba(255,255,255,0.5);
+	text-align: center;
+
+	padding: 0 50px 50px; 
+}
+
+.section08 .news h1{
+	color:#333;
+	font-size: 42px;
+	font-family: 'Dancing Script', cursive;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+.section08 .news table{
+	position: relative;
+
+	width: 100%;
+	line-height: 40px;
+	font-size: 18px;
+
+	font-family: 'Cuprum', sans-serif,微軟正黑體;
+	letter-spacing: 2px;
+
+}
+
+.section08 .news table tr:before{
+	content: "";
+	position: absolute;
+
+	width: 100%;
+	height: 1px;
+	background-color: #aaa;
+}
+
+.section08 .news table tr td{
+	text-align: center;
+	width: 20%;
+	color:#555;
+	background-color: #ccc;
+
+	padding:5px 6px; 
+}
+
+.section08 .news table tr td:nth-child(2){
+	text-align: left;
+	width: 80%;
+}
+
+.section08 .news table tr td a{
+	float: right;
+	text-decoration: none;
+	color:#fff;
+	background-color: #555;
+
+	margin: 6px 5px;
+	padding: 0 10px; 
+
+	font-size: 16px;
+	line-height: 28px;
 }
 
 
+
+/*---section09---*/
+
+.section09{
+	height: auto;
+	padding: 50px 0 75px;
+	background-color: rgba(98, 153, 159, 1.00);
+}
 
 /*____________________________________________________________________________*/
 
@@ -552,8 +632,20 @@ section video{
 
 
 
+/*---section08---*/
+
 .section08{
 	background-attachment: scroll;
+}
+
+.section08 .news table{
+	line-height:32px;
+	font-size: 16px;
+}
+
+.section08 .news table tr td a{
+	font-size: 12px;
+	line-height: 24px;
 }
 
 
@@ -722,6 +814,33 @@ section video{
 	.section07 .fee table tr td span{
 		font-size: 20px;
 	}
+
+
+
+/*---section08---*/
+
+.section08{
+	padding: 100px 0;
+}
+
+.section08 .news{
+	width: 90%;
+	border-radius: 20px;
+	
+	padding: 0 40px 40px; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.section08 .news h1{
+	font-size: 36px;
+}
+
+.section08 .news table{
+	line-height: 32px;
+	font-size: 16px;
+}
 
 
 

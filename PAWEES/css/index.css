@@ -391,6 +391,13 @@ section video{
 	letter-spacing: 1px;
 	line-height: 100px;
 }
+	.section07 .fee h1{
+		color:#333;
+		font-size: 42px;
+		font-family: 'Dancing Script', cursive;
+		line-height: 100px;
+		font-weight: bold;
+	}
 
 .section07 .fee table{
 	position: relative;
@@ -403,9 +410,11 @@ section video{
 	font-size: 18px;
 
 	font-family: 'Cuprum', sans-serif,微軟正黑體;
-
+	
 }
-	.section07 .fee table:before{
+
+
+	/*.section07 .fee table:before{
 		content: "";
 		position: absolute;
 		margin: auto;
@@ -416,7 +425,7 @@ section video{
 		height: 2px;
 		width: 250px;
 		background-color: #333;
-	}
+	}*/
 
 .section07 .fee table tr td{
 	padding:0 25px; 
@@ -484,16 +493,12 @@ section video{
 
 	font-family: 'Cuprum', sans-serif,微軟正黑體;
 	letter-spacing: 2px;
-
 }
 
-.section08 .news table tr:before{
-	content: "";
-	position: absolute;
-
-	width: 100%;
-	height: 1px;
-	background-color: #aaa;
+.section08 .news table tr{
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #aaa;
 }
 
 .section08 .news table tr td{
@@ -528,10 +533,45 @@ section video{
 /*---section09---*/
 
 .section09{
-	height: 100vh;
-	padding: 50px 0 75px;
-	background-color: rgba(98, 153, 159, 1.00);
+
+	height: auto;
+	background: url(../images/section01/video_BG2.jpg) no-repeat fixed center;
+	background-size: cover;
 }
+
+.section09_venue{
+	background-color: rgba(240, 237, 229, 0.75);
+	padding: 15px 0 0;
+
+	text-align: center;
+
+}
+
+.section09_venue h1{
+	color:#333;
+	font-size: 42px;
+	font-family: 'Dancing Script', cursive;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+.section09_venue .venue_info{
+	position: relative;
+
+	width: 100%;
+	line-height: 40px;
+	font-size: 18px;
+
+	font-family: 'Cuprum', sans-serif,微軟正黑體;
+	letter-spacing: 2px;
+}
+
+.section09_venue .venue_info a{
+	text-decoration: none;
+	color: #333;
+
+}
+	
 
 
 

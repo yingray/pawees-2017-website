@@ -411,6 +411,61 @@ nav ul li a{
 	box-sizing: border-box;
 }
 
+footer{
+	line-height: 40px;
+	font-size: 18px;
+
+	font-family: 'Cuprum', sans-serif,微軟正黑體;
+	letter-spacing: 2px;
+}
+
+footer h1{
+	color:#333;
+	font-size: 42px;
+	font-family: 'Dancing Script', cursive;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+footer .organizers{
+	color:#666;
+	width: 100%;
+
+	height: auto;
+	background: #fff;
+
+	padding: 50px 0;
+	text-align: center;
+
+	box-shadow:  0px 0px 30px 0px rgba(0,0,0,1);
+
+}
+	footer .organizers ul li{
+		display: inline-block;
+	}
+
+	footer .organizers ul li img{
+		height: 50px;
+	}
+
+
+footer .contact_us{
+	color:#333;
+	line-height: 30px;
+
+	height: auto;
+	width: 100%;
+	padding: 0px 50px 25px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+
+	background: rgba(98, 153, 159, 1.00);
+
+	text-align: right;
+
+}
 
 
 

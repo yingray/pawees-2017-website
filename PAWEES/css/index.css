@@ -528,10 +528,12 @@ section video{
 /*---section09---*/
 
 .section09{
-	height: auto;
+	height: 100vh;
 	padding: 50px 0 75px;
 	background-color: rgba(98, 153, 159, 1.00);
 }
+
+
 
 /*____________________________________________________________________________*/
 

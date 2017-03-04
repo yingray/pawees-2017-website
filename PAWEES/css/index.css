@@ -35,8 +35,6 @@ section video{
 
 	top: 0;
 	z-index: -1;
-
-	height: 100%;
 	width: 100%;
 
 	object-position: 50% 0;
@@ -391,13 +389,6 @@ section video{
 	letter-spacing: 1px;
 	line-height: 100px;
 }
-	.section07 .fee h1{
-		color:#333;
-		font-size: 42px;
-		font-family: 'Dancing Script', cursive;
-		line-height: 100px;
-		font-weight: bold;
-	}
 
 .section07 .fee table{
 	position: relative;
@@ -412,9 +403,7 @@ section video{
 	font-family: 'Cuprum', sans-serif,微軟正黑體;
 	
 }
-
-
-	/*.section07 .fee table:before{
+	.section07 .fee table:before{
 		content: "";
 		position: absolute;
 		margin: auto;
@@ -425,7 +414,7 @@ section video{
 		height: 2px;
 		width: 250px;
 		background-color: #333;
-	}*/
+	}
 
 .section07 .fee table tr td{
 	padding:0 25px; 
@@ -533,7 +522,6 @@ section video{
 /*---section09---*/
 
 .section09{
-
 	height: auto;
 	background: url(../images/section01/video_BG2.jpg) no-repeat fixed center;
 	background-size: cover;
@@ -569,7 +557,19 @@ section video{
 .section09_venue .venue_info a{
 	text-decoration: none;
 	color: #333;
+}
 
+
+
+.map iframe{
+	width: 100%;
+	height: 300px;
+	display: block;
+	pointer-events: none; /*滑鼠事件先關掉*/
+	position: relative; /* IE needs a position other than static */
+}
+.map iframe.clicked{
+	pointer-events: auto; /*滑鼠事件打開*/
 }
 	
 

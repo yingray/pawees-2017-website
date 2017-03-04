@@ -9,7 +9,7 @@
     // banner fixed 動畫
 
     $window.on("scroll", function(e) {
-      if (this.scrollY > 0) {
+      if ($window.scrollTop() > 0) {
         banner.addClass("banner2");
       }
       else {

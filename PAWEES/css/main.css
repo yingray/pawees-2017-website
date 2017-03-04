@@ -51,24 +51,31 @@ header, content, footer{
 header{
 	position: fixed;
 	top: 0;
-	z-index: 1;
+	z-index: 10;
 }
 
 .banner{
 	transition: 0.5s; 
+	width: 100%;
+	height: 100px;
 }
 	.banner2{
-		/*background: rgba(255,255,255,0.2);*/
 		background: rgba(136,136,136,0.8);
 	}
 
-
+.logo{
+	position: absolute;
+	z-index: 11;
+}
 
 .logo img{
 	margin: 20px 0 20px 20px;
 	width: auto;
 	height: 60px;
 }
+	.logo img.logo_title{
+		cursor: pointer;
+	}
 
 
 
@@ -144,6 +151,321 @@ nav ul li a{
 		border-style: solid;
 		border-color: #FEE68C transparent;
 	}
+	
+	/*註冊紐*/
+	nav ul li.joinicon a{
+		padding:10px;
+		border: 1px solid #fff;
+	}
+	nav ul li.joinicon a:hover{
+		background-color: #fff;
+	}
+
+
+
+/*---註冊頁面---*/
+.fixed_shadowbg{
+	position: fixed;
+	top: 100px;
+	left: -100%;
+	opacity: 0;
+
+	height: 100%;
+	width: 100%;
+	background: rgba(136,136,136,1);
+
+	transition: opacity 1s; 
+}
+	.fixed_shadowbg2{
+		left:0;
+		opacity: 1;
+	}
+
+.Registration_Page{
+	position: fixed;
+	top: 0;
+	left: 100%;
+
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255,1);
+
+	border-radius: 30px;
+	box-shadow: rgba(0,0,0,0) 0px 0px 50px 0px;
+
+	transition: 1s;
+
+	padding: 30px 365px 30px 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	overflow: hidden;
+}
+	.Registration_Page2{
+		left: 335px;
+		box-shadow: rgba(0,0,0,0.8) 0px 0px 50px 0px;
+	}
+
+.Registration_Page_close{
+	position: fixed;
+	width: 40px;
+	height: 40px;
+
+	top: 30px;
+	right: -100%;
+
+	color: #888;
+	font-size: 35px;
+	text-align: center;
+	line-height: 40px;
+
+	cursor: pointer;
+	transition: 1s; 
+}
+	.Registration_Page_close2{
+		right: 30px;
+	}
+
+
+
+/*表單標籤導覽*/
+.fixed_shadowbg ul{
+	position: absolute;
+
+	left: 85px;
+	top: 50px;
+}
+
+.fixed_shadowbg ul li{
+	position: relative;
+	height: 55px;
+
+	text-decoration: none;
+	color: #fff;
+
+	font-size: 18px;
+	font-family: 'Cuprum', sans-serif;
+	letter-spacing: 2px;
+}
+	.fixed_shadowbg ul li:before{
+		content: "";
+		position: absolute;
+		top: -3px;
+		left: -40px;
+
+		width: 18px;
+		height: 18px;
+
+		border: #fff solid 2px;
+		border-radius: 50%;
+	}
+	
+	.fixed_shadowbg ul li.write{
+		color: #faa;
+	}
+	.fixed_shadowbg ul li.write:before{
+		background: #faa;
+	}
+	.fixed_shadowbg ul li.write_done:before{
+		background-color: #fff;
+	}
+
+
+
+/*登入*/
+
+.fixed_shadowbg .login{
+	position: absolute;
+	bottom: 145px;
+	left: 45px;
+
+	width: 240px;
+	padding: 10px 0 25px; 
+	
+	text-align: center;
+	border: 1px solid #fff;
+}
+
+.fixed_shadowbg .login input, .fixed_shadowbg .login .login_title{
+	margin: 10px 0; 
+	height: 30px;
+	width: 200px;
+
+	font-size: 16px;
+	border-radius: 5px;
+	border-width: 0; 
+}
+
+.fixed_shadowbg .login .login_title{
+	position: absolute;
+	bottom: -16px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 100px;	
+
+	font-size: 20px;
+	font-family: 'Cuprum', sans-serif;
+	color:rgba(136,136,136,1);
+	background: #fff;
+
+	border: 1px solid #fff;
+	line-height: 32px;
+	letter-spacing: 2px;
+	font-weight: bolder;	
+
+	cursor: pointer;
+	border-radius: 20px;
+	transition:0.2s; 
+	box-shadow: rgba(0,0,0,0.7) 0px 0px 25px 0px;
+}
+	.fixed_shadowbg .login .login_title:hover{
+		color: #faa;
+		box-shadow: #faa 0px 0px 35px 0px;
+	}
+
+
+
+/*表單內容*/
+.Registration_Page form{
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+	
+	top:0;
+	left: 150%;
+	opacity: 0;
+	transition: 1s;
+
+	text-align: left;
+
+	padding: 100px 365px 100px 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+	.Registration_Page form.write_form{
+		left: 0;
+		opacity: 1;
+	}
+
+	.Registration_Page form.write_done{
+		left: -150%;
+		opacity: 0;
+	}
+
+	.Registration_Page form .form_title{
+		position: absolute;
+		top: 52px;
+		left: 52px;
+		color:rgba(13, 82, 162, 1.00);
+
+		font-size: 28px;
+		font-family: 'Dancing Script', cursive;
+	}
+
+	.Registration_Page form .pre_step, .Registration_Page form .next_step, .Registration_Page form .edit_information, .Registration_Page form .submit_info{
+		position: absolute;
+		bottom: 40px;
+		color:rgba(13, 82, 162, 1.00);
+
+		font-size: 28px;
+		font-family: 'Dancing Script', cursive;
+
+		cursor: pointer;
+	}
+		.Registration_Page form .pre_step{
+			left: 52px;
+		}
+		.Registration_Page form .next_step{
+			right: 387px;
+		}
+
+	.Registration_Page form .edit_information{
+		bottom: 30px;
+		left: 30px;
+		border: 1px solid rgba(13, 82, 162, 1.00);
+		padding: 10px 20px; 
+	}
+	.Registration_Page form .submit_info{
+		bottom: 30px;
+		right: 365px;
+		border: 1px solid rgba(13, 82, 162, 1.00);
+		padding: 10px 20px; 
+	}
+
+.Registration_Page form fieldset{
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+
+	border-width: 1px 0px; 
+	border-style: solid; 
+	border-color: #ccc;
+
+	padding: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+footer{
+	line-height: 40px;
+	font-size: 18px;
+
+	font-family: 'Cuprum', sans-serif,微軟正黑體;
+	letter-spacing: 2px;
+}
+
+footer h1{
+	color:#333;
+	font-size: 42px;
+	font-family: 'Dancing Script', cursive;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+footer .organizers{
+	color:#666;
+	width: 100%;
+
+	height: auto;
+	background: #fff;
+
+	padding: 50px 0;
+	text-align: center;
+
+	box-shadow:  0px 0px 30px 0px rgba(0,0,0,1);
+
+}
+	footer .organizers ul li{
+		display: inline-block;
+	}
+
+	footer .organizers ul li img{
+		height: 50px;
+	}
+
+
+footer .contact_us{
+	color:#333;
+	line-height: 30px;
+
+	height: auto;
+	width: 100%;
+	padding: 0px 50px 25px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+
+	background: rgba(98, 153, 159, 1.00);
+
+	text-align: right;
+
+}
 
 
 
@@ -247,6 +569,14 @@ nav ul li a{
 		border-color: rgba(98, 153, 159, 1.00) transparent;
 	}
 
+	/*註冊紐*/
+	nav ul li.joinicon a{
+		border: 1px solid #888;
+	}
+	nav ul li.joinicon a:hover{
+		background-color: #888;
+	}
+
 	
 
 
@@ -282,7 +612,11 @@ nav ul li a{
 	.sandwich2:before,.sandwich2:after{	
 	top: 0px;
 	}
-	
+
+
+.banner{
+	height: 70px;
+}	
 
 
 .logo img{
@@ -301,6 +635,91 @@ nav ul li{
 nav ul li a{
 	font-size: 20px;
 	line-height: 130px;
+}
+
+
+
+.fixed_shadowbg{
+	top: 70px;
+}
+
+.Registration_Page{
+	overflow: visible;
+	top: 100%;
+	left: 0;
+
+	padding: 30px 30px 100px;
+}
+	.Registration_Page2{
+		left: 0px;
+		top: 70px;
+	}
+
+.Registration_Page_close{
+	width: 44px;
+	height: 44px;
+	top: 13px;
+
+	background-color: #fff;
+	line-height: 44px;
+	border-radius: 50%;
+
+	box-shadow: rgba(0,0,0,0.8) 0px 0px 50px 0px;
+}
+	.Registration_Page_close2{
+		right: 13px;
+	}
+
+
+
+/*表單內容*/
+.Registration_Page form{
+	padding: 70px 30px 140px;
+}
+
+	.Registration_Page form .form_title{
+		top: 30px;
+		left: 30px;
+
+		font-size: 24px;
+	}
+
+	.Registration_Page form .pre_step, .Registration_Page form .next_step{
+		bottom: 96px;
+		font-size: 24px;
+	}
+		.Registration_Page form .pre_step{
+			left: 30px;
+		}
+		.Registration_Page form .next_step{
+			right: 30px;
+		}
+
+	.Registration_Page form .edit_information{
+		font-size: 24px;
+		bottom: 90px;
+		padding: 5px 10px; 
+	}
+	.Registration_Page form .submit_info{
+		font-size: 24px;
+		right: 30px;
+		bottom: 90px;
+		padding: 5px 10px; 
+	}
+
+.Registration_Page form fieldset{
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+
+	border-width: 1px 0px; 
+	border-style: solid; 
+	border-color: #ccc;
+
+	padding: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 

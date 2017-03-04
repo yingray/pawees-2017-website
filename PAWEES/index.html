@@ -21,11 +21,17 @@
  	<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
  	<!-- font-family: 'Cuprum', sans-serif; -->
 
- 	<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
- 	<!-- font-family: 'Vollkorn', serif; -->
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<!-- font-family: 'Dancing Script', cursive; -->
 
- 	<link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
-	<!-- font-family: 'Vidaloka', serif; -->
+	<link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
+	<!-- font-family: 'Marcellus SC', serif; -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Montaga" rel="stylesheet">
+	<!-- font-family: 'Montaga', serif; -->
+
+	<link href="https://fonts.googleapis.com/css?family=Ramaraja" rel="stylesheet">
+	<!-- font-family: 'Ramaraja', serif; -->
 
 
 </head>
@@ -50,7 +56,7 @@
 				<!-- logo -->
 				<div class="logo">
 					<img src="images/PAWEES-logo.png" alt="">
-					<img src="images/PAWEE2017.svg" alt="">
+					<img src="images/PAWEE2017.svg" alt="" class="logo_title">
 				</div>
 
 				<!-- 三明治選單 -->
@@ -67,30 +73,132 @@
 				<nav> 
 					<ul>
 						<!-- 當前頁面掛上here的class -->
-						<li class="icon">
+						<li class="">
 							<a href="javascript:;">About Us</a>
 						</li>
-						<li class="icon">
-							<a href="javascript:;">Programs</a>
+						<li class="">
+							<a href="javascript:;">Call for Abstracts</a>
 						</li>
-						<li class="icon">
-							<a href="javascript:;">Call For Paper</a>
+						<li class="">
+							<a href="javascript:;">Important Dates</a>
 						</li>
-						<li class="icon">
-							<a href="javascript:;">Participants</a>
+						<li class="">
+							<a href="javascript:;">Announcement</a>
 						</li>
-						<li class="icon">
+						<li class="">
 							<a href="javascript:;">Venue</a>
 						</li>
-						<li class="icon here">
-							<a href="javascript:;">Contact Us</a>
+
+						<!-- 最後頁尾是contact us -->
+						<li class="joinicon">
+							<a href="javascript:;">Registration</a>
 						</li>
 					</ul>
 				</nav>
 
 
-				<!-- 暗幕的背景 -->
-				<div class="fixed_shadowbg"></div>
+				<!-- 投稿畫面 -->
+				<div class="fixed_shadowbg">
+
+					<ul>
+						<!-- 當前頁面掛上write的class -->
+						<li class="write">
+							Registration
+						</li>
+						<li class="">
+							Accommodations
+						</li>
+						<li class="">
+							Technical Tour
+						</li>
+						<li class="">
+							Abstract Submission
+						</li>
+					</ul>
+
+					<div class="login">
+						<div class="login_title">LOG IN</div>
+
+						<input type="email" name="email" placeholder=" Email">
+						<input type="password" name="password" placeholder=" Password">
+					</div>
+
+				</div>
+
+				<div class="Registration_Page">
+
+					<form class="write_form">
+						<fieldset>
+							<div class="form_title">Registration</div>
+
+
+
+							<div class="next_step">
+								Next Step
+								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+							</div>
+						</fieldset>
+					</form>
+					
+					<form>
+						<fieldset>
+							<div class="form_title">Accommodations</div>
+
+
+
+							<div class="pre_step">
+								<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+								Previous Step
+							</div>
+							<div class="next_step">
+								Next Step
+								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+							</div>
+						</fieldset>
+					</form>
+
+					<form>
+						<fieldset>
+							<div class="form_title">Technical Tour</div>
+
+
+
+							<div class="pre_step">
+								<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+								Previous Step
+							</div>
+							<div class="next_step">
+								Next Step
+								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+							</div>
+						</fieldset>
+					</form>
+
+					<form>
+						<fieldset>
+							<div class="form_title">Abstract Submission</div>
+
+
+
+							<div class="pre_step">
+								<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+								Previous Step
+							</div>
+							<div class="submit_info">
+								Submit
+							</div>
+						</fieldset>
+					</form>
+					
+
+
+					<div class="Registration_Page_close">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+
+				</div>
+
+
 
 			</div><!-- banner包全部 --> 
 
@@ -103,10 +211,12 @@
 		<div class="welcome">
 		<!-- 第一幕 影片導入 -->
 			<section class="section01">
+				
+				<!-- fixed BG -->
+				<!-- <img src="images/section01/video_BG.jpg"> -->
 
 				<video class="full-video" loop="loop" autoplay="autoplay" poster="">
 					<source src="images/video/water07.mp4" type="video/mp4">
-					<!-- water07 water09-->
 				</video>
 				
 				<!-- PAWEES大標題 -->
@@ -128,8 +238,8 @@
 		<!-- 第二幕 About Us -->
 			<section class="section02">
 
-				<div class="aboutus_time"></div>
 				<div class="aboutus_intro"></div>
+				<div class="aboutus_time"></div>
 				<div class="aboutus_location"></div>
 
 			</section>
@@ -140,8 +250,18 @@
 
 		<!-- 第三幕  -->
 			<section class="section03">
+				<div>
+					<h1>PAWEES 2017 <span>International Conference</span> </h1>
+					
+					<div>
+						November 9-10, 2017<br>
+						Tai-Chung, Taiwan<br>
+						<br>
+						<br>
+						The conference objective is to create an interactive platform for paddy and water environment related researchers, scientists, practitioners, policy makers and other professionals from Asia-Pacific Region and else around the world to share and present their novel advances, research findings, perspectives and experiences in response to, but not limited to, sustainable water and environmental management.
+					</div>
 
-
+				</div>
 
 			</section>
 
@@ -151,8 +271,22 @@
 
 		<!-- 第四幕  -->
 			<section class="section04">
-
-
+				
+				<div class="themes_title"></div>
+				<div class="themes">
+					<span class="h">General session</span><br>
+					The conference pivots on the general theme “<span>Sustainable Water and Environmental Management</span>” accompanied with the following focal topics:<br> 
+					Topic 1 | Sustainable water use and ecologically sustainable development<br> 
+					Topic 2 | Development of rural society with water in Asia<br>  
+					Topic 3 | Sustainable paddy farming<br> 
+					Topic 4 | Integrated watershed management<br> 
+					Topic 5 | Droughts and flood disaster risk management<br> 
+					<br> 
+					<span class="h">Student session</span><br>
+					“<span>Sustainable Water and Environmental Management</span>”
+				</div>
+				
+				<div class="bottom_title"></div>
 
 			</section>
 
@@ -163,7 +297,169 @@
 		<!-- 第五幕  -->
 			<section class="section05">
 
+				<div class="call_abstract">
+					Authors are invited to submit abstracts to the scientific committee of the conference. The notification of acceptance will be dispatched after the decision making from the scientific committee. Student sessions will be operated separately.
+					<br> 
+					<br>
+					<span>The abstract submission process for PAWEES 2017 will be through an online submission portal. Submitters are requested to create an account and submit an abstract for review according to the Registration steps on this website.</span>
+					<br>
+					<br>
 
+					<span class="h">Oral presentation</span><br>
+					Time allotment for each oral presentation will be 15 minutes, in which 10 minutes for presentation and 5 minutes for Q & A are suggested, and session rooms are equipped with standard PowerPoint presentation facilities.<br>
+					<br>
+					<span class="h">Poster presentation</span><br>
+					Poster boards are 8' high with a surface of 4' x 6' and are placed in rows in a poster room. Presenters are asked to be at their assigned poster board during the entire length of the poster session.
+				</div>
+
+			</section>
+
+
+		<!-- ====================================================================================== -->
+
+
+		<!-- 第六幕  -->
+			<section class="section06">
+
+					<div class="important_date">
+						IMPORTANT DATES
+						<table>
+							<tr>
+								<td>Abstract Submission</td>
+								<td>August 31, 2017</td>
+							</tr>
+							<tr>
+								<td>Notification of Acceptance</td>
+								<td>September 30, 2017</td>
+							</tr>
+							<tr>
+								<td><span>Registration</span></td>
+								<td>before September 30, 2017</td>
+							</tr>
+						</table>
+					</div>
+	
+			</section>
+
+
+		<!-- ====================================================================================== -->
+
+
+		<!-- 第七幕  -->
+			<section class="section07">
+				
+				<div class="fee">
+					<h1>Registration Fees</h1>
+					<!-- REGISTRATION FEES -->
+					<table>
+						<tr>
+							<td>
+							<span>International participants</span><br>
+							The registration fees are USD 200 (NTD 6,400) for adults, and USD 100 (NTD 3,200) for students and accompanying persons. The registered delegates and participants shall be provided during the Conference with a conference kit (programs and proceedings), official snacks, lunches and reception dinner, attendance in the opening program, and a field trip. Only payments and issuance of receipts will be done on site.
+							</td>
+							<td>
+							<span>Local participants</span><br>
+							The registration fee is NTD 2600 (NTD 600 for the participation in the Conference only). Participants are requested to remit payments through postal order (郵政劃撥帳號：00114264；戶名：社團法人台灣農業工程學會) before 30 September, 2017. Issuance of receipts will be done on site or sent via email.
+							</td>
+						</tr>
+					</table>
+				</div>
+
+			</section>
+
+
+		<!-- ====================================================================================== -->
+
+
+		<!-- 第八幕  -->
+			<section class="section08">
+
+				<div class="news">
+					<h1>Announcement</h1>
+
+					<table>
+						<tr>
+							<td>20170301</td>
+							<td>1st ANNOUNCEMENT: CALL FOR ABSTRACT
+								<a href="doc/20170301-PAWEES-2017-1st-announcement.doc">
+									<i class="fa fa-file" aria-hidden="true"></i> DOC
+								</a>
+								<a href="doc/20170301-PAWEES-2017-1st-announcement.pdf" target="_blank">
+									<i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF
+								</a>
+							</td>
+						</tr>
+					</table>
+
+
+					<br>
+					<br>
+					<br>
+
+
+					<h1>Program</h1>
+
+					<table>
+						<tr>
+							<td>20171108</td>
+							<td>Arrival</td>
+						</tr>
+
+						<tr>
+							<td>20171109</td>
+							<td>
+								PAWEES 2017 International Conference<br>
+								Award Ceremony, Annual Meeting
+							</td>
+						</tr>
+
+						<tr>
+							<td>20171110</td>
+							<td>
+								Technical Tour: Hu-Shan Reservoir（湖山水庫）
+								<a href="http://www.wracb.gov.tw/ct.asp?xItem=2120&CtNode=924&mp=7" target="_blank">
+									<i class="fa fa-link" aria-hidden="true"></i> WEB
+								</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>20171110</td>
+							<td>Departure</td>
+						</tr>
+
+					</table>
+
+					
+				</div>
+
+			</section>
+
+
+		<!-- ====================================================================================== -->
+
+
+		<!-- 第九幕  -->
+			<section class="section09">
+				<div class="section09_venue">
+					<h1>Venue</h1>
+					<div class="venue_info">
+						Nan-Shan Education & Training Center<br>
+						<i class="fa fa-link" aria-hidden="true"></i>
+						<a href="http://www.ns-etc.com.tw/etc/eng/traffic/traffic01.jsp">
+						http://www.ns-etc.com.tw/etc/eng/traffic/traffic01.jsp</a><br>
+						<i class="fa fa-map-marker" aria-hidden="true"></i> 
+						No. 300, Cheng-gong W. Rd., Wuri Dist., Taichung City, Taiwan<br>
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						+886-4-2334-180<br>
+						台中南山人壽訓練中心（台中市烏日區成功西路300號）<br>
+						<br>
+					</div>
+
+					<div class="map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.9796189519357!2d120.58558211479216!3d24.137353884400078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693ef73d1325ad%3A0xb9daca9495d7e6b7!2z5Y2X5bGx5Lq65aO95pWZ6IKy6KiT57e05Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1488475396300" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
 
 			</section>
 
@@ -172,8 +468,42 @@
 
 
 			<footer>
-				
+					<div class="organizers">
+						<h1>Organizers</h1>
 
+						International Society of Paddy and Water Environment Engineering (PAWEES)<br>
+						Taiwan Agricultural Engineers Society (TAES)<br>
+						Japanese Society of Irrigation, Drainage and Reclamation Engineering (JSIDRE)<br>
+						Korean Society of Agricultural Engineers (KSAE)<br>
+						Department of Bioenvironmental Systems Engineering, National Taiwan University (NTU)<br>
+						Ministry of Science and Technology, Taiwan (MOST)<br>
+						Water Resources Agency, Ministry of Economic Affairs, Taiwan (WRA)<br>
+						
+						<ul>
+							<li><img src="images/footer/OG_logo01.png" alt=""></li>
+							<li><img src="images/footer/OG_logo02.png" alt=""></li>
+							<li><img src="images/footer/OG_logo03.png" alt=""></li>
+							<li><img src="images/footer/OG_logo04.png" alt=""></li>
+							<li><img src="images/footer/OG_logo05.png" alt=""></li>
+							<li><img src="images/footer/OG_logo06.png" alt=""></li>
+							<li><img src="images/footer/OG_logo07.png" alt=""></li>
+							<li><img src="images/footer/OG_logo08.png" alt=""></li>
+						</ul>
+						
+					</div>
+
+					<div class="contact_us">
+						<h1>Contacts</h1>
+
+						Prof. Ke-Sheng Cheng<br>
+						pawees2017@gmail.com<br>
+						Dept. of Bioenvironmental Systems Eng.<br>
+						National Taiwan University, Taiwan<br>
+						<br>
+						2017&copy; MYstudio
+
+
+					</div>
 
 			</footer>
 

@@ -573,10 +573,14 @@ section video{
 
 .section09_venue .venue_info a{
 	text-decoration: none;
-	color: #333;
+	color:#fff;
+	background-color: #555;
+
+	padding: 5px 10px; 
+
+	font-size: 16px;
+	line-height: 28px;
 }
-
-
 
 .map iframe{
 	width: 100%;
@@ -589,7 +593,6 @@ section video{
 	pointer-events: auto; /*滑鼠事件打開*/
 }
 	
-
 
 
 /*____________________________________________________________________________*/
@@ -616,7 +619,7 @@ section video{
 }
 
 .section03 div{
-	padding: 0px 0px 200px;
+	padding: 100px 0px 200px;
 }
 	.section03 h1{
 		font-size: 36px;
@@ -656,6 +659,9 @@ section video{
 .section06{
 	background-attachment: scroll;
 }
+	.section06 .important_date table tr td span{
+		background-color: rgba(255,255,255,0.9);
+	}
 
 
 
@@ -751,7 +757,7 @@ section video{
 
 
 .section03 div{
-	padding: 70px 0px 100px;
+	padding: 140px 0px 100px;
 }
 	.section03 h1{
 		font-size: 18px;
@@ -908,13 +914,29 @@ section video{
 	line-height: 32px;
 	font-size: 16px;
 }
+	.section08 .news table tr td{
+		padding:5px 6px 5px 12px; 
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		display: inline-block;
+		text-align: left;
+		width: 100%;
+	}
+	.section08 .news table tr td:nth-child(2){
+		width: 100%;
+	}
 
 
 
 /*---section09---*/
 
 .section09_venue{
-	padding: 15px 0 0;
+	padding: 15px 10px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .section09_venue h1{
@@ -932,10 +954,8 @@ section video{
 }
 
 .section09_venue .venue_info a{
-	color: #333;
+	font-size: 14px;
 }
-
-
 
 .map iframe{
 	height: 400px;

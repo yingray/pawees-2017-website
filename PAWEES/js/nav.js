@@ -158,6 +158,37 @@
 
 
 
+    // nav here
+
+    $window.on("scroll", function(e) {
+        if ($window.scrollTop()<section03.offset().top){
+            nav_li.removeClass("here");
+        }
+        if ($window.scrollTop() >= section03.offset().top && $window.scrollTop()<(section05.offset().top-banner.outerHeight()-60)) {
+            nav_li.removeClass("here");
+            nav_li.eq(0).addClass("here");
+        }
+        if ($window.scrollTop()>=(section05.offset().top-banner.outerHeight()-60) && $window.scrollTop()<(section06.offset().top-banner.outerHeight()-5)) {
+            nav_li.removeClass("here");
+            nav_li.eq(1).addClass("here");
+        }
+        if ($window.scrollTop()>=(section06.offset().top-banner.outerHeight()-5) && $window.scrollTop()<section08.offset().top) {
+            nav_li.removeClass("here");
+            nav_li.eq(2).addClass("here");
+        }
+        if ($window.scrollTop()>=section08.offset().top && $window.scrollTop()<(section09.offset().top-banner.outerHeight())) {
+            nav_li.removeClass("here");
+            nav_li.eq(3).addClass("here");
+        }
+        if ($window.scrollTop()>=(section09.offset().top-banner.outerHeight())) {
+            nav_li.removeClass("here");
+            nav_li.eq(4).addClass("here");
+        }
+
+    });
+
+
+
     // 地圖防止捲動產生功能
     var map = $('.map');
     map.click(function(){

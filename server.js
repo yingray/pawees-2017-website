@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const app = express();
-const port = 9000;
+const port = 8081;
 
 app.use(compression());
 app.use(express.static('./PAWEES'));

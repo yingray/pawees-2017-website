@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Example</title>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <style>
+        input {
+            display: block;
+            width: 150px;
+            height: 20px;
+            outline: none;
+        }
+        textarea {
+            display: block;
+            border: solid 1px #ccc;
+        }
+    </style>
+</head>
+<body>
+
+
+<fieldset id="loginFieldSet">
+    <legend>Login</legend>
+    <input id="loginEmail" type="email" placeholder="account" value="yingray.lu@fuhu.com">
+    <input id="loginPassword" type="password" placeholder="password" value="aaaaaa">
+    <input id="loginSubmit" type="button" value="Sign In">
+
+</fieldset>
+<script>
+	$(document).ready(function() {
+		console.log( "ready!" );
+		$.get("http://localhost/api/verification")
+			.done(function(data) {
+				$('#loginFieldSet').empty();
+				console.log(data)
+				$('#loginFieldSet').append('<div> Welcome, '+ data[0].delegate.firstName + '</div>')
+				$('#loginFieldSet').append('<a onclick="logout()" style="cursor: pointer;"> logout </a>')
+			})
+			.fail(function() {
+				console.log("verification fail");
+			});
+	});
+
+	function logout () {
+		$.post("http://localhost/api/logout")
+			.done(function(data) {
+				console.log(data)
+				alert("logout yes!");
+				window.location.href = '/template/form-example.html';
+			})
+			.fail(function() {
+				alert("error");
+			});
+    }
+
+	$('#loginSubmit').click(function() {
+		const submitFormObject = {
+			"email": $('#loginEmail').val(),
+			"password": $('#loginPassword').val()
+		}
+		$.post("http://localhost/api/login", submitFormObject)
+			.done(function(data) {
+				console.log(data)
+				alert("register successfully");
+				window.location.href = '/template/form-example.html';
+			})
+			.fail(function() {
+				alert("error");
+			});
+	})
+</script>
+
+<form>
+    <h2>Registration</h2>
+
+    <fieldset>
+
+        <legend>Account Information</legend>
+        <label>Email</label>
+        <input type="text" name="email" value="yingray.lu@fuhu.com" placeholder="email">
+
+        <label>Password</label>
+        <input type="password" name="password" value="aaaaaa">
+
+    </fieldset>
+
+    <label>Title</label>
+    <input type="text" name="title" value="Mr." placeholder="title" required>
+
+    <label>First Name</label>
+    <input type="text" name="firstName" value="Mickey" placeholder="firstName" required>
+
+    <label>Last Name</label>
+    <input type="text" name="lastName" value="Lu" placeholder="lastName">
+
+    <label>Country</label>
+    <input type="text" name="country" value="Taiwan" placeholder="country">
+
+    <label>Male</label>
+    <input type="text" name="gender" value="Male" placeholder="gender">
+
+    <label>Position</label>
+    <input type="text" name="position" value="Taipei" placeholder="position">
+
+    <label>Organization</label>
+    <input type="text" name="organization" value="National Taiwan University" placeholder="organization">
+
+    <label>Address</label>
+    <input type="text" name="address" value="" placeholder="address">
+
+    <label>Fax</label>
+    <input type="text" name="fax" value="" placeholder="fax">
+
+    <label>Phone</label>
+    <input type="text" name="phone" value="" placeholder="phone">
+
+    <label>Mobile</label>
+    <input type="text" name="mobile" value="0987654321" placeholder="mobile">
+
+    <label>Date of Birth</label>
+    <input type="text" name="dateOfBirth" value="1990-01-01" placeholder="dateOfBirth">
+
+    <label>Session</label>
+    <input type="text" name="session" value="general" placeholder="session">
+
+    <label>Type</label>
+    <input type="text" name="type" value="oral" placeholder="type">
+
+    <label>Tour</label>
+    <input type="text" name="tour" value="yes" placeholder="tour">
+
+</form>
+
+
+<form>
+    <h2>Accommodations</h2>
+
+    <label>Hotel</label>
+    <input type="text" name="hotel" value="Garden Villa" placeholder="hotel">
+
+    <label>Stay</label>
+    <input type="text" name="stay" value="5D4N" placeholder="stay">
+
+    <label>Check In</label>
+    <input type="date" name="checkIn" value="2017-08-11" placeholder="checkIn">
+
+    <label>Check Out</label>
+    <input type="date" name="checkOut" value="2017-08-11" placeholder="checkOut">
+
+    <label>Meals</label>
+    <select name="meals">
+        <option value="non-vegetarian">non-vegetarian</option>
+        <option value="vegetarian">vegetarian</option>
+    </select>
+    <!--<button type="submit">submit</button>-->
+</form>
+
+
+<form>
+    <h2>Technical Tour</h2>
+    <fieldset>
+        <legend>Arrival</legend>
+        <label>Airline</label>
+        <input type="text" name="airline" value="eve">
+        <label>Flight</label>
+        <input type="text" name="flight" value="ABC-123">
+        <label>Date</label>
+        <input type="date" name="date" value="2017-08-11">
+        <label>Time</label>
+        <input type="time" name="time" value="10:10">
+    </fieldset>
+    <fieldset>
+        <legend>Departure</legend>
+        <label>Airline</label>
+        <input type="text" name="airline" value="eve">
+        <label>Flight</label>
+        <input type="text" name="flight" value="ABC-123">
+        <label>Date</label>
+        <input type="date" name="date" value="2017-08-11">
+        <label>Time</label>
+        <input type="time" name="time" value="10:10">
+    </fieldset>
+</form>
+
+<form id="f3">
+    <h2>Abstract Submission</h2>
+
+    <label>Title</label>
+    <input type="text" name="title"
+           value="Real-time multi-step-ahead water level forecasting by recurrent neural networks for urban flood control">
+
+    <label>Authors</label>
+    <ol>
+        <input type="button" value="+" name="authors" data-type="array"/>
+        <li id="author0">
+            <input type="text" name="authors" value="Fi-John Chang">
+            <input type="button" value="-" onclick="deltxt(author0)">
+        </li>
+    </ol>
+
+    <label>Affiliations</label>
+    <ol>
+        <input type="button" value="+" name="affiliations" data-type="array"/>
+        <li id="affiliation0"><input type="text" name="affiliations"
+                                     value="Department of Bioenvironmental Systems Engineering, National Taiwan University, Taipei 10617, Taiwan, ROC">
+            <input type="button" value="-" onclick="deltxt(affiliation0)"></li>
+    </ol>
+
+    <label>Abstract</label>
+    <textarea name="abstract" cols="100" rows="10">
+        Urban flood control is a crucial task, which commonly faces fast rising peak flows resulting from urbanization. To mitigate future flood damages, it is imperative to construct an on-line accurate model to forecast inundation levels during flood periods. The Yu-Cheng Pumping Station located in Taipei City of Taiwan is selected as the study area. Firstly, historical hydrologic data are fully explored by statistical techniques to identify the time span of rainfall affecting the rise of the water level in the floodwater storage pond (FSP) at the pumping station. Secondly, effective factors (rainfall stations) that significantly affect the FSP water level are extracted by the Gamma test (GT). Thirdly, one static artificial neural network (ANN) (backpropagation neural network-BPNN) and two dynamic ANNs (Elman neural network-Elman NN; nonlinear autoregressive network with exogenous inputs-NARX network) are used to construct multi-step-ahead FSP water level forecast models through two scenarios, in which scenario I adopts rainfall and FSP water level data as model inputs while scenario II adopts only rainfall data as model inputs. The results demonstrate that the GT can efficiently identify the effective rainfall stations as important inputs to the three ANNs; the recurrent connections from the output layer (NARX network) impose more effects on the output than those of the hidden layer (Elman NN) do; and the NARX network performs the best in real-time forecasting. The NARX network produces coefficients of efficiency within 0.9-0.7 (scenario I) and 0.7-0.5 (scenario II) in the testing stages for 10-60-min-ahead forecasts accordingly. This study suggests that the proposed NARX models can be valuable and beneficial to the government authority for urban flood control.
+    </textarea>
+
+    <label>Keywords</label>
+    <ol>
+        <input type="button" value="+" name="keywords" data-type="array"/>
+        <li id="keyword0"><input type="text" name="keywords" value="Artificial neural networks">
+            <input type="button" value="-" onclick="deltxt(keyword0)">
+        </li>
+    </ol>
+    <hr>
+    <div class="g-recaptcha" data-sitekey="6LfAoRYUAAAAAO-7d2ugkE1F5MvOt-ZdMo9FHptT"></div>
+    <button type="submit">submit</button>
+</form>
+
+</body>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="formToJson.js"></script>
+<script>
+
+	$('form#f3').submit(function(event) {
+		event.preventDefault();
+		var $form = $("form");
+//		console.log($form.serializeArray())
+//		var data = getFormData($form);
+//		console.log(data)
+		var submitFormObject = {}
+
+		$("form").each(function(index) {
+//			console.log( $(this).serializeObject());
+			switch (index) {
+				case 0:
+					submitFormObject.delegate = $(this).serializeObject()
+					break
+				case 1:
+					submitFormObject.accom = $(this).serializeObject()
+					break
+				case 2:
+					submitFormObject.flight = $(this).serializeObject()
+					break
+				case 3:
+					submitFormObject.paper = $(this).serializeObject()
+					break
+				default:
+					break
+			}
+		});
+
+		console.log(JSON.stringify(submitFormObject))
+
+		$.post("http://localhost/api/users", submitFormObject)
+			.done(function(data) {
+				console.log(data)
+				alert("register successfully");
+			})
+			.fail(function() {
+				alert("error");
+			});
+
+	});
+</script>
+</html>

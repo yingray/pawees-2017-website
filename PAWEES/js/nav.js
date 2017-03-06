@@ -9,7 +9,7 @@
     // banner fixed 動畫
 
     $window.on("scroll", function(e) {
-      if (this.scrollY > 0) {
+      if ($window.scrollTop() > 0) {
         banner.addClass("banner2");
       }
       else {
@@ -45,12 +45,17 @@
     var Registration_Page_close=$(".Registration_Page_close");
     var fixed_shadowbg=$(".fixed_shadowbg");
 
-    // 註冊按鈕點擊
+    // 投稿系統先關閉
     joinicon.click(function(){
-        fixed_shadowbg.addClass("fixed_shadowbg2");
-        Registration_Page.addClass("Registration_Page2");
-        Registration_Page_close.addClass("Registration_Page_close2");
+        alert("Registration system will be available in the near future.","Thank you for coming");
     });
+
+    // 註冊按鈕點擊
+    // joinicon.click(function(){
+    //     fixed_shadowbg.addClass("fixed_shadowbg2");
+    //     Registration_Page.addClass("Registration_Page2");
+    //     Registration_Page_close.addClass("Registration_Page_close2");
+    // });
 
     Registration_Page_close.click(function(){
         fixed_shadowbg.removeClass("fixed_shadowbg2");
@@ -150,6 +155,15 @@
         sandwich.removeClass("sandwich2");
         nav.removeClass("navshow");
     });
+
+
+
+    // 地圖防止捲動產生功能
+    var map = $('.map');
+    map.click(function(){
+            $(this).find('iframe').addClass('clicked')});
+    map.mouseleave(function(){
+            $(this).find('iframe').removeClass('clicked')});
 
 
 

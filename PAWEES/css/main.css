@@ -55,6 +55,7 @@ header{
 }
 
 .banner{
+	position: relative;
 	transition: 0.5s; 
 	width: 100%;
 	height: 100px;
@@ -66,6 +67,7 @@ header{
 .logo{
 	position: absolute;
 	z-index: 11;
+	width: 365px;
 }
 
 .logo img{
@@ -411,6 +413,10 @@ nav ul li a{
 	box-sizing: border-box;
 }
 
+
+
+
+
 footer{
 	line-height: 40px;
 	font-size: 18px;
@@ -420,12 +426,32 @@ footer{
 }
 
 footer h1{
+	position: relative;
 	color:#333;
-	font-size: 42px;
-	font-family: 'Dancing Script', cursive;
+	font-size: 26px;
+
+	font-family: 'Marcellus SC', serif;
+	letter-spacing: 1px;
 	line-height: 100px;
-	font-weight: bold;
 }
+	footer h1:after{
+		content: "";
+		position: absolute;
+		bottom: 28px;	
+
+		height: 2px;
+		background-color: #333;
+	}
+	footer .organizers h1:after{
+		width: 170px;
+		margin: auto;
+		left: 0;
+		right: 0;
+	}
+	footer .contact_us h1:after{
+		width: 120px;
+		right: 0;
+	}
 
 footer .organizers{
 	color:#666;
@@ -436,9 +462,7 @@ footer .organizers{
 
 	padding: 50px 0;
 	text-align: center;
-
 	box-shadow:  0px 0px 30px 0px rgba(0,0,0,1);
-
 }
 	footer .organizers ul li{
 		display: inline-block;
@@ -446,7 +470,9 @@ footer .organizers{
 
 	footer .organizers ul li img{
 		height: 50px;
+		margin: 0 10px;
 	}
+
 
 
 footer .contact_us{
@@ -455,17 +481,46 @@ footer .contact_us{
 
 	height: auto;
 	width: 100%;
-	padding: 0px 50px 25px;
+	padding: 0px 50px 35px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
 
 	background: rgba(98, 153, 159, 1.00);
-
 	text-align: right;
-
 }
+	footer .contact_us span{
+		font-family: 'Marcellus SC', serif;
+		font-size: 14px;
+	}
+
+ul.share-buttons{
+  position: absolute;
+  bottom: 25px;
+  left: 45px;
+}
+
+ul.share-buttons li{
+  display: inline;
+  margin:0px 5px; 
+  opacity: 0.8;
+}
+	ul.share-buttons li:hover{
+  		opacity: 1;		
+	}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 
 
 
@@ -478,6 +533,7 @@ footer .contact_us{
 
 .sandwichclick{
 	position: absolute;
+	z-index: 12;
 	margin: auto;
 	top: 0;
 	bottom: 0;
@@ -721,6 +777,73 @@ nav ul li a{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+
+
+
+
+footer{
+	line-height: 32px;
+	font-size: 14px;
+}
+
+footer h1{
+	font-size: 22px;
+}
+	footer h1:after{
+		bottom: 30px;	
+	}
+	footer .organizers h1:after{
+		width: 145px;
+	}
+	footer .contact_us h1:after{
+		width: 105px;
+		left: 0;
+	}
+
+footer .organizers{
+	padding: 50px 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+	footer .organizers ul li{
+		display: inline-block;
+	}
+
+	footer .organizers ul li img{
+		height: 50px;
+		margin: 0 10px;
+	}
+
+
+
+footer .contact_us{
+	line-height: 30px;
+
+	padding: 0px 35px 70px;
+	text-align: left;
+}
+	footer .contact_us span{
+		position: absolute;
+		width: 100%;
+		bottom: 2px;
+		margin: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 12px;
+	}
+
+ul.share-buttons{
+  margin: auto;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+}
+
+
 
 
 

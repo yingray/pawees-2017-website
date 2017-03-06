@@ -35,8 +35,6 @@ section video{
 
 	top: 0;
 	z-index: -1;
-
-	height: 100%;
 	width: 100%;
 
 	object-position: 50% 0;
@@ -391,13 +389,6 @@ section video{
 	letter-spacing: 1px;
 	line-height: 100px;
 }
-	.section07 .fee h1{
-		color:#333;
-		font-size: 42px;
-		font-family: 'Dancing Script', cursive;
-		line-height: 100px;
-		font-weight: bold;
-	}
 
 .section07 .fee table{
 	position: relative;
@@ -412,9 +403,7 @@ section video{
 	font-family: 'Cuprum', sans-serif,微軟正黑體;
 	
 }
-
-
-	/*.section07 .fee table:before{
+	.section07 .fee table:before{
 		content: "";
 		position: absolute;
 		margin: auto;
@@ -425,7 +414,7 @@ section video{
 		height: 2px;
 		width: 250px;
 		background-color: #333;
-	}*/
+	}
 
 .section07 .fee table tr td{
 	padding:0 25px; 
@@ -533,29 +522,45 @@ section video{
 /*---section09---*/
 
 .section09{
-
 	height: auto;
 	background: url(../images/section01/video_BG2.jpg) no-repeat fixed center;
 	background-size: cover;
 }
 
 .section09_venue{
-	background-color: rgba(240, 237, 229, 0.75);
 	padding: 15px 0 0;
-
 	text-align: center;
 
+	background: -webkit-linear-gradient(180deg,rgba(240, 237, 229, 0.5) 0%,rgba(240, 237, 229, 1) 50%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(180deg,rgba(240, 237, 229, 0.5) 0%,rgba(240, 237, 229, 1) 50%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(180deg,rgba(240, 237, 229, 0.5) 0%,rgba(240, 237, 229, 1) 50%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(180deg,rgba(240, 237, 229, 0.5) 0%,rgba(240, 237, 229, 1) 50%); /* Standard syntax */
 }
 
 .section09_venue h1{
+	position: relative;
 	color:#333;
-	font-size: 42px;
-	font-family: 'Dancing Script', cursive;
+	font-size: 26px;
+
+	font-family: 'Marcellus SC', serif;
+	letter-spacing: 1px;
 	line-height: 100px;
-	font-weight: bold;
 }
+	.section09_venue h1:after{
+		content: "";
+		position: absolute;
+		bottom: 28px;
+		margin: auto;
+		left: 0;
+		right: 0;
+
+		height: 2px;
+		width: 90px;
+		background-color: #333;
+	}
 
 .section09_venue .venue_info{
+	color: #333;
 	position: relative;
 
 	width: 100%;
@@ -568,11 +573,26 @@ section video{
 
 .section09_venue .venue_info a{
 	text-decoration: none;
-	color: #333;
+	color:#fff;
+	background-color: #555;
 
+	padding: 5px 10px; 
+
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.map iframe{
+	width: 100%;
+	height: 300px;
+	display: block;
+	pointer-events: none; /*滑鼠事件先關掉*/
+	position: relative; /* IE needs a position other than static */
+}
+.map iframe.clicked{
+	pointer-events: auto; /*滑鼠事件打開*/
 }
 	
-
 
 
 /*____________________________________________________________________________*/
@@ -599,7 +619,7 @@ section video{
 }
 
 .section03 div{
-	padding: 0px 0px 200px;
+	padding: 100px 0px 200px;
 }
 	.section03 h1{
 		font-size: 36px;
@@ -639,6 +659,9 @@ section video{
 .section06{
 	background-attachment: scroll;
 }
+	.section06 .important_date table tr td span{
+		background-color: rgba(255,255,255,0.9);
+	}
 
 
 
@@ -692,6 +715,14 @@ section video{
 
 
 
+/*---section09---*/
+
+.section09{
+	background-attachment: scroll;
+}
+
+
+
 }
 
 /*____________________________________________________________________________*/
@@ -726,7 +757,7 @@ section video{
 
 
 .section03 div{
-	padding: 70px 0px 100px;
+	padding: 140px 0px 100px;
 }
 	.section03 h1{
 		font-size: 18px;
@@ -882,6 +913,52 @@ section video{
 .section08 .news table{
 	line-height: 32px;
 	font-size: 16px;
+}
+	.section08 .news table tr td{
+		padding:5px 6px 5px 12px; 
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		display: inline-block;
+		text-align: left;
+		width: 100%;
+	}
+	.section08 .news table tr td:nth-child(2){
+		width: 100%;
+	}
+
+
+
+/*---section09---*/
+
+.section09_venue{
+	padding: 15px 10px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.section09_venue h1{
+	font-size: 22px;
+}
+	.section09_venue h1:after{
+		bottom: 28px;
+		width: 78px;
+	}
+
+.section09_venue .venue_info{
+	color: #333;
+	font-size: 16px;
+	line-height: 32px;
+}
+
+.section09_venue .venue_info a{
+	font-size: 14px;
+}
+
+.map iframe{
+	height: 400px;
 }
 
 

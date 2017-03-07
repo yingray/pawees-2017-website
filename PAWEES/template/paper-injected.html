@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            font-family: 'Crimson Text', serif;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        body {
+            text-align: center;
+            width: 500px;
+            margin: 0 auto;
+            line-height: 20px;
+            font-size: 12px;
+            /* letter-spacing: 0.5px; */
+            font-family: 'Crimson Text', serif;
+            padding: 20px;
+        }
+        #title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        strong {
+            font-weight: 700;
+        }
+        h1, h4, ul, p {
+            margin-top: 14px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body style="text-align: center; width: 554px; margin: 0 auto;">
+<h1 id="title">Real-time multi-step-ahead
+    water level forecasting by
+    recurrent neural networks for
+    urban flood control</h1>
+<h4 id="authors">Fi-John Chang, Ying-Ray Lu</h4>
+<ul id="affiliations">
+    <li>
+        Department of Bioenvironmental Systems Engineering,
+        National Taiwan University, Taipei 10617, Taiwan, ROC
+    </li>
+    <li>
+        Hydraulic Engineering Office, Public Works Department,
+        Taipei City Government, Taipei 11008, Taiwan, ROC
+    </li>
+</ul>
+<p id="abstract" style="text-align: justify;">
+    Urban flood control is a crucial task, which commonly faces fast
+    rising peak flows resulting from urbanization. To mitigate future
+    flood damages, it is imperative to construct an on-line accurate
+    model to forecast inundation levels during flood periods. The YuCheng
+    Pumping Station located in Taipei City of Taiwan is
+    selected as the study area. Firstly, historical hydrologic data are
+    fully explored by statistical techniques to identify the time span
+    of rainfall affecting the rise of the water level in the floodwater
+    storage pond (FSP) at the pumping station. Secondly, effective
+    factors (rainfall stations) that significantly affect the FSP water
+    level are extracted by the Gamma test (GT). Thirdly, one static
+    artificial neural network (ANN) (backpropagation neural
+    network-BPNN) and two dynamic ANNs (Elman neural networkElman
+    NN; nonlinear autoregressive network with exogenous
+    inputs-NARX network) are used to construct multi-step-ahead
+    FSP water level forecast models through two scenarios, in which
+    scenario I adopts rainfall and FSP water level data as model
+    inputs while scenario II adopts only rainfall data as model inputs.
+    The results demonstrate that the GT can efficiently identify the
+    effective rainfall stations as important inputs to the three ANNs;
+    the recurrent connections from the output layer (NARX network)
+    impose more effects on the output than those of the hidden layer
+    (Elman NN) do; and the NARX network performs the best in realtime
+    forecasting. The NARX network produces coefficients of
+    efficiency within 0.9-0.7 (scenario I) and 0.7-0.5 (scenario II) in
+    the testing stages for 10-60-min-ahead forecasts accordingly.
+    This study suggests that the proposed NARX models can be
+    valuable and beneficial to the government authority for urban
+    flood control.
+</p>
+<p id="keywords" style="text-align: justify;">
+    <strong>Keywords: </strong>Artificial neural networks, Gamma test
+</p>
+</body>
+</html>

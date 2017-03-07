@@ -131,7 +131,67 @@
 						<fieldset>
 							<div class="form_title">Registration</div>
 
+							<!--Delegate Form Start-->
+							<label>Email</label>
+							<input type="text" name="email" placeholder="email">
+							<br>
 
+							<label>Password</label>
+							<input type="password" name="password">
+							<br>
+
+							<label>Title</label>
+							<input type="text" name="title" placeholder="title" required>
+
+							<label>First Name</label>
+							<input type="text" name="firstName" placeholder="firstName" required>
+
+							<label>Last Name</label>
+							<input type="text" name="lastName" placeholder="lastName">
+							<br>
+
+							<label>Country</label>
+							<input type="text" name="country" placeholder="country">
+							<br>
+
+							<label>Male</label>
+							<input type="text" name="gender" placeholder="gender">
+							<br>
+
+							<label>Position</label>
+							<input type="text" name="position" placeholder="position">
+
+							<label>Organization</label>
+							<input type="text" name="organization" placeholder="organization">
+							<br>
+
+							<label>Address</label>
+							<input type="text" name="address" placeholder="address">
+							<br>
+
+							<label>Fax</label>
+							<input type="text" name="fax" placeholder="fax">
+
+							<label>Phone</label>
+							<input type="text" name="phone" placeholder="phone">
+
+							<label>Mobile</label>
+							<input type="text" name="mobile" placeholder="mobile">
+							<br>
+
+							<label>Date of Birth</label>
+							<input type="text" name="dateOfBirth" placeholder="dateOfBirth">
+							<br>
+
+							<label>Session</label>
+							<input type="text" name="session" placeholder="session">
+
+							<label>Type</label>
+							<input type="text" name="type" placeholder="type">
+
+							<label>Tour</label>
+							<input type="text" name="tour" placeholder="tour">
+							<!--Delegate Form End-->
 
 							<div class="next_step">
 								Next Step
@@ -144,7 +204,28 @@
 						<fieldset>
 							<div class="form_title">Accommodations</div>
 
+							<!--Accom Form Start-->
+							<label>Hotel</label>
+							<input type="text" name="hotel" placeholder="hotel">
+							<br>
 
+							<label>Stay</label>
+							<input type="text" name="stay" placeholder="stay">
+							<br>
+
+							<label>Check In</label>
+							<input type="date" name="checkIn" placeholder="checkIn">
+
+							<label>Check Out</label>
+							<input type="date" name="checkOut" placeholder="checkOut">
+							<br>
+
+							<label>Meals</label>
+							<select name="meals">
+								<option value="non-vegetarian">non-vegetarian</option>
+								<option value="vegetarian">vegetarian</option>
+							</select>
+							<!--Accom Form End-->
 
 							<div class="pre_step">
 								<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
@@ -161,7 +242,30 @@
 						<fieldset>
 							<div class="form_title">Technical Tour</div>
 
-
+							<!--Flight Information Form Start -->
+							<fieldset>
+								<legend>Arrival</legend>
+								<label>Airline</label>
+								<input type="text" name="airline" flight="arrival"><br>
+								<label>Flight</label>
+								<input type="text" name="flight" flight="arrival"><br>
+								<label>Date</label>
+								<input type="date" name="date" flight="arrival"><br>
+								<label>Time</label>
+								<input type="time" name="time" flight="arrival">
+							</fieldset>
+							<fieldset>
+								<legend>Departure</legend>
+								<label>Airline</label>
+								<input type="text" name="airline" flight="departure"><br>
+								<label>Flight</label>
+								<input type="text" name="flight" flight="departure"><br>
+								<label>Date</label>
+								<input type="date" name="date" flight="departure"><br>
+								<label>Time</label>
+								<input type="time" name="time" flight="departure">
+							</fieldset>
+							<!--Flight Information Form End -->
 
 							<div class="pre_step">
 								<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
@@ -178,7 +282,32 @@
 						<fieldset>
 							<div class="form_title">Abstract Submission</div>
 
+							<!--Abstract Form Start-->
+							<label>Title</label>
+							<input type="text" name="title">
+							<br>
 
+							<label>Authors</label>
+							<ol>
+								<input type="button" value="+" name="authors" data-type="array"/>
+							</ol>
+							<br>
+
+							<label>Affiliations</label>
+							<ol>
+								<input type="button" value="+" name="affiliations" data-type="array"/>
+							</ol>
+							<br>
+
+							<label>Abstract</label>
+							<textarea name="abstract" cols="100" rows="10"></textarea>
+							<br>
+
+							<label>Keywords</label>
+							<ol>
+								<input type="button" value="+" name="keywords" data-type="array"/>
+							</ol>
+							<!--Abstract Form End-->
 
 							<div class="pre_step">
 								<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
@@ -529,10 +658,16 @@
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
+<script src="js/apis.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/Popup.js"></script>
-
+<script src="js/form.js"></script>
+<script>
+	$(document).ready(function() {
+		console.log("ready!");
+		apis.Verification()
+	})
+</script>
 
 
 </body>

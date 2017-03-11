@@ -46,16 +46,16 @@
     var fixed_shadowbg=$(".fixed_shadowbg");
 
     // 投稿系統先關閉
-    // joinicon.click(function(){
-    //     alert("Registration system will be available in the near future.","Thank you for coming");
-    // });
+    joinicon.click(function(){
+        alert("Registration system will be available in the near future.","Thank you for coming");
+    });
 
     // 註冊按鈕點擊
-    joinicon.click(function(){
-        fixed_shadowbg.addClass("fixed_shadowbg2");
-        Registration_Page.addClass("Registration_Page2");
-        Registration_Page_close.addClass("Registration_Page_close2");
-    });
+    // joinicon.click(function(){
+    //     fixed_shadowbg.addClass("fixed_shadowbg2");
+    //     Registration_Page.addClass("Registration_Page2");
+    //     Registration_Page_close.addClass("Registration_Page_close2");
+    // });
 
     Registration_Page_close.click(function(){
         fixed_shadowbg.removeClass("fixed_shadowbg2");

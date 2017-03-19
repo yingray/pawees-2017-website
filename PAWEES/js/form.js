@@ -38,7 +38,7 @@ function appendInputField(element, value) {
 	var nameId = name.concat(txtId);
 	var inputField = '<input type="text" name="' + name + '"value="' + value + '">';
 	var buttonMinor = '<input type="button" value="-" onclick="deltxt(' + nameId + ')">'
-	$(element).parent().append('<li id="' + nameId + '">' + inputField + buttonMinor + '</li>')
+	$(element).parent().prepend('<li id="' + nameId + '">' + inputField + buttonMinor + '</li>')
 	txtId++;
 }
 

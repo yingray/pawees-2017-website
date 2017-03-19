@@ -103,96 +103,178 @@
 					<ul>
 						<!-- 當前頁面掛上write的class -->
 						<li class="write">
-							Registration
+							Member Account
 						</li>
 						<li class="">
-							Accommodations
+							Registration Information
 						</li>
 						<li class="">
-							Technical Tour
+							Accommodation
+						</li>
+						<li class="">
+							Flight information
 						</li>
 						<li class="">
 							Abstract Submission
 						</li>
 					</ul>
 
-					<div class="login">
-						<div class="login_title">LOG IN</div>
-
-						<input type="email" name="email" placeholder=" Email">
-						<input type="password" name="password" placeholder=" Password">
-					</div>
 
 				</div>
 
 				<div class="Registration_Page">
 
-					<form class="write_form">
+					<form class="write_form account">
 						<fieldset>
-							<div class="form_title">Registration</div>
+							<div class="form_title">Member Account</div>
+
+							<div class="login">
+								<div class="block">
+									<h1>SIGN UP</h1>
+
+									<input type="email" name="email" placeholder="Email">
+									<input type="password" name="password" placeholder="Password">
+
+									<div class="button">SIGN UP</div>
+								</div>
+							</div>
+
+							<div class="or">or</div>
+
+							<div class="login">
+								<div class="block">
+
+									<h1>LOG IN</h1>
+
+									<input type="email" name="email" placeholder="Email">
+									<input type="password" name="password" placeholder="Password">
+									
+									<div class="button">LOG IN</div>
+
+								</div>
+							</div>
+
+						
+
+							<div class="next_step">
+								Next Step
+								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+							</div>
+						</fieldset>
+					</form>
+
+
+
+					<form class="account">
+						<fieldset>
+							<div class="form_title">Member Account</div>
+
+							<div class="login logout">
+								<div class="block">
+
+									<h1>WELCOME</h1>
+
+									<input type="email" name="email" placeholder="Email" disabled>
+									<input type="password" name="password" placeholder="Password" disabled>
+									
+									<div class="button">LOG OUT</div>
+
+								</div>
+							</div>
+
+						
+
+							<div class="next_step">
+								Next Step
+								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+							</div>
+						</fieldset>
+					</form>
+
+
+
+					<form>
+						<fieldset>
+							<div class="form_title">Registration Information</div>
 
 							<!--Delegate Form Start-->
-							<label>Email</label>
-							<input type="text" name="email" placeholder="email">
-							<br>
+							<!-- 必填label class="required" -->
+							<label class="required">Title</label>
+							<select name="title" required>
+								<option>Mr.</option>
+								<option>Mrs.</option>
+								<option>Miss</option>
+							</select>
 
-							<label>Password</label>
-							<input type="password" name="password">
-							<br>
-
-							<label>Title</label>
-							<input type="text" name="title" placeholder="title" required>
 
 							<label>First Name</label>
-							<input type="text" name="firstName" placeholder="firstName" required>
+							<input type="text" name="firstName" required>
 
 							<label>Last Name</label>
-							<input type="text" name="lastName" placeholder="lastName">
+							<input type="text" name="lastName">
 							<br>
 
 							<label>Country</label>
-							<input type="text" name="country" placeholder="country">
+							<input type="text" name="country">
 							<br>
 
 							<label>Male</label>
-							<input type="text" name="gender" placeholder="gender">
+							<input type="text" name="gender">
 							<br>
 
 							<label>Position</label>
-							<input type="text" name="position" placeholder="position">
+							<input type="text" name="position">
 
 							<label>Organization</label>
-							<input type="text" name="organization" placeholder="organization">
+							<input type="text" name="organization">
 							<br>
 
 							<label>Address</label>
-							<input type="text" name="address" placeholder="address">
+							<input type="text" name="address">
 							<br>
 
-							<label>Fax</label>
-							<input type="text" name="fax" placeholder="fax">
+							<label>Mobile</label>
+							<input type="text" name="mobile">
 
 							<label>Phone</label>
-							<input type="text" name="phone" placeholder="phone">
+							<input type="text" name="phone" placeholder="">
 
-							<label>Mobile</label>
-							<input type="text" name="mobile" placeholder="mobile">
+							<label>Fax</label>
+							<input type="text" name="fax">
+
 							<br>
 
 							<label>Date of Birth</label>
-							<input type="text" name="dateOfBirth" placeholder="dateOfBirth">
+							<input type="text" name="dateOfBirth" placeholder="1900-00-00">
 							<br>
 
 							<label>Session</label>
-							<input type="text" name="session" placeholder="session">
+							<select name="session" required>
+								<option>Topic 1 | Sustainable water use and ecologically sustainable development</option>
+								<option>Topic 2 | Development of rural society with water in Asia</option>
+								<option>Topic 3 | Sustainable paddy farming</option>
+								<option>Topic 4 | Integrated watershed management</option>
+								<option>Topic 5 | Droughts and flood disaster risk management</option>
+							</select>
 
 							<label>Type</label>
-							<input type="text" name="type" placeholder="type">
+							<select name="type" required>
+								<option>Oral</option>
+								<option>Poster</option>
+							</select>
+							<br>
 
-							<label>Tour</label>
-							<input type="text" name="tour" placeholder="tour">
+							<label>Join the Tour?</label>
+							<input type="radio" name="tour" value="yes" placeholder="tour" checked>yes
+							<input type="radio" name="tour" value="no" placeholder="tour">no
+
 							<!--Delegate Form End-->
-
+							
+							<div class="pre_step">
+								<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+								Previous Step
+							</div>
+							
 							<div class="next_step">
 								Next Step
 								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
@@ -202,15 +284,15 @@
 					
 					<form>
 						<fieldset>
-							<div class="form_title">Accommodations</div>
+							<div class="form_title">Accommodation</div>
 
 							<!--Accom Form Start-->
 							<label>Hotel</label>
-							<input type="text" name="hotel" placeholder="hotel">
+							<input type="text" name="hotel" placeholder="">
 							<br>
 
 							<label>Stay</label>
-							<input type="text" name="stay" placeholder="stay">
+							<input type="text" name="stay" placeholder="">
 							<br>
 
 							<label>Check In</label>
@@ -240,11 +322,10 @@
 
 					<form>
 						<fieldset>
-							<div class="form_title">Technical Tour</div>
+							<div class="form_title">Flight Information</div>
 
 							<!--Flight Information Form Start -->
-							<fieldset>
-								<legend>Arrival</legend>
+								<h1>Arrival</h1>
 								<label>Airline</label>
 								<input type="text" name="airline" flight="arrival"><br>
 								<label>Flight</label>
@@ -252,10 +333,9 @@
 								<label>Date</label>
 								<input type="date" name="date" flight="arrival"><br>
 								<label>Time</label>
-								<input type="time" name="time" flight="arrival">
-							</fieldset>
-							<fieldset>
-								<legend>Departure</legend>
+								<input type="time" name="time" flight="arrival"><br>
+								<br>
+								<h1>Departure</h1>
 								<label>Airline</label>
 								<input type="text" name="airline" flight="departure"><br>
 								<label>Flight</label>
@@ -264,7 +344,6 @@
 								<input type="date" name="date" flight="departure"><br>
 								<label>Time</label>
 								<input type="time" name="time" flight="departure">
-							</fieldset>
 							<!--Flight Information Form End -->
 
 							<div class="pre_step">
@@ -278,13 +357,14 @@
 						</fieldset>
 					</form>
 
-					<form>
+					<form class="abstract">
 						<fieldset>
 							<div class="form_title">Abstract Submission</div>
 
 							<!--Abstract Form Start-->
 							<label>Title</label>
-							<input type="text" name="title">
+							<input type="text" name="title" class="title">
+							<br>
 							<br>
 
 							<label>Authors</label>
@@ -301,6 +381,7 @@
 
 							<label>Abstract</label>
 							<textarea name="abstract" cols="100" rows="10"></textarea>
+							<br>
 							<br>
 
 							<label>Keywords</label>

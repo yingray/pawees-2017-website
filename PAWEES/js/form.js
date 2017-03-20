@@ -3,7 +3,7 @@ $('.login_title').click(function() {
 	if($(this).html() === 'LOG IN') {
 		const submitFormObject = {
 			"email": $('.login > input[name="email"]').val(),
-			"password": $('.login > input[name="password"]').val()
+			"password": md5($('.login > input[name="password"]').val())
 		}
 		apis.Login(submitFormObject);
 	} else {

@@ -32,9 +32,7 @@ section, .welcome{
 
 section video{
 	position: fixed;
-
 	top: 0;
-	z-index: -1;
 	width: 100%;
 
 	object-position: 50% 0;
@@ -46,6 +44,8 @@ section video{
 /*---section01---*/
 .section01{
 	height: 68%;
+	background: url(../images/section01/video_BG.jpg) no-repeat fixed center;
+	background-size: cover;
 }
 
 .pawee_title{
@@ -571,7 +571,7 @@ section video{
 	letter-spacing: 2px;
 }
 
-.section09_venue .venue_info a{
+.section09_venue .venue_info a.web{
 	text-decoration: none;
 	color:#fff;
 	background-color: #555;
@@ -953,7 +953,7 @@ section video{
 	line-height: 32px;
 }
 
-.section09_venue .venue_info a{
+.section09_venue .venue_info a.web{
 	font-size: 14px;
 }
 

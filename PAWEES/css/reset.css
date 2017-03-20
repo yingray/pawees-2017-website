@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+/*ol,*/ ul {
 	list-style: none;
 }
 blockquote, q {
@@ -50,7 +50,7 @@ table {
 	border-spacing: 0;
 }
 
-input:focus, select:focus, button:focus{
+input:focus, select:focus, button:focus, textarea:focus{
 	outline: none;
 }
 

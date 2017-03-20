@@ -203,6 +203,7 @@ nav ul li a{
 	box-sizing: border-box;
 
 	overflow: hidden;
+	z-index: 15;
 }
 	.Registration_Page2{
 		left: 335px;
@@ -277,32 +278,127 @@ nav ul li a{
 
 /*登入*/
 
-.fixed_shadowbg .login{
-	position: absolute;
-	bottom: 145px;
-	left: 45px;
-
-	width: 240px;
-	padding: 10px 0 25px; 
-	
-	text-align: center;
-	border: 1px solid #fff;
+form.account{
+	background: url(../images/section01/video_BG9.jpg) no-repeat center;
+	background-size: cover;
 }
+.Registration_Page form.account fieldset{
+	font-size: 0;
+}
+form.account .or{
+	position: absolute;
+	margin: auto;
+	top: 15px;
+	bottom:0;
+	left: -335px;
+	right: 0;
 
-.fixed_shadowbg .login input, .fixed_shadowbg .login .login_title{
-	margin: 10px 0; 
-	height: 30px;
-	width: 200px;
+	width: 20px;
+	height: 20px;
+	color:#333;
+	font-size: 22px;
+
+	font-family: 'Marcellus SC', serif;
+	letter-spacing: 1px;
+	line-height: 20px;
+
+	z-index: 15;
+}
+	form.account .or:before, form.account .or:after{
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 100px;
+		background: #aaa;
+
+		margin: auto;
+		right: 0;
+		left: 0;
+	}
+		form.account .or:before{
+			top: -120px;
+		}
+		form.account .or:after{
+			bottom: -120px;
+		}
+
+.Registration_Page .login{
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 100%;
 
 	font-size: 16px;
-	border-radius: 5px;
-	border-width: 0; 
+	text-align: center;
 }
+	.Registration_Page .logout{
+		width: 100%;
+	}
 
-.fixed_shadowbg .login .login_title{
+.Registration_Page .login .block{
 	position: absolute;
-	bottom: -16px;
 	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	height: 300px;
+	width: 270px;
+}
+	
+.Registration_Page .login .block h1{
+	position: relative;
+	color:#333;
+	font-size: 22px;
+
+	font-family: 'Marcellus SC', serif;
+	letter-spacing: 1px;
+	line-height: 80px;
+}
+	
+	.Registration_Page .login .block h1:after{
+		content: "";
+		position: absolute;
+		bottom: 18px;
+		margin: auto;
+		left: 0;
+		right: 0;
+
+		height: 2px;
+		width: 90px;
+		background-color: #333;
+	}
+	.Registration_Page .logout .block h1:after{
+		width: 120px;
+	}
+
+
+.Registration_Page .login input{
+	display: block;
+	margin: 25px 0;
+	padding: 5px 10px;  
+	height: 30px;
+	width: 250px;
+
+	font-size: 18px;
+	font-family: 'Cuprum', sans-serif;
+	border: solid #aaa 1px; 
+
+}
+	.Registration_Page .login input:focus{
+		border: solid #faa 1px; 
+		transition:0.2s; 
+		box-shadow: #faa 0px 0px 15px 0px;
+	}
+	.Registration_Page .logout input{
+		background: transparent;
+	}
+
+.Registration_Page .login .button{
+	position: absolute;
+	margin: auto;
+	bottom: 0px;
 	left: 0;
 	right: 0;
 	width: 100px;	
@@ -310,9 +406,7 @@ nav ul li a{
 	font-size: 20px;
 	font-family: 'Cuprum', sans-serif;
 	color:rgba(136,136,136,1);
-	background: #fff;
 
-	border: 1px solid #fff;
 	line-height: 32px;
 	letter-spacing: 2px;
 	font-weight: bolder;	
@@ -322,9 +416,9 @@ nav ul li a{
 	transition:0.2s; 
 	box-shadow: rgba(0,0,0,0.7) 0px 0px 25px 0px;
 }
-	.fixed_shadowbg .login .login_title:hover{
-		color: #faa;
-		box-shadow: #faa 0px 0px 35px 0px;
+	.Registration_Page .login .button:hover{
+		color: #1256A4;
+		box-shadow: #1256A4 0px 0px 5px 0px;
 	}
 
 
@@ -384,6 +478,10 @@ nav ul li a{
 		.Registration_Page form .next_step{
 			right: 387px;
 		}
+		.Registration_Page form.account .next_step{
+			color: #fff;
+		}
+
 
 	.Registration_Page form .edit_information{
 		bottom: 30px;
@@ -393,10 +491,18 @@ nav ul li a{
 	}
 	.Registration_Page form .submit_info{
 		bottom: 30px;
-		right: 365px;
-		border: 1px solid rgba(13, 82, 162, 1.00);
-		padding: 10px 20px; 
+		right: 387px;
+		padding: 5px 20px; 
+
+		border-radius: 30px;
+
+		transition:0.2s; 
+		box-shadow: rgba(0,0,0,0.7) 0px 0px 25px 0px;
 	}
+		.Registration_Page form .submit_info:hover{
+			color: #1256A4;
+			box-shadow: #1256A4 0px 0px 5px 0px;
+		}
 
 .Registration_Page form fieldset{
 	width: 100%;
@@ -411,9 +517,115 @@ nav ul li a{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	font-size: 18px;
+	color: #333;
+	font-family: 'Cuprum', sans-serif;
+	vertical-align: middle;
 }
 
+.Registration_Page form fieldset label{
+	position: relative;
+	font-size: 18px;
+	color: #333;
+	font-family: 'Marcellus SC', serif;
+	margin: 10px 0px;
 
+	vertical-align: middle;
+
+}
+	/*下在label的必填米字*/
+	.Registration_Page form fieldset label.required:before{
+		content: "＊";
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: -18px;
+
+		font-size: 18px;
+		color: #faa;
+
+		vertical-align: middle;
+	}
+
+.Registration_Page form fieldset input,.Registration_Page form fieldset select{
+	margin: 10px 30px 10px 5px;
+	padding: 0px 10px;  
+	height: 30px;
+	line-height: 30px;
+
+	font-family: 'Cuprum', sans-serif;
+	font-size: 18px;
+	border: solid #aaa 1px; 
+	background: #fff;
+	color: #555;
+
+	vertical-align: middle;
+}
+	.Registration_Page form fieldset input:focus,.Registration_Page form fieldset select:focus{
+		border: solid #faa 1px; 
+		transition:0.2s; 
+		box-shadow: #faa 0px 0px 15px 0px;
+	}
+
+	/*單選選項*/
+	.Registration_Page form fieldset input[type="radio"]{
+		margin: 10px 10px 10px 15px;
+	}
+	.Registration_Page form fieldset input[type="radio"]:focus{
+		border: solid #faa 0px; 
+		box-shadow: #faa 0px 0px 0px 0px;
+	}
+	
+	/*摘要頁面*/
+	.Registration_Page form.abstract fieldset input{
+		margin: 10px 12px 10px 8px;	
+	}
+	.Registration_Page form.abstract fieldset input[type="text"].title{
+		width: 100%;
+		height: 32px;
+		margin: 10px 0px;
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.Registration_Page form.abstract fieldset textarea{
+		width: 100%;
+		margin: 10px 0px;
+	}
+	.Registration_Page form.abstract fieldset textarea:focus{
+		border: solid #faa 1px; 
+		transition:0.2s; 
+		box-shadow: #faa 0px 0px 15px 0px;
+	}
+	
+	/*摘要加欄位*/
+	.Registration_Page form.abstract fieldset ol li{
+		position: relative;
+		left: 30px;
+	}
+
+.Registration_Page h1{
+	position: relative;
+	color:#333;
+	font-size: 22px;
+
+	font-family: 'Marcellus SC', serif;
+	letter-spacing: 1px;
+	line-height: 80px;
+}
+	.Registration_Page h1:after{
+		content: "";
+		position: absolute;
+		bottom: 18px;
+		left: 0;
+
+		height: 1px;
+		width: 100%;
+		background-color: #aaa;
+	}
 
 
 
@@ -633,11 +845,71 @@ nav ul li a{
 		background-color: #888;
 	}
 
-	
 
 
-	
+/*登入*/
+
+form.account .or{
+	position: relative;
+	margin: auto;
+	left: 0;
+	right: 0;
+
+	color:#888;
 }
+	form.account .or:before, form.account .or:after{
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 1px;
+		background: #888;
+
+		margin: auto;
+		top: 0;
+		bottom: 0;
+	}
+		form.account .or:before{
+			left: -170px;
+		}
+		form.account .or:after{
+			right: -170px;
+		}
+
+.Registration_Page .login{
+	width: 100%;
+	height: 400px;
+}
+.Registration_Page .login input{
+	height: 40px;
+	width: 270px;
+}
+
+
+
+.Registration_Page form fieldset label{
+	display: block;
+}
+.Registration_Page form fieldset input,.Registration_Page form fieldset select,.Registration_Page form fieldset textarea{
+	width: 100%;
+	margin: 0px 0px 20px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+.Registration_Page form fieldset input[type="radio"]{
+	width: 20px;
+}
+	.Registration_Page form.abstract fieldset ol{
+		vertical-align: middle;
+	}
+	.Registration_Page form.abstract fieldset ol input{
+		width: auto;	
+	}
+
+
 
 /*____________________________________________________________________________*/
 
@@ -696,7 +968,7 @@ nav ul li a{
 
 
 .fixed_shadowbg{
-	top: 70px;
+	top: 100%;
 }
 
 .Registration_Page{
@@ -731,6 +1003,7 @@ nav ul li a{
 /*表單內容*/
 .Registration_Page form{
 	padding: 70px 30px 140px;
+	border-radius: 30px;
 }
 
 	.Registration_Page form .form_title{
@@ -772,13 +1045,11 @@ nav ul li a{
 	border-style: solid; 
 	border-color: #ccc;
 
-	padding: 50px;
+	padding: 30px 0px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
-
 
 
 
@@ -844,6 +1115,36 @@ ul.share-buttons{
 }
 
 
+
+/*登入*/
+
+form.account{
+	width: 100%;
+}
+form.account .or{
+	height: 100px;
+	line-height: 100px;
+
+	width: 50px;
+	text-align: center;
+}
+
+.Registration_Page .login{
+	width: 100%;
+	height: 325px;
+}
+.Registration_Page .login .block{
+	width: 100%;
+	margin:0px; 
+	height: 300px;
+}
+.Registration_Page .login input{
+	width: 100%;
+	height: 40px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 
 

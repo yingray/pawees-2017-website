@@ -165,6 +165,147 @@ nav ul li a{
 
 
 
+/*---提示視窗---*/
+
+.fixed_shadow{
+	position: fixed;
+	top: 0px;
+	left: -100%;
+	opacity: 0;
+
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 20;
+
+	transition: opacity 1s; 
+}
+	.fixed_shadow2{
+		left:0;
+		opacity: 1;
+	}
+
+.wait_BG{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	width: 50%;
+	height: 350px;
+	
+	background: url(../images/section01/video_BG10.jpg) center top;
+	background-size: cover;
+
+	border-radius: 30px;
+	box-shadow: rgba(0,0,0,1) 0px 0px 50px 0px;
+	text-align: center;
+}
+
+.pawee_wait{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	width: 60%;	
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	background-position: 0 0;
+	background-image: url(../images/section01/PAWEE_01.svg);
+}
+
+	.pawee_wait_p{
+		background-image: url(../images/section01/PAWEE_P.svg);
+		animation: pawees 1.2s 0s linear infinite backwards ;
+	}
+	.pawee_wait_a{
+		background-image: url(../images/section01/PAWEE_A.svg);
+		animation: pawees 1.2s 0.2s linear infinite backwards ;
+	}
+	.pawee_wait_w{
+		background-image: url(../images/section01/PAWEE_W.svg);
+		animation: pawees 1.2s 0.4s linear infinite backwards ;
+	}
+	.pawee_wait_e{
+		background-image: url(../images/section01/PAWEE_E.svg);
+		animation: pawees 1.2s 0.6s linear infinite backwards ;
+	}
+	.pawee_wait_ee{
+		background-image: url(../images/section01/PAWEE_EE.svg);
+		animation: pawees 1.2s 0.8s linear infinite backwards ;
+	}
+	.pawee_wait_s{
+		background-image: url(../images/section01/PAWEE_S.svg);
+		animation: pawees 1.2s 1s linear infinite backwards ;
+	}
+
+.wait_txt{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 25px;
+
+	width: 100%;
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+
+	font-family: sans-serif, 微軟正黑體, 黑體;
+	color: #eee;
+}
+
+.check_txt{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top:100px;
+
+	width: 60%;
+	text-align: center;
+	font-size: 18px;
+	line-height: 24px;
+
+	font-family: sans-serif, 微軟正黑體, 黑體;
+	color: #555;
+}
+
+.wait_BG .button{
+	display: inline-block;
+	position: relative;
+	top:250px;
+	width: 100px;
+	height: 32px;
+	margin:0 30px; 	
+
+	font-size: 20px;
+	font-family: 'Cuprum', sans-serif;
+	color:#555;
+
+	line-height: 32px;
+	letter-spacing: 2px;
+	font-weight: bolder;	
+	text-align: center;
+
+	cursor: pointer;
+	border-radius: 20px;
+	transition:0.2s; 
+	box-shadow: rgba(0,0,0,0.8) 0px 0px 25px 0px;
+	background-color: rgba(255,255,255,0.5);
+}
+	.wait_BG .button:hover{
+		color: #1256A4;
+		box-shadow: #1256A4 0px 0px 5px 0px;
+	}
+
+
+
 /*---註冊頁面---*/
 .fixed_shadowbg{
 	position: fixed;
@@ -532,7 +673,7 @@ form.account .or{
 	margin: 10px 0px;
 
 	vertical-align: middle;
-
+	display: inline-block;
 }
 	/*下在label的必填米字*/
 	.Registration_Page form fieldset label.required:before{
@@ -594,6 +735,10 @@ form.account .or{
 	.Registration_Page form.abstract fieldset textarea{
 		width: 100%;
 		margin: 10px 0px;
+
+		font-family: 'Cuprum', sans-serif;
+		font-size: 18px;
+		color: #555;
 	}
 	.Registration_Page form.abstract fieldset textarea:focus{
 		border: solid #faa 1px; 
@@ -963,6 +1108,17 @@ nav ul li{
 nav ul li a{
 	font-size: 20px;
 	line-height: 130px;
+}
+
+
+
+.wait_BG{
+	width: 80%;
+}
+
+.wait_BG .button{
+	margin:0 10px; 
+	box-shadow: rgba(255,255,255,0.5) 0px 0px 25px 0px;
 }
 
 

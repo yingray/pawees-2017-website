@@ -84,13 +84,13 @@
         Registration_form.eq(n).addClass("write_done");
         Registration_form.removeClass("write_form");
 
-        fixed_shadowbg_li.eq(n).addClass("write_done");
+        fixed_shadowbg_li.eq(n-1).addClass("write_done");
         fixed_shadowbg_li.removeClass("write");
 
         n=n+1;
         Registration_form.eq(n).addClass("write_form");
 
-        fixed_shadowbg_li.eq(n).addClass("write");
+        fixed_shadowbg_li.eq(n-1).addClass("write");
     });
 
     pre_step.click(function(){
@@ -103,8 +103,8 @@
         Registration_form.eq(n).addClass("write_form");
         Registration_form.eq(n).removeClass("write_done");
 
-        fixed_shadowbg_li.eq(n).addClass("write");
-        fixed_shadowbg_li.eq(n).removeClass("write_done");
+        fixed_shadowbg_li.eq(n-1).addClass("write");
+        fixed_shadowbg_li.eq(n-1).removeClass("write_done");
 
     });
 

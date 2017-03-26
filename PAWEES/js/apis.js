@@ -8,11 +8,13 @@ var apis = {
 	Verification: function() {
 		$.get(config.host + "/api/verification")
 			.done(function(data) {
-				ChangeToLogin(data);
-				autofillAllForm(data);
+				if(data) {
+					ChangeToLogin(data);
+					autofillAllForm(data);
+				}
 			})
-			.fail(function() {
-				// console.log("verification fail");
+			.fail(function(err) {
+				alert(err.responseText);
 			});
 	},
 	Login: function(submitFormObject) {
@@ -22,7 +24,7 @@ var apis = {
 				// window.location.href = '/';
 			})
 			.fail(function() {
-				alert("error");
+				alert("Account or password is invalid.");
 			});
 	},
 	Logout: function() {
@@ -30,20 +32,30 @@ var apis = {
 			.done(function(data) {
 				window.location.href = '/';
 			})
-			.fail(function() {
-				alert("error");
+			.fail(function(err) {
+				alert(err.responseText);
+			});
+	},
+	SignUp: function(submitFormObject) {
+		$.post(config.host + "/api/signup", submitFormObject)
+			.done(function(data) {
+				// window.location.href = '/';
+				alert(data);
+				apis.Login(submitFormObject);
+			})
+			.fail(function(err) {
+				alert(err.responseText);
 			});
 	},
 	UpdateProfile: function(submitFormObject) {
-		$.post("http://localhost/api/users", submitFormObject)
+		$.post(config.host + "/api/users", submitFormObject)
 			.done(function(data) {
 				alert("register successfully", () => {
-					// apis.Logout();
+					apis.Logout();
 				});
 			})
-			.fail(function() {
-				alert("error");
+			.fail(function(err) {
+				alert(err.responseText);
 			});
 	}
-
 }

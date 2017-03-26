@@ -7,6 +7,24 @@ $('.login[data-log="login"] .button').click(function() {
 	apis.Login(submitFormObject);
 })
 
+$('.login[data-log="signup"] .button').click(function() {
+	const submitFormObject = {
+		"email": $('.login[data-log="signup"] input[name="email"]').val(),
+		"password": md5($('.login[data-log="signup"] input[name="password"]').val())
+	}
+	const validEmail = submitFormObject.email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+	const validPassword = true;
+	if(validEmail && validPassword) {
+		apis.SignUp(submitFormObject);
+	} else if (validEmail) {
+		alert('error');
+	} else if(validPassword) {
+		alert('error');
+	} else {
+		alert('error');
+	}
+})
+
 $('.login[data-log="logout"] .button').click(function() {
 	apis.Logout();
 })
@@ -21,10 +39,12 @@ $.fn.serializeObject = function() {
 			if (!o[this.name].push) {
 				o[this.name] = [o[this.name]];
 			}
-			o[this.name].push(this.value.trim() || '');
+			if(this.value.trim())
+				o[this.name].push(this.value.trim() || '');
 		} else {
 			o[this.name] = this.value.trim() || '';
 		}
+		console.log(o)
 	});
 	return o;
 };
@@ -38,7 +58,7 @@ function appendInputField(element, value) {
 	var nameId = name.concat(txtId);
 	var inputField = '<input type="text" name="' + name + '"value="' + value + '">';
 	var buttonMinor = '<input type="button" value="-" onclick="deltxt(' + nameId + ')">'
-	$(element).parent().prepend('<li id="' + nameId + '">' + inputField + buttonMinor + '</li>')
+	$(element).before('<li id="' + nameId + '">' + inputField + buttonMinor + '</li>')
 	txtId++;
 }
 
@@ -112,6 +132,7 @@ $('.submit_info').click(function() {
 
 /* 6. Login Status */
 function ChangeToLogin(data) {
+	$('.Registration_Page').find('form:nth-child(1)').addClass('write_done');
 	$('.Registration_Page').find('form:nth-child(1)').removeClass('write_form');
 	$('.Registration_Page').find('form:nth-child(2)').addClass('write_form');
 	$('.Registration_Page').find('form:nth-child(2) input[name="email"]').val(data[0].delegate.email);

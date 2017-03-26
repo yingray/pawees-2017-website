@@ -1,14 +1,14 @@
 /* 1. Login Form Handle */
-$('.login_title').click(function() {
-	if($(this).html() === 'LOG IN') {
-		const submitFormObject = {
-			"email": $('.login > input[name="email"]').val(),
-			"password": md5($('.login > input[name="password"]').val())
-		}
-		apis.Login(submitFormObject);
-	} else {
-		apis.Logout()
+$('.login[data-log="login"] .button').click(function() {
+	const submitFormObject = {
+		"email": $('.login[data-log="login"] input[name="email"]').val(),
+		"password": md5($('.login[data-log="login"] input[name="password"]').val())
 	}
+	apis.Login(submitFormObject);
+})
+
+$('.login[data-log="logout"] .button').click(function() {
+	apis.Logout();
 })
 
 
@@ -54,8 +54,8 @@ function deltxt(nameId) {
 function autofillAllForm(obj) {
 	$('form').map((i, f) =>
 		$(f).find('input, select, textarea').map((a, b) => {
-			if (i === 0) $(b).val(obj[0].delegate[b.name])
-			if (i === 1) {
+			if (i === 2) $(b).val(obj[0].delegate[b.name])
+			if (i === 3) {
 				if (b.name === 'checkIn' || b.name === 'checkOut') {
 					$(b).val(obj[0].accom[b.name].slice(0, 10))
 				} else {
@@ -63,8 +63,8 @@ function autofillAllForm(obj) {
 				}
 
 			}
-			if (i === 2) $(b).val(obj[0].flight[$(b).attr('flight')][b.name])
-			if (i === 3) {
+			if (i === 4) $(b).val(obj[0].flight[$(b).attr('flight')][b.name])
+			if (i === 5) {
 				if ($(b).attr('data-type')) {
 					obj[0].paper[b.name].map(string => {
 						appendInputField(b, string);
@@ -84,16 +84,16 @@ $('.submit_info').click(function() {
 
 	form.each(function(index) {
 		switch (index) {
-			case 0:
+			case 2:
 				submitFormObject.delegate = $(this).serializeObject()
 				break
-			case 1:
+			case 3:
 				submitFormObject.accom = $(this).serializeObject()
 				break
-			case 2:
+			case 4:
 				submitFormObject.flight = $(this).serializeObject()
 				break
-			case 3:
+			case 5:
 				submitFormObject.paper = $(this).serializeObject()
 				break
 			default:
@@ -101,15 +101,18 @@ $('.submit_info').click(function() {
 		}
 	});
 
-	apis.UpdateProfile(submitFormObject)
+	confirm("Are you sure you want to submit this form?", function(result) {
+		if(result) {
+			apis.UpdateProfile(submitFormObject);
+		}
+	});
+
 
 });
 
 /* 6. Login Status */
 function ChangeToLogin(data) {
-	// $('.login').empty();
-	// $('.login').append('<div> Welcome, ' + data[0].delegate.firstName + '</div>')
-	// $('.login').append('<a onclick="apis.Logout()" style="cursor: pointer;"> logout </a>')
-	$('.login_title').html('LOG OUT')
-	$('.login').find('input').prop("disabled", true)
+	$('.Registration_Page').find('form:nth-child(1)').removeClass('write_form');
+	$('.Registration_Page').find('form:nth-child(2)').addClass('write_form');
+	$('.Registration_Page').find('form:nth-child(2) input[name="email"]').val(data[0].delegate.email);
 }

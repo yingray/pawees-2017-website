@@ -37,7 +37,9 @@ var apis = {
 	UpdateProfile: function(submitFormObject) {
 		$.post("http://localhost/api/users", submitFormObject)
 			.done(function(data) {
-				alert("register successfully");
+				alert("register successfully", () => {
+					// apis.Logout();
+				});
 			})
 			.fail(function() {
 				alert("error");

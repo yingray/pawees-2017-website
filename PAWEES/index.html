@@ -128,7 +128,7 @@
 						<fieldset>
 							<div class="form_title">Member Account</div>
 
-							<div class="login">
+							<div class="login" data-log="signup">
 								<div class="block">
 									<h1>SIGN UP</h1>
 
@@ -141,7 +141,7 @@
 
 							<div class="or">or</div>
 
-							<div class="login">
+							<div class="login" data-log="login">
 								<div class="block">
 
 									<h1>LOG IN</h1>
@@ -156,10 +156,10 @@
 
 						
 
-							<div class="next_step">
-								Next Step
-								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-							</div>
+							<!--<div class="next_step">-->
+								<!--Next Step-->
+								<!--<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>-->
+							<!--</div>-->
 						</fieldset>
 					</form>
 
@@ -169,7 +169,7 @@
 						<fieldset>
 							<div class="form_title">Member Account</div>
 
-							<div class="login logout">
+							<div class="login logout" data-log="logout">
 								<div class="block">
 
 									<h1>WELCOME</h1>
@@ -186,7 +186,7 @@
 								</div>
 							</div>
 
-						
+
 
 							<div class="next_step">
 								Next Step
@@ -208,44 +208,51 @@
 								<option>Mr.</option>
 								<option>Mrs.</option>
 								<option>Miss</option>
+								<option>Ms.</option>
 							</select>
+							<br>
 
 
-							<label>First Name</label>
+							<label class="required">First Name</label>
 							<input type="text" name="firstName" required>
 
-							<label>Last Name</label>
-							<input type="text" name="lastName">
+							<label class="required">Last Name</label>
+							<input type="text" name="lastName" required>
 							<br>
 
 							<label>Country</label>
 							<input type="text" name="country">
 							<br>
 
-							<label>Male</label>
-							<input type="text" name="gender">
+							<label>Gender</label>
+							<select name="gender" required>
+								<option>Male</option>
+								<option>Female</option>
+							</select>
 							<br>
 
-							<label>Position</label>
-							<input type="text" name="position">
+							<label class="required">Position</label>
+							<input type="text" name="position" required>
+							<br>
 
 							<label>Organization</label>
-							<input type="text" name="organization">
+							<input type="text" name="organization" style="width: 400px;">
 							<br>
 
 							<label>Address</label>
-							<input type="text" name="address">
+							<input type="text" name="address" style="width: 400px;">
 							<br>
 
 							<label>Mobile</label>
 							<input type="text" name="mobile">
+							<br>
 
 							<label>Phone</label>
-							<input type="text" name="phone" placeholder="">
+							<input type="text" name="phone">
+							<br>
 
 							<label>Fax</label>
 							<input type="text" name="fax">
-
 							<br>
 
 							<label>Date of Birth</label>
@@ -271,7 +278,8 @@
 							<label>Join the Tour?</label>
 							<input type="radio" name="tour" value="yes" placeholder="tour" checked>yes
 							<input type="radio" name="tour" value="no" placeholder="tour">no
-
+							<input type="hidden" name="email">
+							<input type="hidden" name="password">
 							<!--Delegate Form End-->
 							
 							<div class="pre_step">
@@ -293,10 +301,6 @@
 							<!--Accom Form Start-->
 							<label>Hotel</label>
 							<input type="text" name="hotel" placeholder="">
-							<br>
-
-							<label>Stay</label>
-							<input type="text" name="stay" placeholder="">
 							<br>
 
 							<label>Check In</label>

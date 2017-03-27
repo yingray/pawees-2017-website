@@ -15,5 +15,5 @@ RUN npm install --production
 # Bundle app source
 #RUN npm run build
 
-EXPOSE 9000
+EXPOSE 8081
 CMD [ "node", "server" ]

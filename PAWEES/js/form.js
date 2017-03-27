@@ -57,6 +57,9 @@ function appendInputField(element, value) {
 	var name = $(element).attr('name');
 	var nameId = name.concat(txtId);
 	var inputField = '<input type="text" name="' + name + '"value="' + value + '">';
+	if(name === 'affiliations') {
+		inputField = 	'<input type="text" name="' + name + '"value="' + value + '" style="width: 400px;">';
+	}
 	var buttonMinor = '<input type="button" value="-" onclick="deltxt(' + nameId + ')">'
 	$(element).before('<li id="' + nameId + '">' + inputField + buttonMinor + '</li>')
 	txtId++;
@@ -136,4 +139,21 @@ function ChangeToLogin(data) {
 	$('.Registration_Page').find('form:nth-child(1)').removeClass('write_form');
 	$('.Registration_Page').find('form:nth-child(2)').addClass('write_form');
 	$('.Registration_Page').find('form:nth-child(2) input[name="email"]').val(data[0].delegate.email);
+}
+
+/* 7. Loading Start */
+var loadingStatus = 0;
+
+if(loadingStatus <= 0) {
+	LoadingEnd()
+} else {
+	LoadingStart()
+}
+
+function LoadingStart() {
+	$('.fixed_shadow[data-loading="pawees"]').addClass('fixed_shadow2');
+}
+
+function LoadingEnd() {
+	$('.fixed_shadow[data-loading="pawees"]').removeClass('fixed_shadow2');
 }

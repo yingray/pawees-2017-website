@@ -6,24 +6,30 @@ var config = {
 /* APIs Configuration using Ajax */
 var apis = {
 	Verification: function() {
+		LoadingStart();
 		$.get(config.host + "/api/verification")
 			.done(function(data) {
+				LoadingEnd();
 				if(data) {
 					ChangeToLogin(data);
 					autofillAllForm(data);
 				}
 			})
 			.fail(function(err) {
+				LoadingEnd();
 				alert(err.responseText);
 			});
 	},
 	Login: function(submitFormObject) {
+		LoadingStart();
 		$.post(config.host + "/api/login", submitFormObject)
 			.done(function(data) {
+				LoadingEnd();
 				apis.Verification()
 				// window.location.href = '/';
 			})
 			.fail(function() {
+				LoadingEnd();
 				alert("Account or password is invalid.");
 			});
 	},
@@ -48,14 +54,23 @@ var apis = {
 			});
 	},
 	UpdateProfile: function(submitFormObject) {
+		LoadingStart();
 		$.post(config.host + "/api/users", submitFormObject)
 			.done(function(data) {
-				alert("register successfully", () => {
+				LoadingEnd();
+				alert("Update the profile successfully!", () => {
 					apis.Logout();
 				});
 			})
 			.fail(function(err) {
-				alert(err.responseText);
+				LoadingEnd();
+				if (err.status === 401) {
+					alert(err.responseJSON, () => {
+						apis.Logout();
+					});
+				} else {
+					alert('Error!')
+				}
 			});
 	}
 }

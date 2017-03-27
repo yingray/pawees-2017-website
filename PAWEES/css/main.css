@@ -674,6 +674,10 @@ form.account .or{
 
 	vertical-align: middle;
 	display: inline-block;
+	/*
+	Yingray
+	 */
+	width: 115px;
 }
 	/*下在label的必填米字*/
 	.Registration_Page form fieldset label.required:before{

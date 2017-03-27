@@ -1,6 +1,6 @@
 /* General Configuration */
 var config = {
-	host: 'http://localhost'
+	host: ''
 };
 
 /* APIs Configuration using Ajax */

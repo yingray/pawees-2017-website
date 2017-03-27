@@ -5,9 +5,10 @@ const app = express();
 const port = 8081;
 
 app.use(compression());
-app.use(express.static('./PAWEES'));
+// app.use(express.static('./PAWEES'));
+app.use('/staging', express.static('./PAWEES'));
 
-app.get('/*', function (req, res) {
+app.get('/staging/*', function (req, res) {
 	res.sendFile(path.join(__dirname, './PAWEES', 'index.html'));
 });
 

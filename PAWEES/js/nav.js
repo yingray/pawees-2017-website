@@ -81,16 +81,29 @@
     // 表單上下頁點擊
     next_step.click(function(){
         var n=$(this).parents("form").index();
-        Registration_form.eq(n).addClass("write_done");
-        Registration_form.removeClass("write_form");
 
-        fixed_shadowbg_li.eq(n-1).addClass("write_done");
-        fixed_shadowbg_li.removeClass("write");
+        var valid = true;
+        var $required = Registration_form.eq(n).find(".required");
+        $required.each(function(){
+            if(!($(this).next().val())){
+                alert( "Please fill in the " + $(this).text() );
+                valid = false
+                return false;
+            }
+        });
 
-        n=n+1;
-        Registration_form.eq(n).addClass("write_form");
+        if(valid) {
+            Registration_form.eq(n).addClass("write_done");
+            Registration_form.removeClass("write_form");
 
-        fixed_shadowbg_li.eq(n-1).addClass("write");
+            fixed_shadowbg_li.eq(n-1).addClass("write_done");
+            fixed_shadowbg_li.removeClass("write");
+
+            n=n+1;
+            Registration_form.eq(n).addClass("write_form");
+
+            fixed_shadowbg_li.eq(n-1).addClass("write");
+        }
     });
 
     pre_step.click(function(){

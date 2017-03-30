@@ -60,7 +60,7 @@ var apis = {
 			.done(function(data) {
 				LoadingEnd();
 				alert("Update the profile successfully!", () => {
-					apis.Logout();
+					// apis.Logout();
 				});
 			})
 			.fail(function(err) {

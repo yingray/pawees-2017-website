@@ -12,14 +12,15 @@ $('.login[data-log="signup"] .button').click(function() {
 		"email": $('.login[data-log="signup"] input[name="email"]').val(),
 		"password": md5($('.login[data-log="signup"] input[name="password"]').val())
 	}
-	const validEmail = submitFormObject.email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-	const validPassword = true;
+	const validEmail = submitFormObject.email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
+	const validPassword = $('.login[data-log="signup"] input[name="password"]').val().match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
+
 	if(validEmail && validPassword) {
 		apis.SignUp(submitFormObject);
-	} else if (validEmail) {
-		alert('error');
-	} else if(validPassword) {
-		alert('error');
+	} else if (!validEmail) {
+		alert('Not a valid email address. Please try again.');
+	} else if(!validPassword) {
+		alert('Password need to be at least 8 characters and include 1 letter and 1 number.');
 	} else {
 		alert('error');
 	}

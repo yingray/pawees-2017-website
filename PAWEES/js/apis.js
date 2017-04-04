@@ -17,7 +17,8 @@ var apis = {
 			})
 			.fail(function(err) {
 				LoadingEnd();
-				alert(err.responseText);
+                registractionError();
+				console.log('Verification: ', err.responseText);
 			});
 	},
 	Login: function(submitFormObject) {
@@ -36,7 +37,7 @@ var apis = {
 	Logout: function() {
 		$.post(config.host + "/api/logout")
 			.done(function(data) {
-				window.location.href = '/';
+				window.location.href = './';
 			})
 			.fail(function(err) {
 				alert(err.responseText);
@@ -59,7 +60,7 @@ var apis = {
 			.done(function(data) {
 				LoadingEnd();
 				alert("Update the profile successfully!", () => {
-					apis.Logout();
+					// apis.Logout();
 				});
 			})
 			.fail(function(err) {

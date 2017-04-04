@@ -5,7 +5,7 @@
     var footer = $("footer");
     var head = $("head");
 
-    
+
     // banner fixed 動畫
 
     $window.on("scroll", function(e) {
@@ -26,7 +26,7 @@
     var nav=$("nav");
     var sandwichclick=$(".sandwichclick");
     var sandwich=$(".sandwich");
-   
+
     // 三明治選單收合
     sandwichclick.click(function(){
       if(nav.hasClass("navshow")){ //已經打開
@@ -45,16 +45,21 @@
     var Registration_Page_close=$(".Registration_Page_close");
     var fixed_shadowbg=$(".fixed_shadowbg");
 
-    // 投稿系統先關閉
-    // joinicon.click(function(){
-    //     alert("Registration system will be available in the near future.","Thank you for coming");
-    // });
+    var ReigstrationStatus = true;
+    function registractionError() {
+        ReigstrationStatus = false;
+    }
 
     // 註冊按鈕點擊
     joinicon.click(function(){
-        fixed_shadowbg.addClass("fixed_shadowbg2");
-        Registration_Page.addClass("Registration_Page2");
-        Registration_Page_close.addClass("Registration_Page_close2");
+        if(ReigstrationStatus) {
+            fixed_shadowbg.addClass("fixed_shadowbg2");
+            Registration_Page.addClass("Registration_Page2");
+            Registration_Page_close.addClass("Registration_Page_close2");
+        } else {
+            // 投稿系統先關閉
+            alert("Registration system will be available in the near future.","Thank you for coming");
+        }
     });
 
     Registration_Page_close.click(function(){
@@ -81,16 +86,29 @@
     // 表單上下頁點擊
     next_step.click(function(){
         var n=$(this).parents("form").index();
-        Registration_form.eq(n).addClass("write_done");
-        Registration_form.removeClass("write_form");
 
-        fixed_shadowbg_li.eq(n-1).addClass("write_done");
-        fixed_shadowbg_li.removeClass("write");
+        var valid = true;
+        var $required = Registration_form.eq(n).find(".required");
+        $required.each(function(){
+            if(!($(this).next().val())){
+                alert( "Please fill in the " + $(this).text() );
+                valid = false
+                return false;
+            }
+        });
 
-        n=n+1;
-        Registration_form.eq(n).addClass("write_form");
+        if(valid) {
+            Registration_form.eq(n).addClass("write_done");
+            Registration_form.removeClass("write_form");
 
-        fixed_shadowbg_li.eq(n-1).addClass("write");
+            fixed_shadowbg_li.eq(n-1).addClass("write_done");
+            fixed_shadowbg_li.removeClass("write");
+
+            n=n+1;
+            Registration_form.eq(n).addClass("write_form");
+
+            fixed_shadowbg_li.eq(n-1).addClass("write");
+        }
     });
 
     pre_step.click(function(){
@@ -207,4 +225,6 @@
 // 因為有可能載入畫面時，剛好停在有動畫元件的位置，這時就寫下面這行，window一載入就觸發scroll事件
 $window.trigger('scroll');
 
-
+function clickLegal(name) {
+    $('.fixed_shadow[data-legal="' + name + '"]').addClass('fixed_shadow2');
+}

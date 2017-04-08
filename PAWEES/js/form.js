@@ -15,11 +15,11 @@ $('.login[data-log="signup"] .button').click(function() {
 	const validEmail = submitFormObject.email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
 	const validPassword = $('.login[data-log="signup"] input[name="password"]').val().match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
 
-	if(validEmail && validPassword) {
+	if (validEmail && validPassword) {
 		apis.SignUp(submitFormObject);
 	} else if (!validEmail) {
 		alert('Not a valid email address. Please try again.');
-	} else if(!validPassword) {
+	} else if (!validPassword) {
 		alert('Password need to be at least 8 characters and include 1 letter and 1 number.');
 	} else {
 		alert('error');
@@ -40,7 +40,7 @@ $.fn.serializeObject = function() {
 			if (!o[this.name].push) {
 				o[this.name] = [o[this.name]];
 			}
-			if(this.value.trim())
+			if (this.value.trim())
 				o[this.name].push(this.value.trim() || '');
 		} else {
 			o[this.name] = this.value.trim() || '';
@@ -58,8 +58,8 @@ function appendInputField(element, value) {
 	var name = $(element).attr('name');
 	var nameId = name.concat(txtId);
 	var inputField = '<input type="text" name="' + name + '"value="' + value + '">';
-	if(name === 'affiliations') {
-		inputField = 	'<input type="text" name="' + name + '"value="' + value + '" style="width: 400px;">';
+	if (name === 'affiliations') {
+		inputField = '<input type="text" name="' + name + '"value="' + value + '" style="width: 400px;">';
 	}
 	var buttonMinor = '<input type="button" value="-" onclick="deltxt(' + nameId + ')">'
 	$(element).before('<li id="' + nameId + '">' + inputField + buttonMinor + '</li>')
@@ -79,7 +79,7 @@ function autofillAllForm(obj) {
 	$('form').map((i, f) =>
 		$(f).find('input, select, textarea').map((a, b) => {
 			if (i === 2) $(b).val(obj[0].delegate[b.name])
-			if (i === 3) {
+			if (i === 3 && obj[0].accom[b.name]) {
 				if (b.name === 'checkIn' || b.name === 'checkOut') {
 					$(b).val(obj[0].accom[b.name].slice(0, 10))
 				} else {
@@ -98,6 +98,23 @@ function autofillAllForm(obj) {
 				}
 			}
 		}))
+		updateRevision(obj);
+}
+
+function updateRevision(obj) {
+	if (obj[0].paper['link']) {
+		$('.abstract fieldset span.revision').html('\
+		<br>\
+		' + obj[0]['updated_at'].slice(0, 10) + ' Revision ｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
+		<a href="' + obj[0].paper['link'] + '" target="_blank">\
+			' + obj[0].paper['authors'][0] + ' - ' + obj[0].paper['title'] + '\
+		</a>\
+		<br>\
+		<br>\
+		<br>\
+		<h1>Edit</h1>\
+		')
+	}
 }
 
 /* 5. Registration Submitting */
@@ -126,7 +143,7 @@ $('.submit_info').click(function() {
 	});
 
 	confirm("Are you sure you want to submit this form?", function(result) {
-		if(result) {
+		if (result) {
 			apis.UpdateProfile(submitFormObject);
 		}
 	});
@@ -145,7 +162,7 @@ function ChangeToLogin(data) {
 /* 7. Loading Start */
 var loadingStatus = 0;
 
-if(loadingStatus <= 0) {
+if (loadingStatus <= 0) {
 	LoadingEnd()
 } else {
 	LoadingStart()

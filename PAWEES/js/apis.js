@@ -5,14 +5,18 @@ var config = {
 
 /* APIs Configuration using Ajax */
 var apis = {
-	Verification: function() {
+	Verification: function(revision) {
 		LoadingStart();
 		$.get(config.host + "/api/verification")
 			.done(function(data) {
 				LoadingEnd();
 				if(data) {
 					ChangeToLogin(data);
-					autofillAllForm(data);
+					if(revision) {
+						updateRevision(data);
+					} else {
+						autofillAllForm(data);
+					}
 				}
 			})
 			.fail(function(err) {
@@ -61,6 +65,7 @@ var apis = {
 				LoadingEnd();
 				alert("Update the profile successfully!", () => {
 					// apis.Logout();
+					apis.Verification(true)
 				});
 			})
 			.fail(function(err) {

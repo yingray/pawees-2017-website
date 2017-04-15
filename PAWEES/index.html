@@ -312,6 +312,9 @@
 							Accommodation
 						</li>
 						<li class="">
+							Technical Tour
+						</li>
+						<li class="">
 							Flight information
 						</li>
 						<li class="">
@@ -324,7 +327,7 @@
 
 				<div class="Registration_Page">
 
-					<form class="write_form account">
+					<form class="account">
 						<fieldset>
 							<div class="form_title">Member Account</div>
 
@@ -366,18 +369,35 @@
 
 
 
-					<form class="account">
+					<form class="write_form account">
 						<fieldset>
 							<div class="form_title">Member Account</div>
 
 							<div class="login logout" data-log="logout">
 								<div class="block">
 
-									<h1>WELCOME</h1>
+									<h1>Successfully !</h1>
+
+									<!-- <br>
+									您的帳號已申請成功！<br>
+									請盡快依照步驟完成註冊資料填寫，
+									並於最後一頁按送出完成註冊程序。
+									<br> -->
+
+									<!-- <br>
+									您的註冊資料已於20170420更新成功！<br>
+									如果你想要修改資料請按右下角的修改按鈕，
+									並依照步驟修改完畢再次上傳資料。
+									<br> -->
+
+									您的註冊資料和投稿摘要已於20170420更新成功！<br>
+									如果你想要修改資料請按右下角的修改按鈕，
+									並依照步驟修改完畢再次上傳資料。<br>
 									<br>
-									Please fill up the following four steps
-									and press the submit button in the last page
-									to complete the registration
+									Abstract｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="doc/pdf" target="_blank">
+                                         the title of PDF
+                                    </a>
 									<br>
 
 									<input type="email" name="email" placeholder="Email" disabled>
@@ -390,7 +410,7 @@
 
 
 							<div class="next_step">
-								Next Step
+								Revise Information 
 								<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
 							</div>
 						</fieldset>
@@ -402,8 +422,20 @@
 						<div class="form_title">Registration Information</div>
 						<fieldset>
 
+							<h1>Welcome</h1>
+
+							Please fill up the following steps and press the submit button in the last page to complete the registration<br>
+							<span>＊ is required to fill up</span><br>
+							<br>
+							<br>
+
+
 							<!--Delegate Form Start-->
 							<!-- 必填label class="required" -->
+							<label class="required">Account</label>
+							<input type="email" name="email" placeholder="Email" disabled style="width: 400px;background: #ddd;">
+							<br>
+
 							<label class="required">Title</label>
 							<select name="title" required>
 								<option>Mr.</option>
@@ -478,17 +510,13 @@
 							</select>
 							<br>
 
-							<label>Join the Tour?</label>
-							<input type="radio" name="tour" value="yes" placeholder="tour" checked>yes
-							<input type="radio" name="tour" value="no" placeholder="tour">no
-							<input type="hidden" name="email">
-							<input type="hidden" name="password">
+							
 							<!--Delegate Form End-->
 							
 						</fieldset>
 						<div class="pre_step">
 							<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-							Previous Step
+							Member Account
 						</div>
 
 						<div class="next_step">
@@ -541,6 +569,32 @@
 							<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
 						</div>
 					</form>
+
+
+					<form>
+						<div class="form_title">Technical Tour</div>
+						<fieldset>
+
+							<!--Technical Tour Information Form Start -->
+							<label>Join the Tour?</label>
+							<input type="radio" name="tour" value="yes" placeholder="tour" checked>yes
+							<input type="radio" name="tour" value="no" placeholder="tour">no
+							<input type="hidden" name="email">
+							<input type="hidden" name="password">
+							<!--Technical Tour Information Form End -->
+
+						</fieldset>
+						<div class="pre_step">
+							<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+							Previous Step
+						</div>
+						<div class="next_step">
+							Next Step
+							<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+						</div>
+					</form>
+
+
 
 					<form>
 

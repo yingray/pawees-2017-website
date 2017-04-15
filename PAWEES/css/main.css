@@ -487,6 +487,10 @@ form.account .or{
 	height: 300px;
 	width: 270px;
 }
+	.Registration_Page .logout .block{
+		width: 100%;
+		line-height: 20px;
+	}
 
 .Registration_Page .login .block h1{
 	position: relative;
@@ -511,13 +515,15 @@ form.account .or{
 		background-color: #333;
 	}
 	.Registration_Page .logout .block h1:after{
-		width: 120px;
+		width: 150px;
 	}
 
 
 .Registration_Page .login input{
 	display: block;
-	margin: 25px 0;
+	margin: 25px auto;
+	left: 0;
+	right: 0;
 	padding: 5px 10px;
 	height: 30px;
 	width: 250px;
@@ -595,12 +601,17 @@ form.account .or{
 
 	.Registration_Page form .form_title{
 		position: absolute;
-		top: 52px;
+		top: 40px;
 		left: 52px;
 		color:rgba(13, 82, 162, 1.00);
 
 		font-size: 28px;
+		/*font-family:  'Montaga', serif;*/
 		font-family: 'Dancing Script', cursive;
+	}
+	.Registration_Page form span{
+		color: #faa;
+		line-height: 36px;
 	}
 
 	.Registration_Page form .pre_step, .Registration_Page form .next_step, .Registration_Page form .edit_information, .Registration_Page form .submit_info{
@@ -609,6 +620,7 @@ form.account .or{
 		color:rgba(13, 82, 162, 1.00);
 
 		font-size: 28px;
+		/*font-family:  'Montaga', serif;*/
 		font-family: 'Dancing Script', cursive;
 
 		cursor: pointer;
@@ -620,8 +632,19 @@ form.account .or{
 			right: 387px;
 		}
 		.Registration_Page form.account .next_step{
-			color: #fff;
+			color:#fff;
+			bottom: 30px;
+			right: 387px;
+			padding: 5px 20px;
+
+			border-radius: 30px;
+
+			transition:0.2s;
+			box-shadow: #fff 0px 0px 25px 0px;
 		}
+		.Registration_Page form.account .next_step:hover{
+			box-shadow: #fff 0px 0px 5px 0px;
+		}		
 
 
 	.Registration_Page form .edit_information{
@@ -690,7 +713,7 @@ form.account .or{
 
 		font-size: 18px;
 		color: #faa;
-
+		font-family: 'Cuprum', sans-serif;
 		vertical-align: middle;
 	}
 

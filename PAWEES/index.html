@@ -462,19 +462,10 @@
 							<input type="text" name="dateOfBirth" placeholder="1900-00-00">
 							<br>
 
-							<label>Session</label>
-							<select name="session" required>
-								<option>Topic 1 | Sustainable water use and ecologically sustainable development</option>
-								<option>Topic 2 | Development of rural society with water in Asia</option>
-								<option>Topic 3 | Sustainable paddy farming</option>
-								<option>Topic 4 | Integrated watershed management</option>
-								<option>Topic 5 | Droughts and flood disaster risk management</option>
-							</select>
-
-							<label>Type</label>
-							<select name="type" required>
-								<option>Oral</option>
-								<option>Poster</option>
+							<label>Meals</label>
+							<select name="meals">
+								<option value="non-vegetarian">non-vegetarian</option>
+								<option value="vegetarian">vegetarian</option>
 							</select>
 							<br>
 
@@ -523,12 +514,6 @@
 							<label>Check Out</label>
 							<input type="date" name="checkOut" placeholder="checkOut">
 							<br>
-
-							<label>Meals</label>
-							<select name="meals">
-								<option value="non-vegetarian">non-vegetarian</option>
-								<option value="vegetarian">vegetarian</option>
-							</select>
 							<!--Accom Form End-->
 
 						</fieldset>
@@ -597,6 +582,32 @@
                             </span>
 
 							<!--Abstract Form Start-->
+
+							<label>Role</label>
+							<select name="role" required>
+								<option>General</option>
+								<option>Student</option>
+							</select>
+							<br>
+
+							<label>Session</label>
+							<select name="session" required>
+								<option>Topic 1 | Sustainable water use and ecologically sustainable development</option>
+								<option>Topic 2 | Development of rural society with water in Asia</option>
+								<option>Topic 3 | Sustainable paddy farming</option>
+								<option>Topic 4 | Integrated watershed management</option>
+								<option>Topic 5 | Droughts and flood disaster risk management</option>
+							</select>
+
+							<label>Type</label>
+							<select name="type" required>
+								<option>Oral Presentation</option>
+								<option>Poster</option>
+								<option>Representative</option>
+								<option>Observer</option>
+							</select>
+							<br>
+
 							<label>Title</label>
 							<input type="text" name="title" class="title">
 							<br>

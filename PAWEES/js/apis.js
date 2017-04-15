@@ -65,7 +65,8 @@ var apis = {
 				LoadingEnd();
 				alert("Update the profile successfully!", () => {
 					// apis.Logout();
-					apis.Verification(true)
+					apis.Verification(true);
+					window.location.href = './';
 				});
 			})
 			.fail(function(err) {

@@ -91,12 +91,14 @@ function autofillAllForm(obj) {
 			if (i === 4) $(b).val(obj[0].tour[b.name])
 			if (i === 5) $(b).val(obj[0].flight[$(b).attr('flight')][b.name])
 			if (i === 6) {
-				if ($(b).attr('data-type')) {
-					obj[0].paper[b.name].map(string => {
-						appendInputField(b, string);
-					})
-				} else {
-					$(b).val(obj[0].paper[b.name])
+				if(obj[0].paper[b.name]) {
+					if ($(b).attr('data-type')) {
+						obj[0].paper[b.name].map(string => {
+							appendInputField(b, string);
+						})
+					} else {
+						$(b).val(obj[0].paper[b.name])
+					}
 				}
 			}
 		}))

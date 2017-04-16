@@ -75,6 +75,8 @@ function deltxt(nameId) {
 }
 
 /* 4. Auto-fill out data in Forms */
+var form_config = ['delegate', 'accom', 'tour', 'flight', 'paper'];
+
 function autofillAllForm(obj) {
 	$('form').map((i, f) =>
 		$(f).find('input, select, textarea').map((a, b) => {
@@ -87,8 +89,9 @@ function autofillAllForm(obj) {
 				}
 
 			}
-			if (i === 4) $(b).val(obj[0].flight[$(b).attr('flight')][b.name])
-			if (i === 5) {
+			if (i === 4) $(b).val(obj[0].tour[b.name])
+			if (i === 5) $(b).val(obj[0].flight[$(b).attr('flight')][b.name])
+			if (i === 6) {
 				if ($(b).attr('data-type')) {
 					obj[0].paper[b.name].map(string => {
 						appendInputField(b, string);
@@ -98,12 +101,12 @@ function autofillAllForm(obj) {
 				}
 			}
 		}))
-		updateRevision(obj);
+	updateRevision(obj);
 }
 
 function updateRevision(obj) {
 	if (obj[0].paper['link']) {
-		$('.abstract fieldset span.revision').html('\
+		$('.abstract fieldset p.revision').html('\
 		<br>\
 		' + obj[0]['updated_at'].slice(0, 10) + ' Revision ｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
 		<a href="' + obj[0].paper['link'] + '" target="_blank">\
@@ -111,10 +114,19 @@ function updateRevision(obj) {
 		</a>\
 		<br>\
 		<br>\
-		<br>\
 		<h1>Edit</h1>\
-		')
+		');
+
+		$('form.account fieldset p.revision').html('\
+		Abstract｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
+			<a href="' + obj[0].paper['link'] + '" target="_blank">\
+			' + obj[0].paper['authors'][0] + ' - ' + obj[0].paper['title'] + '\
+			</a>\
+		');
+		$('form.account fieldset b.revision').html(obj[0]['updated_at'].slice(0, 10));
+
 	}
+
 }
 
 /* 5. Registration Submitting */
@@ -124,21 +136,10 @@ $('.submit_info').click(function() {
 	var submitFormObject = {}
 
 	form.each(function(index) {
-		switch (index) {
-			case 2:
-				submitFormObject.delegate = $(this).serializeObject()
-				break
-			case 3:
-				submitFormObject.accom = $(this).serializeObject()
-				break
-			case 4:
-				submitFormObject.flight = $(this).serializeObject()
-				break
-			case 5:
-				submitFormObject.paper = $(this).serializeObject()
-				break
-			default:
-				break
+		if(index > 1) {
+			var form_index = index - 2;
+			var form_name = form_config[form_index];
+			submitFormObject[form_name] = $(this).serializeObject()
 		}
 	});
 
@@ -153,10 +154,24 @@ $('.submit_info').click(function() {
 
 /* 6. Login Status */
 function ChangeToLogin(data) {
+
+	$('.Registration_Page').find('form').removeClass('write_form');
+
 	$('.Registration_Page').find('form:nth-child(1)').addClass('write_done');
-	$('.Registration_Page').find('form:nth-child(1)').removeClass('write_form');
-	$('.Registration_Page').find('form:nth-child(2)').addClass('write_form');
+
+	$('.Registration_Page').find('form:nth-child(2) .next_step').trigger('click');
 	$('.Registration_Page').find('form:nth-child(2) input[name="email"]').val(data[0].delegate.email);
+
+	$('.Registration_Page').find('form:nth-child(3)').addClass('write_form');
+}
+
+function returnToMemberAccount() {
+	Registration_form.removeClass('write_form');
+	Registration_form.removeClass('write_done');
+	fixed_shadowbg_li.removeClass('write_done');
+	fixed_shadowbg_li.removeClass('write');
+	Registration_form.eq(1).addClass('write_form');
+	fixed_shadowbg_li.eq(0).addClass('write');
 }
 
 /* 7. Loading Start */

@@ -14,6 +14,7 @@ var apis = {
 					ChangeToLogin(data);
 					if(revision) {
 						updateRevision(data);
+						returnToMemberAccount();
 					} else {
 						autofillAllForm(data);
 					}
@@ -66,7 +67,6 @@ var apis = {
 				alert("Update the profile successfully!", () => {
 					// apis.Logout();
 					apis.Verification(true);
-					window.location.href = './';
 				});
 			})
 			.fail(function(err) {

@@ -327,7 +327,7 @@
 
 				<div class="Registration_Page">
 
-					<form class="account">
+					<form class="write_form account">
 						<fieldset>
 							<div class="form_title">Member Account</div>
 
@@ -369,7 +369,7 @@
 
 
 
-					<form class="write_form account">
+					<form class="account">
 						<fieldset>
 							<div class="form_title">Member Account</div>
 
@@ -390,14 +390,15 @@
 									並依照步驟修改完畢再次上傳資料。
 									<br> -->
 
-									您的註冊資料和投稿摘要已於20170420更新成功！<br>
+									您的註冊資料和投稿摘要已於<b class="revision">20170420</b>更新成功！<br>
 									如果你想要修改資料請按右下角的修改按鈕，
 									並依照步驟修改完畢再次上傳資料。<br>
-									<br>
-									Abstract｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                    <a href="doc/pdf" target="_blank">
-                                         the title of PDF
-                                    </a>
+									<p class="revision">
+										Abstract｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+										<a href="doc/pdf" target="_blank">
+											 the title of PDF
+										</a>
+									</p>
 									<br>
 
 									<input type="email" name="email" placeholder="Email" disabled>
@@ -434,6 +435,8 @@
 							<!-- 必填label class="required" -->
 							<label class="required">Account</label>
 							<input type="email" name="email" placeholder="Email" disabled style="width: 400px;background: #ddd;">
+							<input type="hidden" name="email">
+							<input type="hidden" name="password">
 							<br>
 
 							<label class="required">Title</label>
@@ -564,8 +567,6 @@
 							<label>Join the Tour?</label>
 							<input type="radio" name="tour" value="yes" placeholder="tour" checked>yes
 							<input type="radio" name="tour" value="no" placeholder="tour">no
-							<input type="hidden" name="email">
-							<input type="hidden" name="password">
 							<!--Technical Tour Information Form End -->
 
 						</fieldset>
@@ -622,7 +623,7 @@
 					<form class="abstract">
 						<div class="form_title">Abstract Submission</div>
 						<fieldset>
-                            <span class="revision">
+                            <p class="revision">
                                 <!--<br>-->
                                     <!--20170404 Revision ｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>-->
                                     <!--<a href="doc/pdf" target="_blank">-->
@@ -633,7 +634,7 @@
                                 <!--<br>-->
 
                                 <!--<h1>Edit</h1>-->
-                            </span>
+                            </p>
 
 							<!--Abstract Form Start-->
 

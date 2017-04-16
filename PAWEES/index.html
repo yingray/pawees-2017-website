@@ -497,10 +497,19 @@
 							<input type="text" name="dateOfBirth" placeholder="1900-00-00">
 							<br>
 
-							<label>Meals</label>
-							<select name="meals">
-								<option value="non-vegetarian">non-vegetarian</option>
-								<option value="vegetarian">vegetarian</option>
+							<label>Session</label>
+							<select name="session" required>
+								<option>Topic 1 | Sustainable water use and ecologically sustainable development</option>
+								<option>Topic 2 | Development of rural society with water in Asia</option>
+								<option>Topic 3 | Sustainable paddy farming</option>
+								<option>Topic 4 | Integrated watershed management</option>
+								<option>Topic 5 | Droughts and flood disaster risk management</option>
+							</select>
+
+							<label>Type</label>
+							<select name="type" required>
+								<option>Oral</option>
+								<option>Poster</option>
 							</select>
 							<br>
 
@@ -519,17 +528,11 @@
 						</div>
 					</form>
 					
-					<form>
+					<form class="write_form">
 						<div class="form_title">Accommodation</div>
 						<fieldset>
 
-							* Recommended hotel: <a href="https://www.freshfields.com.tw/">Fresh Fields Hotel</a>
-							<br>
-							* Discounted prices: <a href="https://drive.google.com/open?id=0B97DZ1rynygqc1B2eFpNTmJNZDUxRHQ1cld1OGtoTWtGYVYw">Fresh Fields Hotel</a>
-							<br>
-							* Deadline to Hold Reservation: 2017/10/01
-							<br>
-
+							
 							<!--Accom Form Start-->
 							<label>Hotel</label>
 							<select name="hotel">
@@ -545,6 +548,21 @@
 							<label>Check Out</label>
 							<input type="date" name="checkOut" placeholder="checkOut">
 							<br>
+							<br>
+
+							<h1>Recommended hotel</h1>
+							清新溫泉飯店 Fresh Fields Hotel 
+							<a href="https://www.freshfields.com.tw/" target="_blank" class="web">
+							<i class="fa fa-link" aria-hidden="true"></i> WEB</a>
+							<br>
+							<br>
+							* Discounted prices <a href="https://drive.google.com/open?id=0B97DZ1rynygqc1B2eFpNTmJNZDUxRHQ1cld1OGtoTWtGYVYw" target="_blank" class="web pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF</a>
+							<br>
+							<br>
+							* Deadline to Hold Reservation: 2017/10/01
+							<br>
+
+							
 							<!--Accom Form End-->
 
 						</fieldset>
@@ -637,32 +655,6 @@
                             </p>
 
 							<!--Abstract Form Start-->
-
-							<label>Role</label>
-							<select name="role" required>
-								<option>General</option>
-								<option>Student</option>
-							</select>
-							<br>
-
-							<label>Session</label>
-							<select name="session" required>
-								<option>Topic 1 | Sustainable water use and ecologically sustainable development</option>
-								<option>Topic 2 | Development of rural society with water in Asia</option>
-								<option>Topic 3 | Sustainable paddy farming</option>
-								<option>Topic 4 | Integrated watershed management</option>
-								<option>Topic 5 | Droughts and flood disaster risk management</option>
-							</select>
-
-							<label>Type</label>
-							<select name="type" required>
-								<option>Oral Presentation</option>
-								<option>Poster</option>
-								<option>Representative</option>
-								<option>Observer</option>
-							</select>
-							<br>
-
 							<label>Title</label>
 							<input type="text" name="title" class="title">
 							<br>

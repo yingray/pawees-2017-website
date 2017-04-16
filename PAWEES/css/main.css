@@ -799,6 +799,20 @@ form.account .or{
 		background-color: #aaa;
 	}
 
+.Registration_Page a.web{
+	text-decoration: none;
+	color:#fff;
+	background-color: #555;
+
+	padding: 5px 8px; 
+
+	font-size: 16px;
+	line-height: 28px;
+}
+	.Registration_Page a.web.pdf{
+		padding: 5px 10px; 
+	}
+
 
 
 footer{

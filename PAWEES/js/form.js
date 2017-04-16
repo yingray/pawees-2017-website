@@ -45,7 +45,6 @@ $.fn.serializeObject = function() {
 		} else {
 			o[this.name] = this.value.trim() || '';
 		}
-		console.log(o)
 	});
 	return o;
 };
@@ -105,7 +104,7 @@ function autofillAllForm(obj) {
 }
 
 function updateRevision(obj) {
-	if (obj[0].paper['link']) {
+	if (obj[0].paper['link'] && obj[0].paper['authors']) {
 		$('.abstract fieldset p.revision').html('\
 		<br>\
 		' + obj[0]['updated_at'].slice(0, 10) + ' Revision ｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
@@ -118,13 +117,14 @@ function updateRevision(obj) {
 		');
 
 		$('form.account fieldset p.revision').html('\
-		Abstract｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
-			<a href="' + obj[0].paper['link'] + '" target="_blank">\
-			' + obj[0].paper['authors'][0] + ' - ' + obj[0].paper['title'] + '\
-			</a>\
+			Your registration information and abstract submission have been updated at ' + obj[0]['updated_at'].slice(0, 10) + '.<br>\
+			If you want to revise new information,\
+			please click "Revise Information" button in the lower right corner and follow the steps to edit the data again.<br>\
+			Abstract｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
+				<a href="' + obj[0].paper['link'] + '" target="_blank">\
+				' + obj[0].paper['authors'][0] + ' - ' + obj[0].paper['title'] + '\
+				</a>\
 		');
-		$('form.account fieldset b.revision').html(obj[0]['updated_at'].slice(0, 10));
-
 	}
 
 }
@@ -136,7 +136,7 @@ $('.submit_info').click(function() {
 	var submitFormObject = {}
 
 	form.each(function(index) {
-		if(index > 1) {
+		if (index > 1) {
 			var form_index = index - 2;
 			var form_name = form_config[form_index];
 			submitFormObject[form_name] = $(this).serializeObject()

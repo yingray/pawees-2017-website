@@ -731,6 +731,9 @@ form.account .or{
 
 	vertical-align: middle;
 }
+	.Registration_Page form fieldset input.long{
+		width: 400px;
+	}
 	.Registration_Page form fieldset input:focus,.Registration_Page form fieldset select:focus{
 		border: solid #faa 1px;
 		transition:0.2s;
@@ -784,14 +787,14 @@ form.account .or{
 	color:#333;
 	font-size: 22px;
 
-	font-family: 'Marcellus SC', serif;
+	font-family: 'Marcellus SC', sans-serif,'微軟正黑體';
 	letter-spacing: 1px;
-	line-height: 80px;
+	line-height: 50px;
 }
 	.Registration_Page h1:after{
 		content: "";
 		position: absolute;
-		bottom: 18px;
+		bottom: 10px;
 		left: 0;
 
 		height: 1px;
@@ -811,6 +814,11 @@ form.account .or{
 }
 	.Registration_Page a.web.pdf{
 		padding: 5px 10px; 
+	}
+	.Registration_Page a.web.maptag{
+		position: absolute;
+		top:0;
+		right: 0; 
 	}
 
 
@@ -1084,6 +1092,9 @@ form.account .or{
 	box-sizing: border-box;
 
 }
+	.Registration_Page form fieldset input.long{
+		width: 100%;
+	}
 
 .Registration_Page form fieldset input[type="radio"]{
 	width: 20px;

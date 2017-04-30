@@ -40,8 +40,9 @@ $.fn.serializeObject = function() {
 			if (!o[this.name].push) {
 				o[this.name] = [o[this.name]];
 			}
-			if (this.value.trim())
+			if (this.value.trim()) {
 				o[this.name].push(this.value.trim() || '');
+			}
 		} else {
 			o[this.name] = this.value.trim() || '';
 		}
@@ -49,20 +50,61 @@ $.fn.serializeObject = function() {
 	return o;
 };
 
+function changeAuthorsFormat(submitFormObject) {
+	if(submitFormObject['paper'].hasOwnProperty('authors')) {
+		var newAuthors = []
+		if(typeof submitFormObject.paper.authors === 'object') {
+			$.each(submitFormObject.paper.authors, function(key, value) {
+				if(isEven(key)) {
+					newAuthors[Math.floor(key/2)] = {
+						name: value,
+						affiliation: ''
+					};
+				} else {
+					newAuthors[Math.floor(key/2)].affiliation = value;
+				}
+			})
+		}
+		console.log(newAuthors);
+		submitFormObject.paper.authors = newAuthors;
+	}
+	return submitFormObject;
+}
+
 /* 3. Multi-input Component */
 var txtId = 1;
 
 function appendInputField(element, value) {
 	var value = value ? value : '';
+	var vn = value.name ? value.name : '';
 	var name = $(element).attr('name');
 	var nameId = name.concat(txtId);
 	var inputField = '<input type="text" name="' + name + '"value="' + value + '">';
 	if (name === 'affiliations') {
-		inputField = '<input type="text" name="' + name + '"value="' + value + '" style="width: 400px;">';
+		inputField = '<input type="text" name="' + name + '"value="' + value + '" style="width: 400px;" onchange="updateAuthorsAff()">';
+	} else if (name === 'authors') {
+		inputField = '<input type="text" name="authors" value="' + vn + '">\
+		<select name="authors" value="' + value.affiliation + '" style="width:200px;" required>\
+		<option value="" selected disabled>Please select</option>\
+			</select>\
+		';
 	}
-	var buttonMinor = '<input type="button" value="-" onclick="deltxt(' + nameId + ')">'
+	var buttonMinor = '<input type="button" value="-" onclick="deltxt(' + nameId + ');updateAuthorsAff();">'
 	$(element).before('<li id="' + nameId + '">' + inputField + buttonMinor + '</li>')
 	txtId++;
+	updateAuthorsAff();
+}
+
+function updateAuthorsAff() {
+	var select = $('select[name="authors"]');
+	var aff_field = $('input[name="affiliations"][type="text"]');
+	select.html('');
+	if(aff_field.length === 0) {
+		select.append('<option value="" selected disabled>Please fill out affiliations field</option>');
+	}
+	$.each(aff_field, (k, v) => {
+		if(v.value) select.append('<option>'+v.value+'</option>');
+	});
 }
 
 $('input[data-type="array"]').click(function() {
@@ -93,9 +135,15 @@ function autofillAllForm(obj) {
 			if (i === 6) {
 				if(obj[0].paper[b.name]) {
 					if ($(b).attr('data-type')) {
-						obj[0].paper[b.name].map(string => {
-							appendInputField(b, string);
-						})
+						if(b.name === 'authors') {
+							obj[0].paper['authors'].map(obj => {
+								appendInputField(b, obj);
+							})
+						} else {
+							obj[0].paper[b.name].map(string => {
+								appendInputField(b, string);
+							})
+						}
 					} else {
 						$(b).val(obj[0].paper[b.name])
 					}
@@ -103,6 +151,7 @@ function autofillAllForm(obj) {
 			}
 		}))
 	updateRevision(obj);
+	updateAuthorsAff();
 }
 
 function updateRevision(obj) {
@@ -111,7 +160,7 @@ function updateRevision(obj) {
 		<br>\
 		' + obj[0]['updated_at'].slice(0, 10) + ' Revision ｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
 		<a href="' + obj[0].paper['link'] + '" target="_blank">\
-			' + obj[0].paper['authors'][0] + ' - ' + obj[0].paper['title'] + '\
+			' + obj[0].paper['authors'][0].name + ' - ' + obj[0].paper['title'] + '\
 		</a>\
 		<br>\
 		<br>\
@@ -124,7 +173,7 @@ function updateRevision(obj) {
 			please click "Revise Information" button in the lower right corner and follow the steps to edit the data again.<br>\
 			Abstract｜ <i class="fa fa-file-pdf-o" aria-hidden="true"></i>\
 				<a href="' + obj[0].paper['link'] + '" target="_blank">\
-				' + obj[0].paper['authors'][0] + ' - ' + obj[0].paper['title'] + '\
+				' + obj[0].paper['authors'][0].name + ' - ' + obj[0].paper['title'] + '\
 				</a>\
 		');
 	}
@@ -144,6 +193,8 @@ $('.submit_info').click(function() {
 			submitFormObject[form_name] = $(this).serializeObject()
 		}
 	});
+
+	submitFormObject = changeAuthorsFormat(submitFormObject);
 
 	confirm("Are you sure you want to submit this form?", function(result) {
 		if (result) {
@@ -185,6 +236,10 @@ if (loadingStatus <= 0) {
 	LoadingStart()
 }
 
+function isEven(n) {
+	return n % 2 == 0;
+}
+
 function LoadingStart() {
 	$('.fixed_shadow[data-loading="pawees"]').addClass('fixed_shadow2');
 }
@@ -192,3 +247,17 @@ function LoadingStart() {
 function LoadingEnd() {
 	$('.fixed_shadow[data-loading="pawees"]').removeClass('fixed_shadow2');
 }
+//
+// $('body').click(function() {
+// 	//testing
+// 	var form = $("form");
+// 	var submitFormObject = {}
+//
+// 	form.each(function(index) {
+// 		if (index > 1) {
+// 			var form_index = index - 2;
+// 			var form_name = form_config[form_index];
+// 			submitFormObject[form_name] = $(this).serializeObject()
+// 		}
+// 	})
+// })

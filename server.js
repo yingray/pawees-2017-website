@@ -6,9 +6,9 @@ const port = 8083;
 
 app.use(compression());
 // app.use(express.static('./PAWEES'));
-app.use('/staging', express.static('./PAWEES'));
+app.use('/', express.static('./PAWEES'));
 
-app.get('/staging/*', function (req, res) {
+app.get('/*', function (req, res) {
 	res.sendFile(path.join(__dirname, './PAWEES', 'index.html'));
 });
 

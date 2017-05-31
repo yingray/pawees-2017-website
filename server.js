@@ -7,8 +7,13 @@ const port = 8081;
 app.use(compression());
 // app.use(express.static('./PAWEES'));
 app.use('/', express.static('./PAWEES'));
+app.use('/admin/', express.static('./build'));
 
-app.get('/*', function (req, res) {
+app.get('/admin/*', function (req, res) {
+	res.sendFile(path.join(__dirname, './build', 'index.html'));
+});
+
+app.get('/', function (req, res) {
 	res.sendFile(path.join(__dirname, './PAWEES', 'index.html'));
 });
 

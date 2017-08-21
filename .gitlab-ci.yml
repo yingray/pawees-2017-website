@@ -19,14 +19,14 @@ build:
     - docker build -t $CONTAINER_TEST_IMAGE .
     - docker push $CONTAINER_TEST_IMAGE
 
-# release-image:
-#   stage: release
-#   script:
-#    # try to clone yourself, the SSH_PRIVATE_KEY was added as deploy key to this repository
-#     - git clone git@gitlab.com:yingray/pawees_portal.git
-#     - docker pull $CONTAINER_TEST_IMAGE
-#     - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
-#     - docker push $CONTAINER_RELEASE_IMAGE
-#   only:
-#     # - master
-#     - branches
+release-image:
+  stage: release
+  script:
+   # try to clone yourself, the SSH_PRIVATE_KEY was added as deploy key to this repository
+    - git clone git@gitlab.com:yingray/pawees_portal.git
+    - docker pull $CONTAINER_TEST_IMAGE
+    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
+    - docker push $CONTAINER_RELEASE_IMAGE
+  only:
+    # - master
+    - branches
